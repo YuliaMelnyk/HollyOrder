@@ -1,0 +1,23 @@
+AnchorPane {
+    -fx-background-image: url("../images/loginBG.jpg");
+}
+
+#pic {
+    -fx-background-image: url("../images/pic.jpg");
+}
+
+#pass {
+    -fx-background-image: url("../images/password.png");
+}
+
+#tf_email, #tf_password, #tf_name, #tf_surname, #tf_phone {
+    -fx-background-color: #407088;
+    -fx-text-fill: #FFF;
+}
+#loginPane{
+    -fx-background-color: #407088;
+}
+#btn_login{
+    -fx-background-color: #ecb390;
+    -fx-text-fill: #35495e;
+}

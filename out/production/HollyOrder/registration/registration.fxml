@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+    <children>
+        <AnchorPane layoutY="419.0" prefHeight="48.0" prefWidth="310.0" style="-fx-background-color: #43bb73;">
+
+        </AnchorPane>
+        <AnchorPane prefHeight="48.0" prefWidth="310.0" stylesheets="@../styles/style.css">
+            <children>
+                <Label layoutX="131.0" layoutY="14.0" text="Holly Order" textFill="#8c90b3">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Circle fill="#fa4771" layoutX="16.0" layoutY="24.0" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
+                <Circle fill="#ffc965" layoutX="30.0" layoutY="24.0" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
+                <Circle fill="#42cf9b" layoutX="45.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
+            </children>
+        </AnchorPane>
+
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: #2c344b;">
+            <children>
+                <AnchorPane prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #2e354f;">
+                    <children>
+                        <Label layoutX="165.0" layoutY="14.0" prefHeight="28.0" prefWidth="121.0" text="Holly Order" textFill="#8c90b3">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                        </Label>
+                        <Circle fx:id="close" fill="#fa4771" layoutX="16.0" layoutY="24.0" onMouseClicked="#closeclick" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
+                        <Circle fx:id="min" fill="#ffc965" layoutX="30.0" layoutY="24.0" onMouseClicked="#minclick" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
+                        <Circle fill="#42cf9b" layoutX="45.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
+                    </children>
+                </AnchorPane>
+                <VBox layoutX="51.0" layoutY="88.0" prefHeight="341.0" prefWidth="44.0">
+                    <children>
+
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/email.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/password2.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/user.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/name.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="41.0" fitWidth="37.0" layoutX="114.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/phone.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <VBox layoutX="96.0" layoutY="80.0" prefHeight="400.0" prefWidth="298.0">
+                    <children>
+                        <TextField fx:id="tf_email" alignment="CENTER" maxHeight="49.0" maxWidth="417.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+
+                        <PasswordField fx:id="tf_password" alignment="CENTER" maxHeight="40.0" maxWidth="355.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your password...">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </PasswordField>
+                        <TextField fx:id="tf_name" alignment="CENTER" maxHeight="49.0" maxWidth="417.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="tf_surname" alignment="CENTER" maxHeight="49.0" maxWidth="417.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="tf_phone" alignment="CENTER" maxHeight="49.0" maxWidth="417.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+
+                    </children>
+                </VBox>
+                <VBox layoutX="167.0" layoutY="458.0" prefHeight="82.0" prefWidth="142.0">
+                    <children>
+                        <Button fx:id="btn_login" alignment="CENTER" blendMode="HARD_LIGHT" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#newUserLogin" prefHeight="51.0" prefWidth="134.0" text="Registrate" VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="40.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
