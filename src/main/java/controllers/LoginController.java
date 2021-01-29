@@ -1,8 +1,7 @@
-package login;
+package controllers;
 
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.net.URL;
 
 
@@ -17,12 +16,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import login.Main;
 import model.User;
 import services.UserService;
 
@@ -43,11 +40,7 @@ public class LoginController implements Initializable {
     ActionEvent event;
 
     @FXML
-    private TextField tf_email;
-
-    @FXML
-    private PasswordField pf_password;
-
+    private TextField tf_email, tf_password;
 
 
     @FXML
@@ -55,23 +48,26 @@ public class LoginController implements Initializable {
     private double xOffset = 0;
     private double yOffset = 0;
 
+    static User u1;
+
+    private UserService userService;
+
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-
+    public void initialize(URL location, ResourceBundle resources) {
+        userService = new UserService();
     }
-    static User u1;
+
     @FXML
     void login(MouseEvent event) throws IOException {
 
         String email = tf_email.getText();
-        String password = pf_password.getText();
+        String password = tf_password.getText();
         boolean isLogin = userService.login(email, password);
         if (isLogin) {
             u1 = userService.takeDataBylogin(email, password);
-            Parent parent = FXMLLoader.load(getClass().getResource("/home/home.fxml"));
+
+            Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
             Scene scene = new Scene(parent);
             Main.getPrimaryStage().setScene(scene);
 
@@ -124,17 +120,19 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void sign(MouseEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/views/RegistrationView.fxml"));
+    void registrate(MouseEvent event) throws  IOException{
+        Parent parent = FXMLLoader.load(getClass().getResource("/registration.fxml"));
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
     }
 
-
-    private UserService userService;
-
-    public void initialize() {
-        userService = new UserService();
+    @FXML
+    void sign(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
+        Scene scene = new Scene(parent);
+        scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        Main.getPrimaryStage().setScene(scene);
     }
+
 }
 

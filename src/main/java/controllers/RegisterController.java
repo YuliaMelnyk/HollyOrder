@@ -1,4 +1,4 @@
-package login;
+package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+import login.Main;
 import model.User;
+import services.RegisterService;
 
 import java.io.IOException;
 
@@ -23,25 +27,8 @@ public class RegisterController {
     private Button btn_register;
 
     @FXML
-    private TextField tf_phone;
+    private TextField tf_email, tf_password, tf_name, tf_surname, tf_phone;
 
-    @FXML
-    private TextField tf_mail;
-
-    @FXML
-    private TextField tf_surname;
-
-    @FXML
-    private TextField tf_name;
-
-    @FXML
-    private TextField tf_pass;
-
-    @FXML
-    private TextField tf_login;
-
-    @FXML
-    private Button btn_login;
 
     @FXML
     void insertInto(MouseEvent event) {
@@ -63,8 +50,8 @@ public class RegisterController {
 
     private User newUserData() {
 
-        String email = tf_mail.getText();
-        String password = tf_pass.getText();
+        String email = tf_email.getText();
+        String password = tf_password.getText();
         String name = tf_name.getText();
         String surname = tf_surname.getText();
         String phone = tf_phone.getText();
@@ -74,14 +61,14 @@ public class RegisterController {
 
     @FXML
     void newUserLogin(MouseEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/views/LoginView.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("/login.fxml"));
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
     }
 
     private boolean fieldIsEmpty() {
-        return "".equals(tf_login.getText()) || "".equals(tf_pass.getText()) || "".equals(tf_name.getText())
-                || "".equals(tf_surname.getText()) || "".equals(tf_mail.getText())|| "".equals(tf_phone.getText());
+        return "".equals(tf_email.getText()) || "".equals(tf_password.getText()) || "".equals(tf_name.getText())
+                || "".equals(tf_surname.getText()) || "".equals(tf_phone.getText());
     }
 
     private void showAlertFieldEmpty() {
@@ -90,6 +77,19 @@ public class RegisterController {
         alert.setContentText("Some of the fields on the Registration Form are not filled");
         alert.setTitle("Please fill all required fields. ");
         alert.show();
+    }
+
+
+    /**** minimize ****/
+    @FXML
+    public void minclick(MouseEvent event) {
+        ((Stage) ((Circle) event.getSource()).getScene().getWindow()).setIconified(true);
+    }
+
+    /**** close screen ****/
+    @FXML
+    public void closeclick(MouseEvent event) {
+        System.exit(0);
     }
 
 }

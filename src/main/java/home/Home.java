@@ -2,7 +2,7 @@ package home;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import model.Person;
+import model.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -15,14 +15,14 @@ public class Home extends Application {
     @Override
     public void start(Stage stage) {
         try{
-            var fxmlLoader = new FXMLLoader();
+            FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("home.fxml"));
 
-            var personController = new HomeController(new Person());
-            fxmlLoader.setController(personController);
+            //var personController = new HomeController(new User());
+            //fxmlLoader.setController(personController);
 
-            var root = (Pane)fxmlLoader.load();
-            var scene = new Scene(root);
+            Pane root = (Pane)fxmlLoader.load();
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         }

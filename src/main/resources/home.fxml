@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import com.jfoenix.controls.JFXTabPane?>
-<AnchorPane prefHeight="690.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.HomeController">
+<AnchorPane prefHeight="690.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
     <children>
         <HBox layoutX="-14.0" layoutY="328.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <JFXTabPane prefHeight="690.0" prefWidth="576.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                <JFXTabPane fx:id="tabPane" prefHeight="690.0" prefWidth="576.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                        <Tab text="Burgers">
+                        <Tab text="Menu">
                             <content>
                                 <VBox prefHeight="690.0" prefWidth="519.0">
                                     <children>
@@ -30,84 +30,22 @@
                                                         <Insets left="50.0" />
                                                     </HBox.margin>
                                                     <children>
-                                                        <ImageView fx:id="burger001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="burger001img" fitHeight="130.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/burgers/Big-Mac.jpeg" />
+                                                                <Image url="@/images/loginBG.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
                                                             </VBox.margin></ImageView>
-                                                        <Label alignment="CENTER" prefHeight="44.0" text="Big Mac">
+                                                        <Label alignment="CENTER" prefHeight="44.0" text="Finger food">
                                                             <padding>
                                                                 <Insets bottom="5.0" />
                                                             </padding>
                                                         </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="burger001remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic></JFXButton>
-                                                                <Label fx:id="burger001count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="burger001add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic></JFXButton>
-                                                            </children>
-                                                            <VBox.margin>
-                                                                <Insets />
-                                                            </VBox.margin>
-                                                        </HBox>
+
                                                     </children>
                                                 </VBox>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <children>
-                                                        <ImageView fx:id="burger002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/burgers/McDouble.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="McDouble" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="burger002remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="burger002count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="burger002add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
+
                                             </children>
                                             <VBox.margin>
                                                 <Insets />
@@ -122,7 +60,7 @@
                                                     <children>
                                                         <ImageView fx:id="burger003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/burgers/Double-Quarter-Pounder-with-Cheese.jpeg" />
+                                                                <Image url="@../../resources/images/burgers/Double-Quarter-Pounder-with-Cheese.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -139,7 +77,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -149,7 +87,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -162,7 +100,7 @@
                                                     <children>
                                                         <ImageView fx:id="burger004img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/burgers/Quarter-Pounder-with-Cheese.jpeg" />
+                                                                <Image url="@../../resources/images/burgers/Quarter-Pounder-with-Cheese.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -179,7 +117,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -189,7 +127,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -206,7 +144,7 @@
                                                     <children>
                                                         <ImageView fx:id="burger005img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/burgers/Double-Cheeseburger.jpeg" />
+                                                                <Image url="@../../resources/images/burgers/Double-Cheeseburger.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -223,7 +161,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -233,7 +171,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -246,7 +184,7 @@
                                                     <children>
                                                         <ImageView fx:id="burger006img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/burgers/Cheeseburger.jpeg" />
+                                                                <Image url="@../../resources/images/burgers/Cheeseburger.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -263,7 +201,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -273,7 +211,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -288,7 +226,7 @@
                                 </VBox>
                             </content>
                         </Tab>
-                        <Tab text="Salads">
+                        <Tab text="Cart">
                             <content>
                                 <VBox prefHeight="690.0" prefWidth="519.0">
                                     <children>
@@ -301,7 +239,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/salads/Bacon-Ranch-Salad-with-Buttermilk-Crispy-Chicken.jpeg" />
+                                                                <Image url="@../../resources/images/salads/Bacon-Ranch-Salad-with-Buttermilk-Crispy-Chicken.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -318,7 +256,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -328,7 +266,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -344,7 +282,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/salads/Bacon-Ranch-Salad-with-Grilled-Chicken.jpeg" />
+                                                                <Image url="@../../resources/images/salads/Bacon-Ranch-Salad-with-Grilled-Chicken.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -361,7 +299,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -371,7 +309,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -394,7 +332,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/salads/Side-Salad.jpeg" />
+                                                                <Image url="@../../resources/images/salads/Side-Salad.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -411,7 +349,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -421,7 +359,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -434,7 +372,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad004img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/salads/Southwest-Salad-with-Buttermilk-Crispy-Chicken.jpeg" />
+                                                                <Image url="@../../resources/images/salads/Southwest-Salad-with-Buttermilk-Crispy-Chicken.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -451,7 +389,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -461,7 +399,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -478,7 +416,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad005img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/salads/Southwest-Salad-with-Grilled-Chicken.jpeg" />
+                                                                <Image url="@../../resources/images/salads/Southwest-Salad-with-Grilled-Chicken.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -495,7 +433,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -505,7 +443,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -521,7 +459,7 @@
                                 </VBox>
                             </content>
                         </Tab>
-                        <Tab text="Sides">
+                        <Tab text="Orders">
                             <content>
                                 <VBox prefHeight="690.0" prefWidth="519.0">
                                     <children>
@@ -534,7 +472,7 @@
                                                     <children>
                                                         <ImageView fx:id="side001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/sides/Apple-Slices.jpeg" />
+                                                                <Image url="@../../resources/images/sides/Apple-Slices.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -551,7 +489,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -561,7 +499,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -577,7 +515,7 @@
                                                     <children>
                                                         <ImageView fx:id="side002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/sides/Cuties.jpeg" />
+                                                                <Image url="@../../resources/images/sides/Cuties.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -594,7 +532,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -604,7 +542,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -627,7 +565,7 @@
                                                     <children>
                                                         <ImageView fx:id="side003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/sides/Fries-Small-Medium.jpeg" />
+                                                                <Image url="@../../resources/images/sides/Fries-Small-Medium.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -644,7 +582,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -654,7 +592,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -667,7 +605,7 @@
                                                     <children>
                                                         <ImageView fx:id="side004img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/sides/Fruit-n-Yogurt-Parfait.jpeg" />
+                                                                <Image url="@../../resources/images/sides/Fruit-n-Yogurt-Parfait.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -684,7 +622,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -694,7 +632,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -711,7 +649,7 @@
                                                     <children>
                                                         <ImageView fx:id="side005img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/sides/Go-GURT-Strawberry-Flavored-Low-Fat-Yogurt-Tube.jpeg" />
+                                                                <Image url="@../../resources/images/sides/Go-GURT-Strawberry-Flavored-Low-Fat-Yogurt-Tube.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -728,7 +666,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -738,7 +676,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -754,7 +692,7 @@
                                 </VBox>
                             </content>
                         </Tab>
-                        <Tab text="Desserts">
+                        <Tab text="Sign Out">
                             <content>
                                 <VBox prefHeight="690.0" prefWidth="519.0">
                                     <children>
@@ -767,7 +705,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/Baked-Hot-Apple-Pie.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/Baked-Hot-Apple-Pie.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -784,7 +722,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -794,7 +732,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -810,7 +748,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/Chocolate-Chip-Cookie.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/Chocolate-Chip-Cookie.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -827,7 +765,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -837,7 +775,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -860,7 +798,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/McFlurry-with-OREO-Cookies-12floz-cup.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/McFlurry-with-OREO-Cookies-12floz-cup.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -877,7 +815,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -887,7 +825,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -900,7 +838,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert004img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/Strawberry-Sundae.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/Strawberry-Sundae.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -917,7 +855,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -927,7 +865,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -944,7 +882,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert005img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/Vanilla-Reduced-Fat-Ice-Cream-Cone.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/Vanilla-Reduced-Fat-Ice-Cream-Cone.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -961,7 +899,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -971,7 +909,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -984,7 +922,7 @@
                                                     <children>
                                                         <ImageView fx:id="dessert006img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@../images/desserts/Vanilla-McCafe-Shake-Medium.jpeg" />
+                                                                <Image url="@../../resources/images/desserts/Vanilla-McCafe-Shake-Medium.jpeg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -1001,7 +939,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/remove.png" />
+                                                                                <Image url="@../../resources/images/icons/remove.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -1011,7 +949,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@../images/icons/add.png" />
+                                                                                <Image url="@../../resources/images/icons/add.png" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -1026,278 +964,7 @@
                                 </VBox>
                             </content>
                         </Tab>
-                        <Tab text="Drinks">
-                            <content>
-                                <VBox prefHeight="690.0" prefWidth="519.0">
-                                    <children>
-                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <HBox.margin>
-                                                        <Insets left="50.0" />
-                                                    </HBox.margin>
-                                                    <children>
-                                                        <ImageView fx:id="drink001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/Coca-Cola-Classic-Small.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" prefHeight="44.0" text="Coca Cola">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink001remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink001count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink001add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                            <VBox.margin>
-                                                                <Insets />
-                                                            </VBox.margin>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <children>
-                                                        <ImageView fx:id="drink002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/Coffee-Medium.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Coffee" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink002remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink002count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink002add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets />
-                                            </VBox.margin>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <HBox.margin>
-                                                        <Insets left="50.0" />
-                                                    </HBox.margin>
-                                                    <children>
-                                                        <ImageView fx:id="drink003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/Dasani-Water.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Dasani Water" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink003remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink003count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink003add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                                <VBox alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                                                    <children>
-                                                        <ImageView fx:id="drink004img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/McCafe-Mocha-Medium.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="McCafe Mocha" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink004remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink004count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink004add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER" layoutX="10.0" layoutY="214.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <children>
-                                                        <ImageView fx:id="drink005img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/Minute-Maid-Apple-Juice-Box.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Apple Juice" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink005remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink005count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink005add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-                                                    <children>
-                                                        <ImageView fx:id="drink006img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../images/drinks/Sprite-Small.jpeg" />
-                                                            </image>
-                                                            <VBox.margin>
-                                                                <Insets top="5.0" />
-                                                            </VBox.margin>
-                                                        </ImageView>
-                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Sprite" textAlignment="CENTER" wrapText="true">
-                                                            <padding>
-                                                                <Insets bottom="5.0" />
-                                                            </padding>
-                                                        </Label>
-                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
-                                                            <children>
-                                                                <JFXButton fx:id="drink006remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/remove.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                                <Label fx:id="drink006count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
-                                                                <JFXButton fx:id="drink006add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
-                                                                    <graphic>
-                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                                                            <image>
-                                                                                <Image url="@../images/icons/add.png" />
-                                                                            </image>
-                                                                        </ImageView>
-                                                                    </graphic>
-                                                                </JFXButton>
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                            </children>
-                                        </HBox>
-                                    </children>
-                                </VBox>
-                            </content>
-                        </Tab>
+
                     </tabs>
                 </JFXTabPane>
                 <VBox prefHeight="600.0" prefWidth="318.0">
@@ -1315,7 +982,7 @@
                                     <graphic>
                                         <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../images/icons/settings.png" />
+                                                <Image url="@../../resources/images/icons/settings.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>

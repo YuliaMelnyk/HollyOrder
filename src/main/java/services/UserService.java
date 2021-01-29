@@ -13,20 +13,17 @@ import util.HibernateUtil;
  */
 
 
-
-
-
 public class UserService {
 
 
-    public boolean login(String login, String password) {
+    public boolean login(String email, String password) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction trx = session.beginTransaction();
 
-        Query query = session.createQuery("FROM User WHERE login=:login and password=:pass");
-        query.setString("login", login);
-        query.setString("pass", password);
+        Query query = (Query) session.createQuery("FROM User WHERE email=:email and password=:password");
+        query.setString("email", email);
+        query.setString("password", password);
 
         List<User> list = query.list();
         trx.commit();
@@ -37,18 +34,18 @@ public class UserService {
         }
         User user = list.get(0);
         System.out.println(user);
-        System.out.println("Zalogowano: " + user.getName() + " " + user.getSurname());
+        System.out.println("Login success: " + user.getName() + " " + user.getSurname());
         return true;
     }
 
-    public User takeDataBylogin(String login, String password) {
+    public User takeDataBylogin(String email, String password) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction trx = session.beginTransaction();
 
-        Query query = session.createQuery("FROM User WHERE login=:login and password=:pass");
-        query.setString("login", login);
-        query.setString("pass", password);
+        Query query = (Query) session.createQuery("FROM User WHERE email=:email and password=:password");
+        query.setString("email", email);
+        query.setString("password", password);
 
         List<User> list = query.list();
         trx.commit();
