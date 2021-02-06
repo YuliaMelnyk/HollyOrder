@@ -1,0 +1,48 @@
+#fingerFood {
+    -fx-background-image: url("../images/01.jpg");
+}
+
+.paneCard {
+    -fx-background-color: #7f333639;
+}
+
+#westernSoup {
+    -fx-background-image: url("../images/02.jpg");
+}
+
+#easternSoup {
+    -fx-background-image: url("../images/03.jpg");
+}
+
+#sandwiches {
+    -fx-background-image: url("../images/04.jpg");
+}
+
+#salads {
+    -fx-background-image: url("../images/09.jpg");
+}
+
+#chicken {
+    -fx-background-image: url("../images/05.jpg");
+    -fx-background-size: cover;
+}
+
+#burger {
+    -fx-background-image: url("../images/06.jpg");
+}
+
+#drinks {
+    -fx-background-image: url("../images/08.jpg");
+}
+
+#desserts {
+    -fx-background-image: url("../images/10.jpg");
+}
+
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
+

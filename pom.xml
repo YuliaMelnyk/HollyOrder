@@ -59,6 +59,26 @@
             <version>1.5.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.jfoenix/jfoenix -->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>8.0.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>3.3.9</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.gluonhq/charm-down-core -->
+        <dependency>
+            <groupId>com.gluonhq</groupId>
+            <artifactId>charm-down-core</artifactId>
+            <version>3.8.6</version>
+        </dependency>
+
+
     </dependencies>
 
 
@@ -70,10 +90,9 @@
                 <version>8.8.3</version>
                 <configuration>
                     <!-- your.main.class.which.extends.javafx.Application -->
-                    <mainClass>pl.jzych.ticketreservation.Main</mainClass>
+                    <mainClass>login.Main</mainClass>
                 </configuration>
             </plugin>
-
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>

@@ -1,4 +1,4 @@
-AnchorPane {
+AnchorPane{
     -fx-background-image: url("../images/loginBG.jpg");
 }
 
@@ -14,10 +14,13 @@ AnchorPane {
     -fx-background-color: #407088;
     -fx-text-fill: #FFF;
 }
-#loginPane{
+
+#loginPane {
     -fx-background-color: #407088;
 }
-#btn_login{
+
+#btn_login {
     -fx-background-color: #ecb390;
     -fx-text-fill: #35495e;
 }
+

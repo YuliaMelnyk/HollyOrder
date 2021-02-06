@@ -48,7 +48,7 @@ public class LoginController implements Initializable {
     private double xOffset = 0;
     private double yOffset = 0;
 
-    static User u1;
+    public static User u1;
 
     private UserService userService;
 
@@ -67,9 +67,7 @@ public class LoginController implements Initializable {
         if (isLogin) {
             u1 = userService.takeDataBylogin(email, password);
 
-            Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
-            Scene scene = new Scene(parent);
-            Main.getPrimaryStage().setScene(scene);
+            sign();
 
         } else {
             Alert error = new Alert(Alert.AlertType.ERROR);
@@ -127,10 +125,10 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void sign(MouseEvent event) throws IOException {
+    void sign() throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
         Scene scene = new Scene(parent);
-        scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/styles/homeStyle.css").toExternalForm());
         Main.getPrimaryStage().setScene(scene);
     }
 
