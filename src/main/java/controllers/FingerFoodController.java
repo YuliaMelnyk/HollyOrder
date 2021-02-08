@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 public class FingerFoodController implements Initializable {
 
     @FXML
-    Label quantityLabelFCh, quantityLabelKCh;
+    Label quantityLabelFCh, quantityLabelKCh, quantityLabelShrimp;
 
     @FXML
     ImageView plusFCh;
@@ -51,6 +51,12 @@ public class FingerFoodController implements Initializable {
 
     }
 
+    //add to Cart Shrimp
+    @FXML
+    public void onCartShr(MouseEvent event) {
+
+    }
+
     //plus quantity of Fried Chicken
     @FXML
     public void onPlusClickFCh(MouseEvent event) {
@@ -60,7 +66,7 @@ public class FingerFoodController implements Initializable {
     //minus quantity of Korean Chicken
     @FXML
     public void onMinusClickFCh(MouseEvent event) {
-        onMinus(quantityLabelKCh);
+        onMinus(quantityLabelFCh);
     }
     //plus quantity of Korean Chicken
     @FXML
@@ -71,7 +77,19 @@ public class FingerFoodController implements Initializable {
     //minus quantity of Fried Chicken
     @FXML
     public void onMinusKCh(MouseEvent event) {
-        onMinus(quantityLabelFCh);
+        onMinus(quantityLabelKCh);
+    }
+
+    //minus quantity of Shrimp
+    @FXML
+    public void onMinusShr(MouseEvent event) {
+        onMinus(quantityLabelShrimp);
+    }
+
+    //plus quantity of Shrimp
+    @FXML
+    public void onPlusShr(MouseEvent event) {
+        onPlus(quantityLabelShrimp);
     }
 
     public void onPlus(Label label) {

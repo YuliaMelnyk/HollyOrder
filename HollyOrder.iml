@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <datasource-mapping>
-          <factory-entry name="Entities" value="1311e01a-31fe-41f3-873c-b735126fe564" />
-        </datasource-mapping>
-        <naming-strategy-map />
-      </configuration>
-    </facet>
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="a2154602-c092-4870-8fb9-70ceb3da95fe" />
-        </datasource-map>
-        <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="javafx-swt" level="application" />
-    <orderEntry type="library" name="mysql-connector-java-8.0.23" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
@@ -67,8 +43,9 @@
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-classworlds:2.5.2" level="project" />
     <orderEntry type="library" name="Maven: com.gluonhq:charm-down-core:3.8.6" level="project" />
-    <orderEntry type="library" name="javafx.graphics" level="project" />
-    <orderEntry type="library" name="javafx.controls" level="project" />
-    <orderEntry type="library" name="openjfx-78-backport-1.8.0-ea-b96.1" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:16-ea+6" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac:16-ea+6" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:16-ea+6" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac:16-ea+6" level="project" />
   </component>
 </module>

@@ -52,15 +52,15 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickEastern" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER" onMouseClicked="#clickSalads" prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="easternSoup" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="salads" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
                                                         <Insets top="-60.0" />
                                                     </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Eastern soups" textAlignment="CENTER" textFill="WHITE">
+                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Salads" textAlignment="CENTER" textFill="WHITE">
                                                         <font>
                                                             <Font size="44.0" />
                                                         </font>
@@ -86,22 +86,6 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickSalads" prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="salads" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Salads" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
 
                                         <VBox alignment="CENTER" onMouseClicked="#clickChicken" prefHeight="300" prefWidth="800.0">
                                             <children>
@@ -190,7 +174,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/01.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -207,7 +191,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/01.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -217,7 +201,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -233,7 +217,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/01.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -250,7 +234,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -260,7 +244,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/03.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -283,7 +267,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/03.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -300,7 +284,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -310,7 +294,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/01.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>

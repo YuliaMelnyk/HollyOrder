@@ -25,9 +25,9 @@ public class Main extends Application {
         try {
             setPrimaryStage(primaryStage);
 
-            Parent parent = FXMLLoader.load(getClass().getResource("/login.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/fingerfoods.fxml"));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+            //scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setTitle("Application for Order food");
             primaryStage.show();

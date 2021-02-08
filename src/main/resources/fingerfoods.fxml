@@ -168,7 +168,7 @@
                                                                                                 <Image url="@images/minus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <Label fx:id="quantityLabelKCh" text="1">
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelKCh" text="1">
                                                                                         </Label>
                                                                                         <ImageView fx:id="plus" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusKCh" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
@@ -256,7 +256,7 @@
                                                                                                 <Image url="@images/minus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <Label fx:id="quantityLabelShrimp" text="1">
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelShrimp" text="1">
                                                                                         </Label>
                                                                                         <ImageView fx:id="plusShrimp" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusShr" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
@@ -295,7 +295,7 @@
                         </Tab>
                         <Tab text="Cart">
                             <content>
-                                <VBox onMouseClicked="#clickWestern" prefHeight="690.0" prefWidth="519.0">
+                                <VBox  prefHeight="690.0" prefWidth="519.0">
                                     <children>
                                         <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
                                             <children>
@@ -306,7 +306,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/01.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -323,7 +323,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/01.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -333,7 +333,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -349,7 +349,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/01.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -366,7 +366,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -376,7 +376,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/03.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -399,7 +399,7 @@
                                                     <children>
                                                         <ImageView fx:id="salad003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
-                                                                <Image url="@images/03.jpg" />
+                                                                <Image url="@images/pic.jpg" />
                                                             </image>
                                                             <VBox.margin>
                                                                 <Insets top="5.0" />
@@ -416,7 +416,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/02.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>
@@ -426,7 +426,7 @@
                                                                     <graphic>
                                                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                                                             <image>
-                                                                                <Image url="@images/01.jpg" />
+                                                                                <Image url="@images/pic.jpg" />
                                                                             </image>
                                                                         </ImageView>
                                                                     </graphic>

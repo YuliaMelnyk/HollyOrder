@@ -36,11 +36,6 @@ public class HomeController implements Initializable {
 
     }
 
-    //click en category of Eastern Soups
-    @FXML
-    public void clickEastern(MouseEvent event) {
-
-    }
 
     //click en category of Sandwiches
     @FXML

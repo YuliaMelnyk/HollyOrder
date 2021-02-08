@@ -10,20 +10,17 @@
     -fx-background-image: url("../images/02.jpg");
 }
 
-#easternSoup {
-    -fx-background-image: url("../images/03.jpg");
-}
 
 #sandwiches {
     -fx-background-image: url("../images/04.jpg");
 }
 
 #salads {
-    -fx-background-image: url("../images/09.jpg");
+    -fx-background-image: url("../images/03.jpg");
 }
 
 #chicken {
-    -fx-background-image: url("../images/05.jpg");
+    -fx-background-image: url("../images/05.jpeg");
     -fx-background-size: cover;
 }
 
@@ -32,7 +29,7 @@
 }
 
 #drinks {
-    -fx-background-image: url("../images/08.jpg");
+    -fx-background-image: url("../images/07.jpg");
 }
 
 #desserts {
