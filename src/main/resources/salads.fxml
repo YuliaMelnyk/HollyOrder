@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="850.0" stylesheets="@styles/fingerFoodStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FingerFoodController">
+<AnchorPane prefHeight="700.0" prefWidth="850.0" stylesheets="@styles/salads.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SaladController">
     <children>
         <HBox layoutX="-14.0" layoutY="328.0" prefHeight="600.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -28,9 +28,9 @@
                                                     <Insets bottom="10" left="10.0" top="10.0" />
                                                 </VBox.margin>
                                             </Pane>
-                                            <HBox prefHeight="240.0" prefWidth="800">
+                                            <HBox prefHeight="240.0" prefWidth="800.0">
                                                 <children>
-                                                    <JFXButton fx:id="friedChicken" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    <JFXButton fx:id="tuna" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
                                                     </JFXButton>
                                                     <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
                                                         <children>
@@ -43,37 +43,40 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Fried Chicken" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Warm Tuna and Bean Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="Crispy, crunchy chicken" textAlignment="CENTER">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText" text="As it poaches in the oil, the oil soaks up the fragrance of the herbs, garlic, and tuna" textAlignment="CENTER" wrapText="true">
                                                                                     <font>
                                                                                         <Font size="20.0" />
                                                                                     </font>
                                                                                 </Label>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <Label fx:id="priceFriedChicken" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="7" textAlignment="CENTER">
+                                                                                        <Label fx:id="priceTuna" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="10" textAlignment="CENTER" wrapText="true">
                                                                                             <font>
                                                                                                 <Font size="21.0" />
                                                                                             </font>
                                                                                             <HBox.margin>
-                                                                                                <Insets left="35.0" />
+                                                                                                <Insets left="155.0"  />
                                                                                             </HBox.margin>
                                                                                         </Label>
-                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="657.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="510.0" styleClass="coloredText" text="€" textAlignment="LEFT">
                                                                                             <font>
-                                                                                                <Font size="22.0" />
+                                                                                                <Font size="23.0" />
                                                                                             </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="18.0" />
+                                                                                            </HBox.margin>
                                                                                         </Label>
                                                                                     </children>
                                                                                 </HBox>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                    <ImageView fx:id="minusFCh" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusClickFCh" pickOnBounds="true" preserveRatio="true">
+                                                                                    <ImageView fx:id="minusTun" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusClickTun" pickOnBounds="true" preserveRatio="true">
                                                                                         <HBox.margin>
                                                                                             <Insets left="55.0" right="10" />
                                                                                         </HBox.margin>
@@ -81,9 +84,9 @@
                                                                                             <Image url="@images/minus.png" />
                                                                                         </image>
                                                                                     </ImageView>
-                                                                                        <Label fx:id="quantityLabelFCh" styleClass="quantityLabel" text="1">
+                                                                                        <Label fx:id="quantityLabelTun" styleClass="quantityLabel" text="1">
                                                                                         </Label>
-                                                                                        <ImageView fx:id="plusFCh" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusClickFCh" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="plusTun" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusClickTun" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="10.0" right="10" />
                                                                                             </HBox.margin>
@@ -91,7 +94,7 @@
                                                                                                 <Image url="@images/plus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <ImageView fx:id="cartFCh" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartFCh" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="cartTun" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartTun" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="105.0" />
                                                                                             </HBox.margin>
@@ -114,7 +117,7 @@
 
                                             <HBox prefHeight="240.0" prefWidth="800">
                                                 <children>
-                                                    <JFXButton fx:id="KoreanFried" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    <JFXButton fx:id="Cesar" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
                                                     </JFXButton>
                                                     <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
                                                         <children>
@@ -127,13 +130,13 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Korean Fried Chicken Wings" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Caesar Salad with Pancetta" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="60.0" prefWidth="359.0" styleClass="coloredText" text="Try this at during football season and your guests will beg for more!" textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText" text="This salad is everything a Caesar should be - assertive, complex, and rich" textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
                                                                                     </VBox.margin>
@@ -143,24 +146,27 @@
                                                                                 </Label>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <Label fx:id="priceKoreanFried" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="7" textAlignment="CENTER">
+                                                                                        <Label fx:id="priceTCes" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="10" textAlignment="CENTER">
                                                                                             <font>
                                                                                                 <Font size="21.0" />
                                                                                             </font>
                                                                                             <HBox.margin>
-                                                                                                <Insets left="35.0" />
+                                                                                                <Insets left="155.0" />
                                                                                             </HBox.margin>
                                                                                         </Label>
-                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="657.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="510.0" styleClass="coloredText" text="€" textAlignment="LEFT">
                                                                                             <font>
-                                                                                                <Font size="22.0" />
+                                                                                                <Font size="23.0" />
                                                                                             </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="12.0" />
+                                                                                            </HBox.margin>
                                                                                         </Label>
                                                                                     </children>
                                                                                 </HBox>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <ImageView fx:id="minus" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusKCh" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="minusCes" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusCes" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="55.0" right="10" />
                                                                                             </HBox.margin>
@@ -168,9 +174,9 @@
                                                                                                 <Image url="@images/minus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelKCh" text="1">
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelCes" text="1">
                                                                                         </Label>
-                                                                                        <ImageView fx:id="plus" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusKCh" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="plusCes" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusCes" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="10.0" right="10" />
                                                                                             </HBox.margin>
@@ -178,7 +184,7 @@
                                                                                                 <Image url="@images/plus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <ImageView fx:id="cartImage" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartKCh" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="cartImageCes" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartCes" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="105.0" />
                                                                                             </HBox.margin>
@@ -200,7 +206,7 @@
                                             </HBox>
                                             <HBox prefHeight="240.0" prefWidth="800">
                                                 <children>
-                                                    <JFXButton fx:id="ChimichurriShrimp" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    <JFXButton fx:id="Octopus" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
                                                     </JFXButton>
                                                     <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
                                                         <children>
@@ -213,14 +219,14 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Chimichurri Shrimp" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Mediterranean Octopus Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="60.0" prefWidth="359.0" styleClass="coloredText"
-                                                                                       text="Skillet-grilled shrimp meets chimichurri, a delicious union requiring a little bit of prep"
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="Refreshing and light, this salad exposes the most exquisite taste and texture"
                                                                                        textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
@@ -231,24 +237,27 @@
                                                                                 </Label>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <Label fx:id="priceShrimps" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="7" textAlignment="CENTER">
+                                                                                        <Label fx:id="priceOc" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="12" textAlignment="CENTER">
                                                                                             <font>
                                                                                                 <Font size="21.0" />
                                                                                             </font>
                                                                                             <HBox.margin>
-                                                                                                <Insets left="35.0" />
+                                                                                                <Insets left="155.0" />
                                                                                             </HBox.margin>
                                                                                         </Label>
-                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="657.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="510.0" styleClass="coloredText" text="€" textAlignment="LEFT">
                                                                                             <font>
-                                                                                                <Font size="22.0" />
+                                                                                                <Font size="23.0" />
                                                                                             </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="12.0" />
+                                                                                            </HBox.margin>
                                                                                         </Label>
                                                                                     </children>
                                                                                 </HBox>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <ImageView fx:id="minusShrimp" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusShr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="minusOc" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusOc" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="55.0" right="10" />
                                                                                             </HBox.margin>
@@ -256,9 +265,9 @@
                                                                                                 <Image url="@images/minus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelShrimp" text="1">
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelOc" text="1">
                                                                                         </Label>
-                                                                                        <ImageView fx:id="plusShrimp" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusShr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="plusOc" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusOc" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="10.0" right="10" />
                                                                                             </HBox.margin>
@@ -266,7 +275,7 @@
                                                                                                 <Image url="@images/plus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <ImageView fx:id="cartImageSrimp" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartShr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="cartImageOc" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartOc" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="105.0" />
                                                                                             </HBox.margin>
@@ -286,9 +295,10 @@
                                                     </HBox>
                                                 </children>
                                             </HBox>
+
                                             <HBox prefHeight="240.0" prefWidth="800">
                                                 <children>
-                                                    <JFXButton fx:id="Croquetas" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    <JFXButton fx:id="Primavera" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
                                                     </JFXButton>
                                                     <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
                                                         <children>
@@ -301,14 +311,14 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Serrano Ham Croquetas With Smoked Pimentón Aioli" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Primavera" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="60.0" prefWidth="359.0" styleClass="coloredText"
-                                                                                       text="The crust fries up shaggy and golden from the panko, and the paprika aioli is pretty in pink, with an assertive garlic punch"
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="Arugula, Pear and Goat Cheese Salad with Pomegranate Vinaigrette"
                                                                                        textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
@@ -319,24 +329,27 @@
                                                                                 </Label>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <Label fx:id="priceCroquetas" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="5" textAlignment="CENTER">
+                                                                                        <Label fx:id="pricePr" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="9" textAlignment="CENTER">
                                                                                             <font>
                                                                                                 <Font size="21.0" />
                                                                                             </font>
                                                                                             <HBox.margin>
-                                                                                                <Insets left="35.0" />
+                                                                                                <Insets left="155.0" />
                                                                                             </HBox.margin>
                                                                                         </Label>
-                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="657.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="510.0" styleClass="coloredText" text="€" textAlignment="LEFT">
                                                                                             <font>
-                                                                                                <Font size="22.0" />
+                                                                                                <Font size="23.0" />
                                                                                             </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="12.0" />
+                                                                                            </HBox.margin>
                                                                                         </Label>
                                                                                     </children>
                                                                                 </HBox>
                                                                                 <HBox>
                                                                                     <children>
-                                                                                        <ImageView fx:id="minusCroquetas" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusCr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="minusPr" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusPr" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="55.0" right="10" />
                                                                                             </HBox.margin>
@@ -344,9 +357,9 @@
                                                                                                 <Image url="@images/minus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelCroquetas" text="1">
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelPr" text="1">
                                                                                         </Label>
-                                                                                        <ImageView fx:id="plusCroquetas" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusCr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="plusPr" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusPr" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="10.0" right="10" />
                                                                                             </HBox.margin>
@@ -354,7 +367,7 @@
                                                                                                 <Image url="@images/plus.png" />
                                                                                             </image>
                                                                                         </ImageView>
-                                                                                        <ImageView fx:id="cartImageCroquetas" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartCr" pickOnBounds="true" preserveRatio="true">
+                                                                                        <ImageView fx:id="cartImagePr" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartPr" pickOnBounds="true" preserveRatio="true">
                                                                                             <HBox.margin>
                                                                                                 <Insets left="105.0" />
                                                                                             </HBox.margin>

@@ -1,0 +1,36 @@
+
+#tuna {
+    -fx-background-image: url("../images/sa01.jpg");
+}
+#Cesar {
+    -fx-background-image: url("../images/sa02.jpeg");
+}
+#Octopus {
+    -fx-background-image: url("../images/sa03.jpg");
+}
+#Primavera{
+    -fx-background-image: url("../images/sa04.jpg");
+
+}
+
+.paneCard {
+    -fx-background-color: #7f333639;
+}
+.descPane{
+    -fx-background-color: #e8efeb;
+    -fx-border-radius: 5pt;
+    -fx-background-radius: 5pt;
+}
+.quantityLabel{
+    -fx-font-size: 22;
+}
+.coloredText{
+    -fx-text-fill: #5eaaa8;
+}
+
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+

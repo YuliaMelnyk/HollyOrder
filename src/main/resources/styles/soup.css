@@ -1,0 +1,36 @@
+
+#carrot {
+    -fx-background-image: url("../images/s01.jpg");
+}
+#Tomato {
+    -fx-background-image: url("../images/s02.jpg");
+}
+#Lemon {
+    -fx-background-image: url("../images/s03.jpg");
+}
+#Croquetas{
+    -fx-background-image: url("../images/ff05.jpg");
+
+}
+
+.paneCard {
+    -fx-background-color: #7f333639;
+}
+.descPane{
+    -fx-background-color: #e8efeb;
+    -fx-border-radius: 5pt;
+    -fx-background-radius: 5pt;
+}
+.quantityLabel{
+    -fx-font-size: 22;
+}
+.coloredText{
+    -fx-text-fill: #5eaaa8;
+}
+
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
