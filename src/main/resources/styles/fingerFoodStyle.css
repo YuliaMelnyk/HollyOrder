@@ -8,6 +8,10 @@
 #ChimichurriShrimp {
     -fx-background-image: url("../images/ff04.jpg");
 }
+#Croquetas{
+    -fx-background-image: url("../images/ff05.jpg");
+
+}
 
 .paneCard {
     -fx-background-color: #7f333639;
@@ -23,8 +27,6 @@
 .coloredText{
     -fx-text-fill: #5eaaa8;
 }
-
-
 
 .buttonCard {
     -fx-background-size: cover;

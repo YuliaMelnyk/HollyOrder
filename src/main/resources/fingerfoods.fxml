@@ -286,6 +286,94 @@
                                                     </HBox>
                                                 </children>
                                             </HBox>
+                                            <HBox prefWidth="800">
+                                                <children>
+                                                    <JFXButton fx:id="Croquetas" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
+                                                        <children>
+                                                            <VBox prefHeight="220.0" prefWidth="387.0">
+                                                                <JFXClippedPane prefHeight="220.0" prefWidth="300.0" styleClass="descPane">
+                                                                    <VBox.margin>
+                                                                        <Insets left="15.0" right="15.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <VBox prefHeight="220" prefWidth="300">
+                                                                            <children>
+                                                                                <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Serrano Ham Croquetas With Smoked Pimentón Aioli" textAlignment="CENTER">
+                                                                                        <font>
+                                                                                            <Font size="25.0" />
+                                                                                        </font>
+                                                                                    </Label>
+                                                                                </Pane>
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="60.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="The crust fries up shaggy and golden from the panko, and the paprika aioli is pretty in pink, with an assertive garlic punch"
+                                                                                       textAlignment="CENTER" wrapText="true">
+                                                                                    <VBox.margin>
+                                                                                        <Insets top="10" />
+                                                                                    </VBox.margin>
+                                                                                    <font>
+                                                                                        <Font size="20.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <Label fx:id="priceCroquetas" layoutX="20.0" layoutY="3.0" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="5" textAlignment="CENTER">
+                                                                                            <font>
+                                                                                                <Font size="21.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="35.0" />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="657.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                            <font>
+                                                                                                <Font size="22.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <ImageView fx:id="minusCroquetas" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusCr" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="55.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/minus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label styleClass="quantityLabel" fx:id="quantityLabelCroquetas" text="1">
+                                                                                        </Label>
+                                                                                        <ImageView fx:id="plusCroquetas" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusCr" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="10.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/plus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <ImageView fx:id="cartImageCroquetas" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartCr" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="105.0" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/cart.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                    </children>
+                                                                                </HBox>
+
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </JFXClippedPane>
+                                                            </VBox>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
 
                                         </children>
                                     </VBox>

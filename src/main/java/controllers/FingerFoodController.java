@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 public class FingerFoodController implements Initializable {
 
     @FXML
-    Label quantityLabelFCh, quantityLabelKCh, quantityLabelShrimp;
+    Label quantityLabelFCh, quantityLabelKCh, quantityLabelShrimp, quantityLabelCroquetas;
 
     @FXML
     ImageView plusFCh;
@@ -57,6 +57,12 @@ public class FingerFoodController implements Initializable {
 
     }
 
+    //add to Cart Croquetas
+    @FXML
+    public void onCartCr(MouseEvent event) {
+
+    }
+
     //plus quantity of Fried Chicken
     @FXML
     public void onPlusClickFCh(MouseEvent event) {
@@ -68,6 +74,7 @@ public class FingerFoodController implements Initializable {
     public void onMinusClickFCh(MouseEvent event) {
         onMinus(quantityLabelFCh);
     }
+
     //plus quantity of Korean Chicken
     @FXML
     public void onPlusKCh(MouseEvent event) {
@@ -92,6 +99,18 @@ public class FingerFoodController implements Initializable {
         onPlus(quantityLabelShrimp);
     }
 
+    //minus quantity of Croquetas
+    @FXML
+    public void onMinusCr(MouseEvent event) {
+        onMinus(quantityLabelCroquetas);
+    }
+
+    //plus quantity of Croquetas
+    @FXML
+    public void onPlusCr(MouseEvent event) {
+        onPlus(quantityLabelCroquetas);
+    }
+
     public void onPlus(Label label) {
         int q = Integer.parseInt(label.getText());
         label.setText(String.valueOf(++q));
@@ -103,9 +122,7 @@ public class FingerFoodController implements Initializable {
             label.setText("1");
         } else {
             label.setText(String.valueOf(--q));
-
         }
     }
-
 
 }
