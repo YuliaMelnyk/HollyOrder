@@ -1,0 +1,38 @@
+
+#Hoon {
+    -fx-background-image: url("../images/ch01.jpg");
+}
+#Tandoori {
+    -fx-background-image: url("../images/ch02.jpg");
+}
+#Salad {
+    -fx-background-image: url("../images/ch04.jpg");
+}
+#Mojo{
+    -fx-background-image: url("../images/ch05.jpg");
+}
+#Kebab{
+    -fx-background-image: url("../images/ch06.jpg");
+}
+
+.paneCard {
+    -fx-background-color: #7f333639;
+}
+.descPane{
+    -fx-background-color: #e8efeb;
+    -fx-border-radius: 5pt;
+    -fx-background-radius: 5pt;
+}
+.quantityLabel{
+    -fx-font-size: 22;
+}
+.coloredText{
+    -fx-text-fill: #5eaaa8;
+}
+
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+
