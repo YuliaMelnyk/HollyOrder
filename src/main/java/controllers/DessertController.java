@@ -15,10 +15,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class DrinksController implements Initializable {
+public class DessertController implements Initializable {
 
     @FXML
-    Label quantityLabelHib, quantityLabelCoc, quantityLabelBee, quantityLabelMilk;
+    Label quantityLabelApr, quantityLabelYog, quantityLabelBan, quantityLabelTir;
 
     @FXML
     ImageView plusFCh;
@@ -39,78 +39,78 @@ public class DrinksController implements Initializable {
     }
 
 
-    //add to Cart Hibiscus Lemonade
+    //add to Cart Apricot Dessert
     @FXML
-    public void onCartHib(MouseEvent event) {
+    public void onCartApr(MouseEvent event) {
 
     }
 
-    //add to Cart Coca Cola
+    //add to Cart Frozen Yogurt
     @FXML
-    public void onCartCoc(MouseEvent event) {
+    public void onCartYog(MouseEvent event) {
 
     }
 
-    //add to Cart Craft Beer
+    //add to Cart Banana Cake
     @FXML
-    public void onCartBee(MouseEvent event) {
+    public void onCartBan(MouseEvent event) {
 
     }
 
-    //add to Cart Milk Shake
+    //add to Cart Tiramisu
     @FXML
-    public void onCartMilk(MouseEvent event) {
+    public void onCartTir(MouseEvent event) {
 
     }
 
 
 
-    //plus quantity of Hibiscus Lemonade
+    //plus quantity of Apricot Dessert
     @FXML
-    public void onPlusClickHib(MouseEvent event) {
-        onPlus(quantityLabelHib);
+    public void onPlusClickApr(MouseEvent event) {
+        onPlus(quantityLabelApr);
     }
 
-    //minus quantity of Hibiscus Lemonade
+    //minus quantity of Apricot Dessert
     @FXML
-    public void onMinusClickHib(MouseEvent event) {
-        onMinus(quantityLabelHib);
+    public void onMinusClickApr(MouseEvent event) {
+        onMinus(quantityLabelApr);
     }
 
-    //plus quantity of Coca Cola
+    //plus quantity of Frozen Yogurt
     @FXML
-    public void onPlusCoc(MouseEvent event) {
-        onPlus(quantityLabelCoc);
+    public void onPlusYog(MouseEvent event) {
+        onPlus(quantityLabelYog);
     }
 
-    //minus quantity of Coca Cola
+    //minus quantity of Frozen Yogurt
     @FXML
-    public void onMinusCoc(MouseEvent event) {
-        onMinus(quantityLabelCoc);
+    public void onMinusYog(MouseEvent event) {
+        onMinus(quantityLabelYog);
     }
 
-    //minus quantity of Craft Beer
+    //minus quantity of Banana Cake
     @FXML
-    public void onMinusBee(MouseEvent event) {
-        onMinus(quantityLabelBee);
+    public void onMinusBan(MouseEvent event) {
+        onMinus(quantityLabelBan);
     }
 
-    //plus quantity of Craft Beer
+    //plus quantity of Banana Cake
     @FXML
-    public void onPlusBee(MouseEvent event) {
-        onPlus(quantityLabelBee);
+    public void onPlusBan(MouseEvent event) {
+        onPlus(quantityLabelBan);
     }
 
-    //minus quantity of Milk Shake
+    //minus quantity of Tiramisu
     @FXML
-    public void onMinusMilk(MouseEvent event) {
-        onMinus(quantityLabelMilk);
+    public void onMinusTir(MouseEvent event) {
+        onMinus(quantityLabelTir);
     }
 
-    //plus quantity of Milk Shake
+    //plus quantity of Tiramisu
     @FXML
-    public void onPlusMilk(MouseEvent event) {
-        onPlus(quantityLabelMilk);
+    public void onPlusTir(MouseEvent event) {
+        onPlus(quantityLabelTir);
     }
 
 

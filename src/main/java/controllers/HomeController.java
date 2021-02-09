@@ -32,44 +32,61 @@ public class HomeController implements Initializable {
 
     //click en category of Western Soups
     @FXML
-    public void clickWestern(MouseEvent event) {
+    public void clickWestern(MouseEvent event) throws IOException {
 
+        Parent parent = FXMLLoader.load(getClass().getResource("/soup.fxml"));
+        Scene scene = new Scene(parent);
+        scene.getStylesheets().add(getClass().getResource("/styles/soup.css").toExternalForm());
+        Main.getPrimaryStage().setScene(scene);
     }
 
 
     //click en category of Sandwiches
     @FXML
-    public void clickSandwiches(MouseEvent event) {
+    public void clickSandwiches(MouseEvent event) throws IOException {
 
+        Parent parent = FXMLLoader.load(getClass().getResource("/sandwiches.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 
     //click en category of Salads
     @FXML
-    public void clickSalads(MouseEvent event) {
-
+    public void clickSalads(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/salads.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 
     //click en category of Chicken
     @FXML
-    public void clickChicken(MouseEvent event) {
-
+    public void clickChicken(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/chicken.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 
     //click en category of Burgers
     @FXML
-    public void clickBurger(MouseEvent event) {
-
+    public void clickBurger(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/burger.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 
     //click en category of Drinks
     @FXML
-    public void clickDrinks(MouseEvent event) {
-
+    public void clickDrinks(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/drinks.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Drinks
+    //click en category of Desserts
     @FXML
-    public void clickDesserts(MouseEvent event) {
-
+    public void clickDesserts(MouseEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/dessert.fxml"));
+        Scene scene = new Scene(parent);
+        Main.getPrimaryStage().setScene(scene);
     }
 }

@@ -19,13 +19,12 @@ public class Main extends Application {
     }
 
 
-
     @Override
     public void start(Stage primaryStage) {
         try {
             setPrimaryStage(primaryStage);
 
-            Parent parent = FXMLLoader.load(getClass().getResource("/drinks.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/login.fxml"));
             Scene scene = new Scene(parent);
             //scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
             primaryStage.setScene(scene);

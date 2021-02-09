@@ -35,9 +35,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickWestern" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="westernSoup" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="westernSoup" onMouseClicked="#clickWestern" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -52,9 +52,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickSalads" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="salads" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="salads" onMouseClicked="#clickSalads" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -69,9 +69,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickSandwiches" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="sandwiches" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="sandwiches" onMouseClicked="#clickSandwiches" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -86,9 +86,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickChicken" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="chicken" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="chicken" onMouseClicked="#clickChicken" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -103,9 +103,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickBurger" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="burger" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="burger" onMouseClicked="#clickBurger" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -120,9 +120,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickDrinks" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="drinks" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="drinks" onMouseClicked="#clickDrinks" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
@@ -137,9 +137,9 @@
                                             </children>
                                         </VBox>
 
-                                        <VBox alignment="CENTER" onMouseClicked="#clickDesserts" prefHeight="300" prefWidth="800.0">
+                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
                                             <children>
-                                                <JFXButton fx:id="desserts" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
+                                                <JFXButton fx:id="desserts" onMouseClicked="#clickDesserts" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
                                                 </JFXButton>
                                                 <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
                                                     <VBox.margin>
