@@ -25,7 +25,7 @@ public class Main extends Application {
         try {
             setPrimaryStage(primaryStage);
 
-            Parent parent = FXMLLoader.load(getClass().getResource("/burger.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/drinks.fxml"));
             Scene scene = new Scene(parent);
             //scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
             primaryStage.setScene(scene);

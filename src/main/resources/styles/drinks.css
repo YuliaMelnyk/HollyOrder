@@ -1,0 +1,38 @@
+
+#Hibiscus {
+    -fx-background-image: url("../images/d01.jpg");
+}
+#Cola {
+    -fx-background-image: url("../images/d02.jpg");
+}
+#Beer {
+    -fx-background-image: url("../images/d03.jpeg");
+}
+#Milk{
+    -fx-background-image: url("../images/d04.jpg");
+}
+#Shrimp{
+    -fx-background-image: url("../images/b05.jpg");
+}
+
+.paneCard {
+    -fx-background-color: #7f333639;
+}
+.descPane{
+    -fx-background-color: #e8efeb;
+    -fx-border-radius: 5pt;
+    -fx-background-radius: 5pt;
+}
+.quantityLabel{
+    -fx-font-size: 22;
+}
+.coloredText{
+    -fx-text-fill: #5eaaa8;
+}
+
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+

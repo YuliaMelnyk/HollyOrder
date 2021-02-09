@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" stylesheets="@styles/drinks.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DrinksController">
+    <children>
+        <HBox layoutX="-14.0" layoutY="328.0" prefHeight="600.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXTabPane fx:id="tabPane" prefHeight="690.0" prefWidth="1128.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Menu">
+                            <content>
+                                <ScrollPane prefHeight="NaN" prefWidth="800.0">
+                                    <VBox prefWidth="800.0">
+                                        <children>
+                                            <Pane>
+                                                <ImageView fx:id="backToMenu" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#onBackToMenu" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/back.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <VBox.margin>
+                                                    <Insets bottom="10" left="10.0" top="10.0" />
+                                                </VBox.margin>
+                                            </Pane>
+                                            <HBox prefHeight="240.0" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="Hibiscus" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
+                                                        <children>
+                                                            <VBox prefHeight="220.0" prefWidth="387.0">
+                                                                <JFXClippedPane prefHeight="220.0" prefWidth="300.0" styleClass="descPane">
+                                                                    <VBox.margin>
+                                                                        <Insets left="15.0" right="15.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <VBox prefHeight="220" prefWidth="300">
+                                                                            <children>
+                                                                                <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Hibiscus Lemonade" textAlignment="CENTER">
+                                                                                        <font>
+                                                                                            <Font size="25.0" />
+                                                                                        </font>
+                                                                                    </Label>
+                                                                                </Pane>
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Tart, fruity, sweet and delightfully refreshing" textAlignment="CENTER" wrapText="true">
+                                                                                    <font>
+                                                                                        <Font size="20.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <Label fx:id="priceHib" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="4" textAlignment="CENTER" wrapText="true">
+                                                                                            <font>
+                                                                                                <Font size="21.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="155.0"  />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="530.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                            <font>
+                                                                                                <Font size="23.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="18.0" />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                    <ImageView fx:id="minusHib" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusClickHib" pickOnBounds="true" preserveRatio="true">
+                                                                                        <HBox.margin>
+                                                                                            <Insets left="55.0" right="10" />
+                                                                                        </HBox.margin>
+                                                                                        <image>
+                                                                                            <Image url="@images/minus.png" />
+                                                                                        </image>
+                                                                                    </ImageView>
+                                                                                        <Label fx:id="quantityLabelHib" styleClass="quantityLabel" text="1">
+                                                                                        </Label>
+                                                                                        <ImageView fx:id="plusHib" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusClickHib" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="10.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/plus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <ImageView fx:id="cartHib" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartHib" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="105.0" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/cart.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                    </children>
+                                                                                </HBox>
+
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </JFXClippedPane>
+                                                            </VBox>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
+
+                                            <HBox prefHeight="240.0" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="Cola" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
+                                                        <children>
+                                                            <VBox prefHeight="220.0" prefWidth="387.0">
+                                                                <JFXClippedPane prefHeight="220.0" prefWidth="300.0" styleClass="descPane">
+                                                                    <VBox.margin>
+                                                                        <Insets left="15.0" right="15.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <VBox prefHeight="220" prefWidth="300">
+                                                                            <children>
+                                                                                <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Coca Cola" textAlignment="CENTER">
+                                                                                        <font>
+                                                                                            <Font size="25.0" />
+                                                                                        </font>
+                                                                                    </Label>
+                                                                                </Pane>
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Coca Cola" textAlignment="CENTER" wrapText="true">
+                                                                                    <font>
+                                                                                        <Font size="20.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <Label fx:id="priceCoc" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="3" textAlignment="CENTER" wrapText="true">
+                                                                                            <font>
+                                                                                                <Font size="21.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="155.0"  />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="530.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                            <font>
+                                                                                                <Font size="23.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="18.0" />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <ImageView fx:id="minusCoc" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusCoc" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="55.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/minus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="quantityLabelCoc" styleClass="quantityLabel" text="1">
+                                                                                        </Label>
+                                                                                        <ImageView fx:id="plusCoc" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusCoc" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="10.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/plus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <ImageView fx:id="cartCoc" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartCoc" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="105.0" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/cart.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                    </children>
+                                                                                </HBox>
+
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </JFXClippedPane>
+                                                            </VBox>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
+
+                                            <HBox prefHeight="240.0" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="Beer" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
+                                                        <children>
+                                                            <VBox prefHeight="220.0" prefWidth="387.0">
+                                                                <JFXClippedPane prefHeight="220.0" prefWidth="300.0" styleClass="descPane">
+                                                                    <VBox.margin>
+                                                                        <Insets left="15.0" right="15.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <VBox prefHeight="220" prefWidth="300">
+                                                                            <children>
+                                                                                <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Craft Beer" textAlignment="CENTER">
+                                                                                        <font>
+                                                                                            <Font size="25.0" />
+                                                                                        </font>
+                                                                                    </Label>
+                                                                                </Pane>
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Craft beer" textAlignment="CENTER" wrapText="true">
+                                                                                    <font>
+                                                                                        <Font size="20.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <Label fx:id="priceBee" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="4" textAlignment="CENTER" wrapText="true">
+                                                                                            <font>
+                                                                                                <Font size="21.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="155.0"  />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="530.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                            <font>
+                                                                                                <Font size="23.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="18.0" />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <ImageView fx:id="minusBee" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusBee" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="55.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/minus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="quantityLabelBee" styleClass="quantityLabel" text="1">
+                                                                                        </Label>
+                                                                                        <ImageView fx:id="plusBee" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusBee" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="10.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/plus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <ImageView fx:id="cartBee" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartBee" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="105.0" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/cart.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                    </children>
+                                                                                </HBox>
+
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </JFXClippedPane>
+                                                            </VBox>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
+
+                                            <HBox prefHeight="240.0" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="Milk" alignment="TOP_LEFT" buttonType="RAISED" prefHeight="220" prefWidth="400" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <HBox alignment="TOP_RIGHT" prefHeight="300" prefWidth="400.0">
+                                                        <children>
+                                                            <VBox prefHeight="220.0" prefWidth="387.0">
+                                                                <JFXClippedPane prefHeight="220.0" prefWidth="300.0" styleClass="descPane">
+                                                                    <VBox.margin>
+                                                                        <Insets left="15.0" right="15.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <VBox prefHeight="220" prefWidth="300">
+                                                                            <children>
+                                                                                <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Milk Shake" textAlignment="CENTER">
+                                                                                        <font>
+                                                                                            <Font size="25.0" />
+                                                                                        </font>
+                                                                                    </Label>
+                                                                                </Pane>
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Mango Just-Milk Shake" textAlignment="CENTER" wrapText="true">
+                                                                                    <font>
+                                                                                        <Font size="20.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <Label fx:id="priceMilk" prefHeight="49.0" prefWidth="366.0" styleClass="coloredText" text="4" textAlignment="CENTER" wrapText="true">
+                                                                                            <font>
+                                                                                                <Font size="21.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="155.0"  />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                        <Label layoutX="20.0" layoutY="3.0" prefHeight="51.0" prefWidth="530.0" styleClass="coloredText" text="€" textAlignment="LEFT">
+                                                                                            <font>
+                                                                                                <Font size="23.0" />
+                                                                                            </font>
+                                                                                            <HBox.margin>
+                                                                                                <Insets bottom="18.0" />
+                                                                                            </HBox.margin>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </HBox>
+                                                                                <HBox>
+                                                                                    <children>
+                                                                                        <ImageView fx:id="minusMilk" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onMinusMilk" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="55.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/minus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="quantityLabelMilk" styleClass="quantityLabel" text="1">
+                                                                                        </Label>
+                                                                                        <ImageView fx:id="plusMilk" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#onPlusMilk" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="10.0" right="10" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/plus.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <ImageView fx:id="cartMilk" fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onCartMilk" pickOnBounds="true" preserveRatio="true">
+                                                                                            <HBox.margin>
+                                                                                                <Insets left="105.0" />
+                                                                                            </HBox.margin>
+                                                                                            <image>
+                                                                                                <Image url="@images/cart.png" />
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                    </children>
+                                                                                </HBox>
+
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </JFXClippedPane>
+                                                            </VBox>
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
+
+
+
+                                        </children>
+                                    </VBox>
+
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Cart">
+                            <content>
+                                <VBox  prefHeight="690.0" prefWidth="519.0">
+                                    <children>
+                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                                    <HBox.margin>
+                                                        <Insets left="50.0" />
+                                                    </HBox.margin>
+                                                    <children>
+                                                        <ImageView fx:id="salad001img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@images/pic.jpg" />
+                                                            </image>
+                                                            <VBox.margin>
+                                                                <Insets top="5.0" />
+                                                            </VBox.margin>
+                                                        </ImageView>
+                                                        <Label alignment="CENTER" prefHeight="44.0" text="Bacon Ranch Salad with Buttermilk Crispy Chicken" textAlignment="CENTER" wrapText="true">
+                                                            <padding>
+                                                                <Insets bottom="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton fx:id="salad001remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                                <Label fx:id="salad001count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
+                                                                <JFXButton fx:id="salad001add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ImageView fx:id="salad002img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@images/pic.jpg" />
+                                                            </image>
+                                                            <VBox.margin>
+                                                                <Insets top="5.0" />
+                                                            </VBox.margin>
+                                                        </ImageView>
+                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Bacon Ranch Salad with Grilled Chicken" textAlignment="CENTER" wrapText="true">
+                                                            <padding>
+                                                                <Insets bottom="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton fx:id="salad002remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                                <Label fx:id="salad002count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
+                                                                <JFXButton fx:id="salad002add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                                    <HBox.margin>
+                                                        <Insets left="50.0" />
+                                                    </HBox.margin>
+                                                    <children>
+                                                        <ImageView fx:id="salad003img" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@images/pic.jpg" />
+                                                            </image>
+                                                            <VBox.margin>
+                                                                <Insets top="5.0" />
+                                                            </VBox.margin>
+                                                        </ImageView>
+                                                        <Label alignment="CENTER" lineSpacing="2.0" prefHeight="44.0" prefWidth="200.0" text="Side Salad" textAlignment="CENTER" wrapText="true">
+                                                            <padding>
+                                                                <Insets bottom="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton fx:id="salad003remove" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="22.0" prefWidth="22.0">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                                <Label fx:id="salad003count" alignment="CENTER" prefHeight="39.0" prefWidth="35.0" text="0" textAlignment="CENTER" />
+                                                                <JFXButton fx:id="salad003add" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="35.0" text="&gt;">
+                                                                    <graphic>
+                                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@images/pic.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                    </graphic>
+                                                                </JFXButton>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" layoutX="10.0" layoutY="214.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Orders">
+                            <content>
+                                <VBox prefHeight="690.0" prefWidth="519.0">
+                                    <children>
+                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+
+
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Sign Out">
+                            <content>
+                                <VBox prefHeight="690.0" prefWidth="519.0">
+                                    <children>
+                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+
+
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+
+
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" layoutX="10.0" layoutY="214.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
+                                            <children>
+
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </JFXTabPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
