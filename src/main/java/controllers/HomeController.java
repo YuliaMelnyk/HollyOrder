@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -34,6 +35,9 @@ public class HomeController implements Initializable {
     public static List<Product> products = new ArrayList<>();
 
     public static HashMap<Integer, Product> cartItems = new HashMap<>();
+
+    @FXML
+    Tab cartTab;
 
 
 
@@ -118,9 +122,12 @@ public class HomeController implements Initializable {
     //method using foreach to take element book and fill fxml element in positions in gridpane
     private void addCartElements() throws IOException {
 
+
         GridPane gridPane = new GridPane();
         gridPane.setVgap(200);
         gridPane.setHgap(200);
+
+        cartTab.setContent(gridPane);
 
         int index = -1;
 
@@ -131,7 +138,7 @@ public class HomeController implements Initializable {
             VBox hb = (VBox) loader.load();
             hb.setMinHeight(350);
 
-            //set isbn
+            //set name
             String Name = product.getName();
 
             //((Label) loader.getNamespace().get("quantity")).setText(currentISBN);
