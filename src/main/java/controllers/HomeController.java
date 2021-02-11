@@ -7,9 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -18,6 +22,11 @@ import java.util.ResourceBundle;
  */
 
 public class HomeController implements Initializable {
+
+    //list of products that add to card
+    public static List<Product> products = new ArrayList<>();
+
+    public static HashMap<Integer, Product> cartItems = new HashMap<>();
 
 
 

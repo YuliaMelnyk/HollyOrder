@@ -17,17 +17,15 @@ public class Cart {
     private long id;
     @Column(name = "date")
     private Date date;
-    @OneToMany(mappedBy = "shoppingCart",
-            cascade = {CascadeType.PERSIST, CascadeType.REFRESH,
-                    CascadeType.DETACH, CascadeType.MERGE})
-    private List<Product> products;
+    @ManyToOne
+    private Product product;
     @Column(name = "totalPrice")
     private double totalPrice;
 
-    public Cart(long id, List<Product> products) {
+    public Cart(long id, Product product) {
         this.id = id;
         this.date = new Date();
-        this.products = products;
+        this.product = product;
     }
 
     public Cart() {
@@ -46,12 +44,12 @@ public class Cart {
         this.date = date;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public Product getProducts() {
+        return product;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProducts(Product product) {
+        this.product = product;
     }
 
     public double getTotalPrice() {

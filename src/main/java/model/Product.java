@@ -23,17 +23,15 @@ public class Product {
     private String description;
     @Column(name = "price")
     private double price;
-    @Column(name = "category")
-    private String category;
 
 
-    public Product(long product_id, String name, byte[] image, String description, double price, String category) {
+
+    public Product(long product_id, String name, byte[] image, String description, double price) {
         this.product_id = product_id;
         this.name = name;
         this.image = image;
         this.description = description;
         this.price = price;
-        this.category = category;
     }
 
     public Product() {
@@ -76,11 +74,5 @@ public class Product {
         this.price = price;
     }
 
-    public String getCategory() {
-        return category;
-    }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }

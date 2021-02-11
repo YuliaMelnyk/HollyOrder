@@ -1,6 +1,7 @@
 package util;
 import java.util.Objects;
 
+import model.Product;
 import model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -20,6 +21,7 @@ public class HibernateUtil {
         // Creating Configuration Instance & Passing Hibernate Configuration File
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Product.class);
         configuration.configure("hibernate.cfg.xml");
 
         // Since Hibernate Version 4.x, ServiceRegistry Is Being Used

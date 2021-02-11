@@ -25,7 +25,7 @@ public class AbstractDAO<T> implements GenericDao<T> {
     }
 
     @Override
-    public T getById(int id) {
+    public T getByName(String id) {
         return null;
     }
 

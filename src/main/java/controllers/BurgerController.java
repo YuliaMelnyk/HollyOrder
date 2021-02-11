@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,7 +23,16 @@ public class BurgerController implements Initializable {
     Label quantityLabelSa, quantityLabelTex, quantityLabelGr, quantityLabelBean, quantityLabelShr;
 
     @FXML
+    Label priceSa;
+
+    @FXML
+    Label salmonName;
+
+    @FXML
     ImageView plusFCh;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,6 +53,7 @@ public class BurgerController implements Initializable {
     //add to Cart Salmon Burger
     @FXML
     public void onCartSa(MouseEvent event) {
+        service.getProduct(salmonName.getText(), Integer.parseInt(priceSa.getText()));
 
     }
 
@@ -62,6 +74,7 @@ public class BurgerController implements Initializable {
     public void onCartBean(MouseEvent event) {
 
     }
+
     //add to Cart Garlic Shrimp Burger
     @FXML
     public void onCartShr(MouseEvent event) {
