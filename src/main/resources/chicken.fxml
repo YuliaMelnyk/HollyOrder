@@ -43,13 +43,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="CURRY MEE HOON" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="CURRY MEE HOON" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText" text="Instead of calling the Indian takeaway, make your own easy chicken jalfrezi" textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Instead of calling the Indian takeaway, make your own easy chicken jalfrezi" textAlignment="CENTER" wrapText="true">
                                                                                     <font>
                                                                                         <Font size="20.0" />
                                                                                     </font>
@@ -130,13 +132,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Tandoori chicken" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Tandoori chicken" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText" text="This low-fat curried chicken is packed full of flavour." textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="This low-fat curried chicken is packed full of flavour." textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
                                                                                     </VBox.margin>
@@ -219,7 +223,8 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Chicken Salad" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Chicken Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
@@ -311,14 +316,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Mojo Chicken" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Mojo Chicken" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
                                                                                 <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
-                                                                                       text="The citrus and spices in the mojo marinade make this chicken flavorful and tender. Grilling gives the skin a crispy exterior that pairs perfectly with the juicy chicken."
+                                                                                       text="The citrus and spices in the mojo marinade make this chicken flavorful and tender."
                                                                                        textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
@@ -403,7 +409,8 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Chicken Kebabs with Garlic Sauce" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Chicken Kebabs with Garlic Sauce" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>

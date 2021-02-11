@@ -43,13 +43,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Roasted Carrot Soup" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Roasted Carrot Soup" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText" text="A toasty warm version of a traditional style carrot soup" textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="A toasty warm version of a traditional style carrot soup" textAlignment="CENTER" wrapText="true">
                                                                                     <font>
                                                                                         <Font size="20.0" />
                                                                                     </font>
@@ -130,13 +132,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Roasted Tomato BLT Soup" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Roasted Tomato BLT Soup" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText" text="Serve it with a garlic sauce, croutons, arugula, and bacon bits." textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="Serve it with a garlic sauce, croutons, arugula, and bacon bits." textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
                                                                                     </VBox.margin>
@@ -219,14 +223,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Greek Lemon Soup—Avgolemono" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Greek Lemon Soup—Avgolemono" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
                                                                                 <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
-                                                                                       text="SAn eggy, lemony, orzo-spiked bowl of goodness"
+                                                                                       text="An eggy, lemony, orzo-spiked bowl of goodness"
                                                                                        textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />

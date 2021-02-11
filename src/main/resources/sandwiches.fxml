@@ -43,13 +43,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Pork Cutlet Sandwiches with Basil Aioli" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Pork Cutlet Sandwiches with Basil Aioli" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText" text="Texture of the cutlets with the aioli and laid the pork on top." textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="366.0" styleClass="coloredText"
+                                                                                       text="Texture of the cutlets with the aioli and laid the pork on top." textAlignment="CENTER" wrapText="true">
                                                                                     <font>
                                                                                         <Font size="20.0" />
                                                                                     </font>
@@ -130,13 +132,15 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="The Perfect Egg Sandwich" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="The Perfect Egg Sandwich" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
                                                                                     </Label>
                                                                                 </Pane>
-                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText" text="The lemony bacon is a cool technique, and this is a super tasty" textAlignment="CENTER" wrapText="true">
+                                                                                <Label alignment="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="70.0" prefWidth="359.0" styleClass="coloredText"
+                                                                                       text="The lemony bacon is a cool technique, and this is a super tasty" textAlignment="CENTER" wrapText="true">
                                                                                     <VBox.margin>
                                                                                         <Insets top="10" />
                                                                                     </VBox.margin>
@@ -219,7 +223,8 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Prosciutto and Fontina Panini" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Prosciutto and Fontina Panini" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
@@ -311,7 +316,8 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText" text="Marinated Tofu Steak Sandwiches" textAlignment="CENTER">
+                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                           text="Marinated Tofu Steak Sandwiches" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
                                                                                         </font>
