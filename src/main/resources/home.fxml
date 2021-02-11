@@ -314,24 +314,6 @@
                                 </VBox>
                             </content>
                         </Tab>
-                        <Tab text="Orders">
-                            <content>
-                                <VBox prefHeight="690.0" prefWidth="519.0">
-                                    <children>
-                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets />
-                                            </VBox.margin>
-                                        </HBox>
-
-
-                                    </children>
-                                </VBox>
-                            </content>
-                        </Tab>
                         <Tab text="Sign Out">
                             <content>
                                 <VBox prefHeight="690.0" prefWidth="519.0">

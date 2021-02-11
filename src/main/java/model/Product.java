@@ -13,11 +13,74 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "product_id", unique = true, nullable = false)
     private long product_id;
+    @Column(name = "name")
     private String name;
-    private String image;
+    @Column(name = "image")
+    private byte[] image;
+    @Column(name = "description")
     private String description;
+    @Column(name = "price")
     private double price;
+    @Column(name = "category")
     private String category;
 
+
+    public Product(long product_id, String name, byte[] image, String description, double price, String category) {
+        this.product_id = product_id;
+        this.name = name;
+        this.image = image;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+    }
+
+    public Product() {
+
+    }
+
+    public long getProduct_id() {
+        return product_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }
