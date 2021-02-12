@@ -9,19 +9,28 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class ChickenController implements Initializable {
+public class ChickenController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelCh, quantityLabelTan, quantityLabelMoj, quantityLabelSal, quantityLabelKeb;
 
     @FXML
-    ImageView plusFCh;
+    Label priceCh, priceETan, priceSal, priceMoj, priceKeb;
+
+    @FXML
+    Label hoonName, tanName, SalName, mojoName, kebName;
+
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,30 +51,30 @@ public class ChickenController implements Initializable {
     //add to Cart Chicken HOON
     @FXML
     public void onCartCh(MouseEvent event) {
-
+        service.getProduct(hoonName.getText(), Integer.parseInt(priceCh.getText()));
     }
 
     //add to Cart Mojo Chicken
     @FXML
     public void onCartMoj(MouseEvent event) {
-
+        service.getProduct(mojoName.getText(), Integer.parseInt(priceMoj.getText()));
     }
 
     //add to Cart Tandoori chicken
     @FXML
     public void onCartTan(MouseEvent event) {
-
+        service.getProduct(tanName.getText(), Integer.parseInt(priceETan.getText()));
     }
 
     //add to Cart Chicken Salad
     @FXML
     public void onCartSal(MouseEvent event) {
-
+        service.getProduct(SalName.getText(), Integer.parseInt(priceSal.getText()));
     }
     //add to Cart Chicken Kebab
     @FXML
     public void onCartKeb(MouseEvent event) {
-
+        service.getProduct(kebName.getText(), Integer.parseInt(priceKeb.getText()));
     }
 
 

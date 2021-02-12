@@ -9,19 +9,27 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class DessertController implements Initializable {
+public class DessertController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelApr, quantityLabelYog, quantityLabelBan, quantityLabelTir;
 
     @FXML
-    ImageView plusFCh;
+    Label priceApr, priceYog, priceBan, priceTir;
+
+    @FXML
+    Label aprName, yogName, banName, tirName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,25 +50,25 @@ public class DessertController implements Initializable {
     //add to Cart Apricot Dessert
     @FXML
     public void onCartApr(MouseEvent event) {
-
+        service.getProduct(aprName.getText(), Integer.parseInt(priceApr.getText()));
     }
 
     //add to Cart Frozen Yogurt
     @FXML
     public void onCartYog(MouseEvent event) {
-
+        service.getProduct(yogName.getText(), Integer.parseInt(priceYog.getText()));
     }
 
     //add to Cart Banana Cake
     @FXML
     public void onCartBan(MouseEvent event) {
-
+        service.getProduct(banName.getText(), Integer.parseInt(priceBan.getText()));
     }
 
     //add to Cart Tiramisu
     @FXML
     public void onCartTir(MouseEvent event) {
-
+        service.getProduct(tirName.getText(), Integer.parseInt(priceTir.getText()));
     }
 
 

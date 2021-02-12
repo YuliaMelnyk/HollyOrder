@@ -43,7 +43,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="hoonName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="CURRY MEE HOON" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -132,7 +132,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="tanName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Tandoori chicken" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -223,7 +223,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="SalName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Chicken Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -316,7 +316,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="mojoName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Mojo Chicken" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -409,7 +409,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="kebName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Chicken Kebabs with Garlic Sauce" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />

@@ -17,16 +17,19 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class BurgerController implements Initializable {
+public class BurgerController implements Initializable, GeneralController {
 
+    //labels of quantities
     @FXML
     Label quantityLabelSa, quantityLabelTex, quantityLabelGr, quantityLabelBean, quantityLabelShr;
 
+    //labels of prices
     @FXML
-    Label priceSa;
+    Label priceSa, priceETex, priceBean, pricePork, priceShr;
 
+    //labels of names
     @FXML
-    Label salmonName;
+    Label salmonName, texasName, beanName, porkName, shrimpName;
 
     @FXML
     ImageView plusFCh;
@@ -37,7 +40,7 @@ public class BurgerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //labelFriedChicken.setText(LoginController.u1.getName());
+
     }
 
     //click on Image Back
@@ -53,32 +56,31 @@ public class BurgerController implements Initializable {
     //add to Cart Salmon Burger
     @FXML
     public void onCartSa(MouseEvent event) {
-        service.getProduct(salmonName.getText(), Integer.parseInt(priceSa.getText()));
-
+        service.getProduct(salmonName.getText(), Integer.parseInt(priceETex.getText()));
     }
 
     //add to Cart Grilled Pork Burger
     @FXML
     public void onCartGr(MouseEvent event) {
-
+        service.getProduct(porkName.getText(), Integer.parseInt(pricePork.getText()));
     }
 
     //add to Cart Texas Burger
     @FXML
     public void onCartTex(MouseEvent event) {
-
+        service.getProduct(texasName.getText(), Integer.parseInt(priceSa.getText()));
     }
 
     //add to Cart Black Bean Burger
     @FXML
     public void onCartBean(MouseEvent event) {
-
+        service.getProduct(beanName.getText(), Integer.parseInt(priceBean.getText()));
     }
 
     //add to Cart Garlic Shrimp Burger
     @FXML
     public void onCartShr(MouseEvent event) {
-
+        service.getProduct(shrimpName.getText(), Integer.parseInt(priceShr.getText()));
     }
 
 

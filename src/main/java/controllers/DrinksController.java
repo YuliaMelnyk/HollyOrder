@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class DrinksController implements Initializable {
+public class DrinksController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelHib, quantityLabelCoc, quantityLabelBee, quantityLabelMilk;
