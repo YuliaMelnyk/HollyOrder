@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,6 +24,15 @@ public class FingerFoodController implements Initializable {
 
     @FXML
     ImageView plusFCh;
+
+    @FXML
+    Label priceFriedChicken, priceKoreanFried, priceShrimps, priceCroquetas;
+
+    @FXML
+    Label friedName, korName, chimName, croName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -38,29 +49,28 @@ public class FingerFoodController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //add to Cart Fried Chicken
     @FXML
     public void onCartFCh(MouseEvent event) {
-
+        service.getProduct(friedName.getText(), Integer.parseInt(priceFriedChicken.getText()));
     }
 
     //add to Cart Korean Chicken
     @FXML
     public void onCartKCh(MouseEvent event) {
-
+        service.getProduct(korName.getText(), Integer.parseInt(priceKoreanFried.getText()));
     }
 
     //add to Cart Shrimp
     @FXML
     public void onCartShr(MouseEvent event) {
-
+        service.getProduct(chimName.getText(), Integer.parseInt(priceShrimps.getText()));
     }
 
     //add to Cart Croquetas
     @FXML
     public void onCartCr(MouseEvent event) {
-
+        service.getProduct(croName.getText(), Integer.parseInt(priceCroquetas.getText()));
     }
 
     //plus quantity of Fried Chicken

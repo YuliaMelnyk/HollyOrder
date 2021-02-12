@@ -43,7 +43,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="porkName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Pork Cutlet Sandwiches with Basil Aioli" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -132,7 +132,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="eggName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="The Perfect Egg Sandwich" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -223,7 +223,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="prosName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Prosciutto and Fontina Panini" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -316,7 +316,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="tofuName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Marinated Tofu Steak Sandwiches" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />

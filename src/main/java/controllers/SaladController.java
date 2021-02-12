@@ -9,19 +9,27 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class SaladController implements Initializable {
+public class SaladController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelTun, quantityLabelOc, quantityLabelCes, quantityLabelPr;
 
     @FXML
-    ImageView plusFCh;
+    Label priceTuna, priceTCes, priceOc, pricePr;
+
+    @FXML
+    Label tunaName, cesName, octName, primName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,25 +50,25 @@ public class SaladController implements Initializable {
     //add to Cart Tuna Salad
     @FXML
     public void onCartTun(MouseEvent event) {
-
+        service.getProduct(tunaName.getText(), Integer.parseInt(priceTuna.getText()));
     }
 
     //add to Cart Octopus Salad
     @FXML
     public void onCartOc(MouseEvent event) {
-
+        service.getProduct(octName.getText(), Integer.parseInt(priceOc.getText()));
     }
 
     //add to Cart Cesar Salad
     @FXML
     public void onCartCes(MouseEvent event) {
-
+        service.getProduct(cesName.getText(), Integer.parseInt(priceTCes.getText()));
     }
 
     //add to Cart Primavera Salad
     @FXML
     public void onCartPr(MouseEvent event) {
-
+        service.getProduct(primName.getText(), Integer.parseInt(pricePr.getText()));
     }
 
 

@@ -43,7 +43,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="carName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Roasted Carrot Soup" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -132,7 +132,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="tomName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Roasted Tomato BLT Soup" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -223,7 +223,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="lemName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Greek Lemon Soup—Avgolemono" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />

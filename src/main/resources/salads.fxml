@@ -43,7 +43,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="tunaName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Warm Tuna and Bean Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -132,7 +132,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="cesName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Caesar Salad with Pancetta" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -223,7 +223,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="octName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Mediterranean Octopus Salad" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />
@@ -316,7 +316,7 @@
                                                                         <VBox prefHeight="220" prefWidth="300">
                                                                             <children>
                                                                                 <Pane prefHeight="35.0" prefWidth="300.0" styleClass="paneCard">
-                                                                                    <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
+                                                                                    <Label fx:id="primName" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="32.0" prefWidth="357.0" styleClass="coloredText"
                                                                                            text="Primavera" textAlignment="CENTER">
                                                                                         <font>
                                                                                             <Font size="25.0" />

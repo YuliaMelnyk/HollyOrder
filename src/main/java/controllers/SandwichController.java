@@ -9,19 +9,27 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class SandwichController implements Initializable {
+public class SandwichController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelPor, quantityLabelEgg, quantityLabelTo, quantityLabelPr;
 
     @FXML
-    ImageView plusFCh;
+    Label pricePork, priceEgg, pricePr, priceTo;
+
+    @FXML
+    Label porkName, eggName, prosName, tofuName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -38,29 +46,28 @@ public class SandwichController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //add to Cart Pork Sandwich
     @FXML
     public void onCartPor(MouseEvent event) {
-
+        service.getProduct(porkName.getText(), Integer.parseInt(pricePork.getText()));
     }
 
     //add to Cart Tofu Sandwich
     @FXML
     public void onCartTo(MouseEvent event) {
-
+        service.getProduct(tofuName.getText(), Integer.parseInt(priceTo.getText()));
     }
 
     //add to Cart Egg Sandwich
     @FXML
     public void onCartEgg(MouseEvent event) {
-
+        service.getProduct(eggName.getText(), Integer.parseInt(priceEgg.getText()));
     }
 
     //add to Cart Prosciutto Sandwich
     @FXML
     public void onCartPr(MouseEvent event) {
-
+        service.getProduct(prosName.getText(), Integer.parseInt(pricePr.getText()));
     }
 
 

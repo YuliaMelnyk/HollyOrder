@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,7 +23,13 @@ public class DrinksController implements Initializable, GeneralController {
     Label quantityLabelHib, quantityLabelCoc, quantityLabelBee, quantityLabelMilk;
 
     @FXML
-    ImageView plusFCh;
+    Label priceHib, priceCoc, priceBee, priceMilk;
+
+    @FXML
+    Label hibName, colaName, beerName, shakeName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,25 +50,25 @@ public class DrinksController implements Initializable, GeneralController {
     //add to Cart Hibiscus Lemonade
     @FXML
     public void onCartHib(MouseEvent event) {
-
+        service.getProduct(hibName.getText(), Integer.parseInt(priceHib.getText()));
     }
 
     //add to Cart Coca Cola
     @FXML
     public void onCartCoc(MouseEvent event) {
-
+        service.getProduct(colaName.getText(), Integer.parseInt(priceCoc.getText()));
     }
 
     //add to Cart Craft Beer
     @FXML
     public void onCartBee(MouseEvent event) {
-
+        service.getProduct(beerName.getText(), Integer.parseInt(priceBee.getText()));
     }
 
     //add to Cart Milk Shake
     @FXML
     public void onCartMilk(MouseEvent event) {
-
+        service.getProduct(shakeName.getText(), Integer.parseInt(priceMilk.getText()));
     }
 
 

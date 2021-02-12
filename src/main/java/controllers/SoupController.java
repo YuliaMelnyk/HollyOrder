@@ -9,19 +9,30 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.Product;
+import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class SoupController implements Initializable {
+public class SoupController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelCar, quantityLabelTom, quantityLabelLem;
 
     @FXML
     ImageView plusFCh;
+
+    @FXML
+    Label priceCarrot, priceTom, priceLem;
+
+    @FXML
+    Label carName, tomName, lemName;
+
+    private ProductService service = new ProductService();
+    private Product product = new Product();
 
 
     @Override
@@ -42,19 +53,19 @@ public class SoupController implements Initializable {
     //add to Cart Carrot Soup
     @FXML
     public void onCartCar(MouseEvent event) {
-
+        service.getProduct(carName.getText(), Integer.parseInt(priceCarrot.getText()));
     }
 
     //add to Cart Tomato Soup
     @FXML
     public void onCartTom(MouseEvent event) {
-
+        service.getProduct(tomName.getText(), Integer.parseInt(priceTom.getText()));
     }
 
     //add to Cart Lemon Soup
     @FXML
     public void onCartLem(MouseEvent event) {
-
+        service.getProduct(lemName.getText(), Integer.parseInt(priceLem.getText()));
     }
 
 
