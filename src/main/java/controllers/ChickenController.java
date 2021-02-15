@@ -58,31 +58,36 @@ public class ChickenController extends BaseController implements Initializable, 
 
     //add to Cart Chicken HOON
     @FXML
-    public void onCartCh(MouseEvent event) {
+    public void onCartCh(MouseEvent event) throws IOException {
         service.getProduct(hoonName.getText(), Integer.parseInt(quantityLabelCh.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Mojo Chicken
     @FXML
-    public void onCartMoj(MouseEvent event) {
+    public void onCartMoj(MouseEvent event) throws IOException {
         service.getProduct(mojoName.getText(), Integer.parseInt(quantityLabelMoj.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Tandoori chicken
     @FXML
-    public void onCartTan(MouseEvent event) {
+    public void onCartTan(MouseEvent event) throws IOException {
         service.getProduct(tanName.getText(), Integer.parseInt(quantityLabelTan.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Chicken Salad
     @FXML
-    public void onCartSal(MouseEvent event) {
+    public void onCartSal(MouseEvent event) throws IOException {
         service.getProduct(SalName.getText(), Integer.parseInt(quantityLabelSal.getText()));
+        addCartElements(scrollPane);
     }
     //add to Cart Chicken Kebab
     @FXML
-    public void onCartKeb(MouseEvent event) {
+    public void onCartKeb(MouseEvent event) throws IOException {
         service.getProduct(kebName.getText(), Integer.parseInt(quantityLabelKeb.getText()));
+        addCartElements(scrollPane);
     }
 
     //plus quantity of Chicken HOON
@@ -145,19 +150,5 @@ public class ChickenController extends BaseController implements Initializable, 
         onPlus(quantityLabelKeb);
     }
 
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
-    }
 
 }

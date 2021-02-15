@@ -54,29 +54,32 @@ public class DrinksController extends BaseController implements Initializable, G
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //add to Cart Hibiscus Lemonade
     @FXML
-    public void onCartHib(MouseEvent event) {
+    public void onCartHib(MouseEvent event) throws IOException {
         service.getProduct(hibName.getText(), Integer.parseInt(quantityLabelHib.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Coca Cola
     @FXML
-    public void onCartCoc(MouseEvent event) {
+    public void onCartCoc(MouseEvent event) throws IOException {
         service.getProduct(colaName.getText(), Integer.parseInt(quantityLabelCoc.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Craft Beer
     @FXML
-    public void onCartBee(MouseEvent event) {
+    public void onCartBee(MouseEvent event) throws IOException {
         service.getProduct(beerName.getText(), Integer.parseInt(quantityLabelBee.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Milk Shake
     @FXML
-    public void onCartMilk(MouseEvent event) {
+    public void onCartMilk(MouseEvent event) throws IOException {
         service.getProduct(shakeName.getText(), Integer.parseInt(quantityLabelMilk.getText()));
+        addCartElements(scrollPane);
     }
 
 
@@ -127,22 +130,6 @@ public class DrinksController extends BaseController implements Initializable, G
     @FXML
     public void onPlusMilk(MouseEvent event) {
         onPlus(quantityLabelMilk);
-    }
-
-
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
     }
 
 }

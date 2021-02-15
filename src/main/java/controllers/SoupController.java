@@ -38,7 +38,6 @@ public class SoupController extends BaseController implements Initializable, Gen
     private ProductService service = new ProductService();
     private Product product = new Product();
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -57,25 +56,26 @@ public class SoupController extends BaseController implements Initializable, Gen
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //add to Cart Carrot Soup
     @FXML
-    public void onCartCar(MouseEvent event) {
+    public void onCartCar(MouseEvent event) throws IOException {
         service.getProduct(carName.getText(), Integer.parseInt(quantityLabelCar.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Tomato Soup
     @FXML
-    public void onCartTom(MouseEvent event) {
+    public void onCartTom(MouseEvent event) throws IOException {
         service.getProduct(tomName.getText(), Integer.parseInt(quantityLabelTom.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Lemon Soup
     @FXML
-    public void onCartLem(MouseEvent event) {
+    public void onCartLem(MouseEvent event) throws IOException {
         service.getProduct(lemName.getText(), Integer.parseInt(quantityLabelLem.getText()));
+        addCartElements(scrollPane);
     }
-
 
     //plus quantity of Carrot Soup
     @FXML
@@ -111,21 +111,6 @@ public class SoupController extends BaseController implements Initializable, Gen
     @FXML
     public void onPlusLem(MouseEvent event) {
         onPlus(quantityLabelLem);
-    }
-
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
     }
 
 }

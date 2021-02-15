@@ -59,26 +59,30 @@ public class FingerFoodController extends BaseController implements Initializabl
 
     //add to Cart Fried Chicken
     @FXML
-    public void onCartFCh(MouseEvent event) {
+    public void onCartFCh(MouseEvent event) throws IOException {
         service.getProduct(friedName.getText(), Integer.parseInt(quantityLabelFCh.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Korean Chicken
     @FXML
-    public void onCartKCh(MouseEvent event) {
+    public void onCartKCh(MouseEvent event) throws IOException {
         service.getProduct(korName.getText(), Integer.parseInt(quantityLabelKCh.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Shrimp
     @FXML
-    public void onCartShr(MouseEvent event) {
+    public void onCartShr(MouseEvent event) throws IOException {
         service.getProduct(chimName.getText(), Integer.parseInt(quantityLabelShrimp.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Croquetas
     @FXML
-    public void onCartCr(MouseEvent event) {
+    public void onCartCr(MouseEvent event) throws IOException {
         service.getProduct(croName.getText(), Integer.parseInt(quantityLabelCroquetas.getText()));
+        addCartElements(scrollPane);
     }
 
     //plus quantity of Fried Chicken
@@ -127,20 +131,6 @@ public class FingerFoodController extends BaseController implements Initializabl
     @FXML
     public void onPlusCr(MouseEvent event) {
         onPlus(quantityLabelCroquetas);
-    }
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
     }
 
 }

@@ -39,7 +39,6 @@ public class SaladController extends BaseController implements Initializable, Ge
     private ProductService service = new ProductService();
     private Product product = new Product();
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -58,31 +57,33 @@ public class SaladController extends BaseController implements Initializable, Ge
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //add to Cart Tuna Salad
     @FXML
-    public void onCartTun(MouseEvent event) {
+    public void onCartTun(MouseEvent event) throws IOException {
         service.getProduct(tunaName.getText(), Integer.parseInt(quantityLabelTun.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Octopus Salad
     @FXML
-    public void onCartOc(MouseEvent event) {
+    public void onCartOc(MouseEvent event) throws IOException {
         service.getProduct(octName.getText(), Integer.parseInt(quantityLabelOc.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Cesar Salad
     @FXML
-    public void onCartCes(MouseEvent event) {
+    public void onCartCes(MouseEvent event) throws IOException {
         service.getProduct(cesName.getText(), Integer.parseInt(quantityLabelCes.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Primavera Salad
     @FXML
-    public void onCartPr(MouseEvent event) {
+    public void onCartPr(MouseEvent event) throws IOException {
         service.getProduct(primName.getText(), Integer.parseInt(quantityLabelPr.getText()));
+        addCartElements(scrollPane);
     }
-
 
     //plus quantity of Tuna Salad
     @FXML
@@ -131,20 +132,4 @@ public class SaladController extends BaseController implements Initializable, Ge
     public void onPlusPr(MouseEvent event) {
         onPlus(quantityLabelPr);
     }
-
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
-    }
-
 }

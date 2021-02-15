@@ -35,7 +35,6 @@ public class SandwichController extends BaseController implements Initializable,
     private ProductService service = new ProductService();
     private Product product = new Product();
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -56,28 +55,31 @@ public class SandwichController extends BaseController implements Initializable,
 
     //add to Cart Pork Sandwich
     @FXML
-    public void onCartPor(MouseEvent event) {
+    public void onCartPor(MouseEvent event) throws IOException {
         service.getProduct(porkName.getText(), Integer.parseInt(quantityLabelPor.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Tofu Sandwich
     @FXML
-    public void onCartTo(MouseEvent event) {
+    public void onCartTo(MouseEvent event) throws IOException {
         service.getProduct(tofuName.getText(), Integer.parseInt(quantityLabelTo.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Egg Sandwich
     @FXML
-    public void onCartEgg(MouseEvent event) {
+    public void onCartEgg(MouseEvent event) throws IOException {
         service.getProduct(eggName.getText(), Integer.parseInt(quantityLabelEgg.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Prosciutto Sandwich
     @FXML
-    public void onCartPr(MouseEvent event) {
+    public void onCartPr(MouseEvent event) throws IOException {
         service.getProduct(prosName.getText(), Integer.parseInt(quantityLabelPr.getText()));
+        addCartElements(scrollPane);
     }
-
 
     //plus quantity of Pork Sandwich
     @FXML
@@ -125,21 +127,6 @@ public class SandwichController extends BaseController implements Initializable,
     @FXML
     public void onPlusPr(MouseEvent event) {
         onPlus(quantityLabelPr);
-    }
-
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
     }
 
 }

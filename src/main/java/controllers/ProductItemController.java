@@ -2,6 +2,7 @@ package controllers;
 
 import javafx.fxml.Initializable;
 
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,5 +18,8 @@ public class ProductItemController implements Initializable {
 
     }
 
+    public void putToOrder(MouseEvent event){
+
+    }
 
 }

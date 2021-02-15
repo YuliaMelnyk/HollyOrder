@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -32,6 +33,8 @@ public class BurgerController extends BaseController implements Initializable, G
     @FXML
     Label salmonName, texasName, beanName, porkName, shrimpName;
 
+    @FXML
+    Tab cartTab;
 
     @FXML
     ScrollPane scrollPane;
@@ -61,32 +64,37 @@ public class BurgerController extends BaseController implements Initializable, G
 
     //add to Cart Salmon Burger
     @FXML
-    public void onCartSa(MouseEvent event) {
+    public void onCartSa(MouseEvent event) throws IOException {
         service.getProduct(salmonName.getText(), Integer.parseInt(quantityLabelTex.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Grilled Pork Burger
     @FXML
-    public void onCartGr(MouseEvent event) {
+    public void onCartGr(MouseEvent event) throws IOException {
         service.getProduct(porkName.getText(), Integer.parseInt(quantityLabelGr.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Texas Burger
     @FXML
-    public void onCartTex(MouseEvent event) {
+    public void onCartTex(MouseEvent event) throws IOException {
         service.getProduct(texasName.getText(), Integer.parseInt(quantityLabelSa.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Black Bean Burger
     @FXML
-    public void onCartBean(MouseEvent event) {
+    public void onCartBean(MouseEvent event) throws IOException {
         service.getProduct(beanName.getText(), Integer.parseInt(quantityLabelBean.getText()));
+        addCartElements(scrollPane);
     }
 
     //add to Cart Garlic Shrimp Burger
     @FXML
-    public void onCartShr(MouseEvent event) {
+    public void onCartShr(MouseEvent event) throws IOException {
         service.getProduct(shrimpName.getText(), Integer.parseInt(quantityLabelShr.getText()));
+        addCartElements(scrollPane);
     }
 
 
@@ -150,19 +158,5 @@ public class BurgerController extends BaseController implements Initializable, G
         onPlus(quantityLabelShr);
     }
 
-
-    public void onPlus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        label.setText(String.valueOf(++q));
-    }
-
-    public void onMinus(Label label) {
-        int q = Integer.parseInt(label.getText());
-        if (q == 1) {
-            label.setText("1");
-        } else {
-            label.setText(String.valueOf(--q));
-        }
-    }
 
 }

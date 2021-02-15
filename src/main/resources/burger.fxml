@@ -733,10 +733,8 @@
                                                     </HBox>
                                                 </children>
                                             </HBox>
-
                                         </children>
                                     </VBox>
-
                                 </ScrollPane>
                             </content>
                         </Tab>

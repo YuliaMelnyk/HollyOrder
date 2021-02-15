@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXButton?>
+<VBox alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.ProductItemController"
+      prefHeight="230.0" prefWidth="300.0" stylesheets="@styles/style.css">
+
+    <VBox.margin>
+        <Insets left="10.0" top="10.0" right="10.0" bottom="10.0"></Insets>
+    </VBox.margin>
+    <padding>
+        <Insets left="50.0" top="50.0" ></Insets>
+    </padding>
+    <children>
+        <VBox prefHeight="20.0" prefWidth="100.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="30.0" prefWidth="100.0">
+                    <HBox>
+                        <children>
+                            <Label fx:id="total" text="Total" textFill="#7a5465">
+                                <HBox.margin>
+                                    <Insets left="15.0" right="15.0">
+                                    </Insets>
+                                </HBox.margin>
+                                <font>
+                                    <Font size="25.0"/>
+                                </font>
+                            </Label>
+                            <Label fx:id="totalPrice" text="Name" textFill="#7a5465">
+                                <font>
+                                    <Font size="25.0"/>
+                                </font>
+                            </Label>
+                            <JFXButton fx:id="placeOrder" buttonType="RAISED" onMouseClicked="#putToOrder" prefHeight="30" prefWidth="40"
+                                       styleClass="buttonCard" text="Place Order">
+
+                            </JFXButton>
+                        </children>
+                    </HBox>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>
+
