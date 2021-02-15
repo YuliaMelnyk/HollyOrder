@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class FingerFoodController implements Initializable {
+public class FingerFoodController extends BaseController implements Initializable {
 
     @FXML
     Label quantityLabelFCh, quantityLabelKCh, quantityLabelShrimp, quantityLabelCroquetas;
@@ -31,13 +32,20 @@ public class FingerFoodController implements Initializable {
     @FXML
     Label friedName, korName, chimName, croName;
 
+    @FXML
+    ScrollPane scrollPane;
+
     private ProductService service = new ProductService();
     private Product product = new Product();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //labelFriedChicken.setText(LoginController.u1.getName());
+        try {
+            addCartElements(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //click on Image Back
@@ -52,25 +60,25 @@ public class FingerFoodController implements Initializable {
     //add to Cart Fried Chicken
     @FXML
     public void onCartFCh(MouseEvent event) {
-        service.getProduct(friedName.getText(), Integer.parseInt(priceFriedChicken.getText()));
+        service.getProduct(friedName.getText(), Integer.parseInt(quantityLabelFCh.getText()));
     }
 
     //add to Cart Korean Chicken
     @FXML
     public void onCartKCh(MouseEvent event) {
-        service.getProduct(korName.getText(), Integer.parseInt(priceKoreanFried.getText()));
+        service.getProduct(korName.getText(), Integer.parseInt(quantityLabelKCh.getText()));
     }
 
     //add to Cart Shrimp
     @FXML
     public void onCartShr(MouseEvent event) {
-        service.getProduct(chimName.getText(), Integer.parseInt(priceShrimps.getText()));
+        service.getProduct(chimName.getText(), Integer.parseInt(quantityLabelShrimp.getText()));
     }
 
     //add to Cart Croquetas
     @FXML
     public void onCartCr(MouseEvent event) {
-        service.getProduct(croName.getText(), Integer.parseInt(priceCroquetas.getText()));
+        service.getProduct(croName.getText(), Integer.parseInt(quantityLabelCroquetas.getText()));
     }
 
     //plus quantity of Fried Chicken

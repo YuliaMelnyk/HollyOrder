@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class SoupController implements Initializable, GeneralController {
+public class SoupController extends BaseController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelCar, quantityLabelTom, quantityLabelLem;
@@ -31,13 +32,20 @@ public class SoupController implements Initializable, GeneralController {
     @FXML
     Label carName, tomName, lemName;
 
+    @FXML
+    ScrollPane scrollPane;
+
     private ProductService service = new ProductService();
     private Product product = new Product();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //labelFriedChicken.setText(LoginController.u1.getName());
+        try {
+            addCartElements(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //click on Image Back
@@ -53,19 +61,19 @@ public class SoupController implements Initializable, GeneralController {
     //add to Cart Carrot Soup
     @FXML
     public void onCartCar(MouseEvent event) {
-        service.getProduct(carName.getText(), Integer.parseInt(priceCarrot.getText()));
+        service.getProduct(carName.getText(), Integer.parseInt(quantityLabelCar.getText()));
     }
 
     //add to Cart Tomato Soup
     @FXML
     public void onCartTom(MouseEvent event) {
-        service.getProduct(tomName.getText(), Integer.parseInt(priceTom.getText()));
+        service.getProduct(tomName.getText(), Integer.parseInt(quantityLabelTom.getText()));
     }
 
     //add to Cart Lemon Soup
     @FXML
     public void onCartLem(MouseEvent event) {
-        service.getProduct(lemName.getText(), Integer.parseInt(priceLem.getText()));
+        service.getProduct(lemName.getText(), Integer.parseInt(quantityLabelLem.getText()));
     }
 
 

@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.net.URL;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -20,6 +23,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import login.Main;
+import model.Product;
 import model.User;
 import services.UserService;
 
@@ -32,6 +36,11 @@ import services.UserService;
 
 public class LoginController implements Initializable {
 
+    // list of products that add to card
+    public static List<Product> products;
+
+    // list of products that add to card
+    public static HashMap<Product, Integer> cartItems = new HashMap<>();
 
     @FXML
     Circle min;
@@ -55,7 +64,11 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         userService = new UserService();
+
+        // initialize cartList
+        products = new ArrayList<>();
     }
 
     @FXML
@@ -66,7 +79,6 @@ public class LoginController implements Initializable {
         boolean isLogin = userService.login(email, password);
         if (isLogin) {
             u1 = userService.takeDataBylogin(email, password);
-
             sign();
 
         } else {
@@ -92,29 +104,8 @@ public class LoginController implements Initializable {
 
         Scene scene = new Scene(blah);
 
-
         appStage.setScene(scene);
         appStage.show();
-
-    }
-
-    /**** minimize ****/
-    @FXML
-    public void minclick(MouseEvent event) {
-
-        ((Stage) ((Circle) event.getSource()).getScene().getWindow()).setIconified(true);
-
-
-    }
-
-    /**** close screen ****/
-    @FXML
-    public void closeclick(MouseEvent event) {
-
-
-        System.exit(0);
-
-
     }
 
     @FXML

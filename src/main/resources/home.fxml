@@ -161,7 +161,10 @@
                             </content>
                         </Tab>
                         <Tab fx:id="cartTab" text="Cart">
+                            <ScrollPane fx:id="scrollPane" prefHeight="NaN" prefWidth="800.0">
 
+
+                            </ScrollPane>
                         </Tab>
                         <Tab text="Sign Out">
                             <content>

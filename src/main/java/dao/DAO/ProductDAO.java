@@ -9,15 +9,17 @@ import util.HibernateUtil;
 import java.util.List;
 
 /**
- * @author sergeymelnik on 11/2/21
+ * @author yuliiamelnik on 11/2/21
  * @project HollyOrder
  */
+
+//class DAO to get data of Product from dataBase
 public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
 
+
+    //Method to delete Product from Cart
     @Override
     public void delete(int id) {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
 
         Session session = null;
         try{
@@ -38,10 +40,11 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
             }
         }
     }
+
+    //method to get all Products in List in Cart
     @Override
     public List<Product> getAll() {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
+
         Session session = null;
         List<Product> product = null;
 
@@ -65,8 +68,7 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
     }
 
     public List<Product> getAll(int category) {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
+
         Session session = null;
         List<Product> product = null;
 
@@ -91,10 +93,9 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
         return product;
     }
 
+    //method to get Product by its Name from DataBase in moment to put in Cart
     @Override
     public Product getByName(String name) {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
 
         Product product = null;
         Session session = null;
@@ -118,14 +119,12 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
         return product;
     }
 
+    //method to add new Product in DataBase
     @Override
     public int insert(Product product) {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
 
         Session session = null;
         int resultId = 0;
-
 
         try{
             session = HibernateUtil.getSessionFactory().openSession();
@@ -147,7 +146,4 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
         }
         return resultId;
     }
-
-
-
 }

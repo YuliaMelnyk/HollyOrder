@@ -18,10 +18,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static controllers.HomeController.products;
 
 /**
- * @author sergeymelnik on 9/2/21
+ * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
 public class CartController implements Initializable {

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class BurgerController implements Initializable, GeneralController {
+public class BurgerController extends BaseController implements Initializable, GeneralController {
 
     //labels of quantities
     @FXML
@@ -31,8 +32,9 @@ public class BurgerController implements Initializable, GeneralController {
     @FXML
     Label salmonName, texasName, beanName, porkName, shrimpName;
 
+
     @FXML
-    ImageView plusFCh;
+    ScrollPane scrollPane;
 
     private ProductService service = new ProductService();
     private Product product = new Product();
@@ -40,7 +42,11 @@ public class BurgerController implements Initializable, GeneralController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        try {
+            addCartElements(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //click on Image Back
@@ -56,31 +62,31 @@ public class BurgerController implements Initializable, GeneralController {
     //add to Cart Salmon Burger
     @FXML
     public void onCartSa(MouseEvent event) {
-        service.getProduct(salmonName.getText(), Integer.parseInt(priceETex.getText()));
+        service.getProduct(salmonName.getText(), Integer.parseInt(quantityLabelTex.getText()));
     }
 
     //add to Cart Grilled Pork Burger
     @FXML
     public void onCartGr(MouseEvent event) {
-        service.getProduct(porkName.getText(), Integer.parseInt(pricePork.getText()));
+        service.getProduct(porkName.getText(), Integer.parseInt(quantityLabelGr.getText()));
     }
 
     //add to Cart Texas Burger
     @FXML
     public void onCartTex(MouseEvent event) {
-        service.getProduct(texasName.getText(), Integer.parseInt(priceSa.getText()));
+        service.getProduct(texasName.getText(), Integer.parseInt(quantityLabelSa.getText()));
     }
 
     //add to Cart Black Bean Burger
     @FXML
     public void onCartBean(MouseEvent event) {
-        service.getProduct(beanName.getText(), Integer.parseInt(priceBean.getText()));
+        service.getProduct(beanName.getText(), Integer.parseInt(quantityLabelBean.getText()));
     }
 
     //add to Cart Garlic Shrimp Burger
     @FXML
     public void onCartShr(MouseEvent event) {
-        service.getProduct(shrimpName.getText(), Integer.parseInt(priceShr.getText()));
+        service.getProduct(shrimpName.getText(), Integer.parseInt(quantityLabelShr.getText()));
     }
 
 

@@ -18,18 +18,6 @@
                 </Label>
             </children>
         </AnchorPane>
-        <AnchorPane prefHeight="48.0" prefWidth="310.0" stylesheets="@styles/style.css">
-            <children>
-                <Label layoutX="131.0" layoutY="14.0" text="Holly Order" textFill="#8c90b3">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Circle fill="#fa4771" layoutX="16.0" layoutY="24.0" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
-                <Circle fill="#ffc965" layoutX="30.0" layoutY="24.0" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
-                <Circle fill="#42cf9b" layoutX="45.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
-            </children>
-        </AnchorPane>
 
         <Label layoutX="89.0" layoutY="377.0" text="or Create new profile" textFill="#8c90b3">
             <font>
@@ -39,18 +27,6 @@
 
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: #2c344b;">
             <children>
-                <AnchorPane prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #2e354f;">
-                    <children>
-                        <Label layoutX="165.0" layoutY="14.0" prefHeight="28.0" prefWidth="121.0" text="Holly Order" textFill="#8c90b3">
-                            <font>
-                                <Font size="23.0" />
-                            </font>
-                        </Label>
-                        <Circle fx:id="close" fill="#fa4771" layoutX="16.0" layoutY="24.0" onMouseClicked="#closeclick" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
-                        <Circle fx:id="min" fill="#ffc965" layoutX="30.0" layoutY="24.0" onMouseClicked="#minclick" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
-                        <Circle fill="#42cf9b" layoutX="45.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
-                    </children>
-                </AnchorPane>
                 <VBox layoutX="51.0" layoutY="231.0" prefHeight="135.0" prefWidth="45.0">
                     <children>
 

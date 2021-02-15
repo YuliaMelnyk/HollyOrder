@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class SandwichController implements Initializable, GeneralController {
+public class SandwichController extends BaseController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelPor, quantityLabelEgg, quantityLabelTo, quantityLabelPr;
@@ -28,13 +29,20 @@ public class SandwichController implements Initializable, GeneralController {
     @FXML
     Label porkName, eggName, prosName, tofuName;
 
+    @FXML
+    ScrollPane scrollPane;
+
     private ProductService service = new ProductService();
     private Product product = new Product();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //labelFriedChicken.setText(LoginController.u1.getName());
+        try {
+            addCartElements(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //click on Image Back
@@ -49,25 +57,25 @@ public class SandwichController implements Initializable, GeneralController {
     //add to Cart Pork Sandwich
     @FXML
     public void onCartPor(MouseEvent event) {
-        service.getProduct(porkName.getText(), Integer.parseInt(pricePork.getText()));
+        service.getProduct(porkName.getText(), Integer.parseInt(quantityLabelPor.getText()));
     }
 
     //add to Cart Tofu Sandwich
     @FXML
     public void onCartTo(MouseEvent event) {
-        service.getProduct(tofuName.getText(), Integer.parseInt(priceTo.getText()));
+        service.getProduct(tofuName.getText(), Integer.parseInt(quantityLabelTo.getText()));
     }
 
     //add to Cart Egg Sandwich
     @FXML
     public void onCartEgg(MouseEvent event) {
-        service.getProduct(eggName.getText(), Integer.parseInt(priceEgg.getText()));
+        service.getProduct(eggName.getText(), Integer.parseInt(quantityLabelEgg.getText()));
     }
 
     //add to Cart Prosciutto Sandwich
     @FXML
     public void onCartPr(MouseEvent event) {
-        service.getProduct(prosName.getText(), Integer.parseInt(pricePr.getText()));
+        service.getProduct(prosName.getText(), Integer.parseInt(quantityLabelPr.getText()));
     }
 
 

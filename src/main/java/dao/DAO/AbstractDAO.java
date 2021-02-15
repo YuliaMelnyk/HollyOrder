@@ -8,6 +8,8 @@ import java.util.List;
  * @author sergeymelnik on 9/2/21
  * @project HollyOrder
  */
+
+//abstract class with using generics
 public class AbstractDAO<T> implements GenericDao<T> {
     @Override
     public int insert(T t) {

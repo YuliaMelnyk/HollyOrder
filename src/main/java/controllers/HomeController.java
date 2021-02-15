@@ -1,51 +1,49 @@
 package controllers;
 
+import com.jfoenix.controls.JFXButton;
 import dao.DAO.CartDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import login.Main;
 import model.Product;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
+
+import static controllers.LoginController.cartItems;
+import static controllers.LoginController.products;
 
 /**
  * @author yuliiamelnyk on 2/9/21
  * @project HollyOrder
  */
 
-public class HomeController implements Initializable {
-
-    //list of products that add to card
-    public static List<Product> products = new ArrayList<>();
-
-    public static HashMap<Integer, Product> cartItems = new HashMap<>();
+public class HomeController extends BaseController implements Initializable {
 
     @FXML
     Tab cartTab;
 
-
+    @FXML
+    ScrollPane scrollPane;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            addCartElements();
+            addCartElements(scrollPane);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -62,18 +60,15 @@ public class HomeController implements Initializable {
     //click en category of Western Soups
     @FXML
     public void clickWestern(MouseEvent event) throws IOException {
-
         Parent parent = FXMLLoader.load(getClass().getResource("/soup.fxml"));
         Scene scene = new Scene(parent);
         scene.getStylesheets().add(getClass().getResource("/styles/soup.css").toExternalForm());
         Main.getPrimaryStage().setScene(scene);
     }
 
-
     //click en category of Sandwiches
     @FXML
     public void clickSandwiches(MouseEvent event) throws IOException {
-
         Parent parent = FXMLLoader.load(getClass().getResource("/sandwiches.fxml"));
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
@@ -119,39 +114,4 @@ public class HomeController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //method using foreach to take element book and fill fxml element in positions in gridpane
-    private void addCartElements() throws IOException {
-
-
-        GridPane gridPane = new GridPane();
-        gridPane.setVgap(200);
-        gridPane.setHgap(200);
-
-        cartTab.setContent(gridPane);
-
-        int index = -1;
-
-
-        for (Product product : products) {
-            index++;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product_item.fxml"));
-            VBox hb = (VBox) loader.load();
-            hb.setMinHeight(350);
-
-            //set name
-            String Name = product.getName();
-
-            //((Label) loader.getNamespace().get("quantity")).setText(currentISBN);
-            //put image value en label from DB
-            if (product.getImage() != null) {
-                Image image = new Image(new ByteArrayInputStream(product.getImage()));
-                ((ImageView) loader.getNamespace().get("productImage")).setImage(image);
-            }
-            //put name value en label from DB
-            ((Label) loader.getNamespace().get("name")).setText(product.getName());
-
-            //add each element in gridpane
-            gridPane.add(hb, index % 2, index/2);
-        }
-    }
 }

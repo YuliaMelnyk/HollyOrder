@@ -24,3 +24,9 @@ AnchorPane{
     -fx-text-fill: #35495e;
 }
 
+.buttonCard {
+    -fx-background-size: cover;
+    -fx-border-radius: 15pt;
+    -fx-background-radius: 15pt;
+}
+

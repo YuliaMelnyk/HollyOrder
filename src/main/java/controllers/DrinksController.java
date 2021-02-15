@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class DrinksController implements Initializable, GeneralController {
+public class DrinksController extends BaseController implements Initializable, GeneralController {
 
     @FXML
     Label quantityLabelHib, quantityLabelCoc, quantityLabelBee, quantityLabelMilk;
@@ -28,13 +29,20 @@ public class DrinksController implements Initializable, GeneralController {
     @FXML
     Label hibName, colaName, beerName, shakeName;
 
+    @FXML
+    ScrollPane scrollPane;
+
     private ProductService service = new ProductService();
     private Product product = new Product();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //labelFriedChicken.setText(LoginController.u1.getName());
+        try {
+            addCartElements(scrollPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //click on Image Back
@@ -50,25 +58,25 @@ public class DrinksController implements Initializable, GeneralController {
     //add to Cart Hibiscus Lemonade
     @FXML
     public void onCartHib(MouseEvent event) {
-        service.getProduct(hibName.getText(), Integer.parseInt(priceHib.getText()));
+        service.getProduct(hibName.getText(), Integer.parseInt(quantityLabelHib.getText()));
     }
 
     //add to Cart Coca Cola
     @FXML
     public void onCartCoc(MouseEvent event) {
-        service.getProduct(colaName.getText(), Integer.parseInt(priceCoc.getText()));
+        service.getProduct(colaName.getText(), Integer.parseInt(quantityLabelCoc.getText()));
     }
 
     //add to Cart Craft Beer
     @FXML
     public void onCartBee(MouseEvent event) {
-        service.getProduct(beerName.getText(), Integer.parseInt(priceBee.getText()));
+        service.getProduct(beerName.getText(), Integer.parseInt(quantityLabelBee.getText()));
     }
 
     //add to Cart Milk Shake
     @FXML
     public void onCartMilk(MouseEvent event) {
-        service.getProduct(shakeName.getText(), Integer.parseInt(priceMilk.getText()));
+        service.getProduct(shakeName.getText(), Integer.parseInt(quantityLabelMilk.getText()));
     }
 
 
