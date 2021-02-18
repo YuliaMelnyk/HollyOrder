@@ -82,7 +82,7 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/total_price.fxml"));
         VBox hBox = loader.load();
         hBox.setMaxHeight(40);
-        ((Label) loader.getNamespace().get("totalPrice")).setText(String.valueOf(totalPrice));
+        ((Label) loader.getNamespace().get("totalPr")).setText(String.valueOf(totalPrice));
         if (index < 0) {
             gridPane.add(hBox, 0, 0);
         } else {

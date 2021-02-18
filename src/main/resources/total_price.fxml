@@ -24,7 +24,7 @@
                 <VBox alignment="CENTER" prefHeight="30.0" prefWidth="100.0">
                     <HBox>
                         <children>
-                            <Label fx:id="total" text="Total" textFill="#7a5465">
+                            <Label fx:id="total_price" text="Total" textFill="#7a5465">
                                 <HBox.margin>
                                     <Insets left="15.0" right="15.0">
                                     </Insets>
@@ -33,7 +33,7 @@
                                     <Font size="25.0"/>
                                 </font>
                             </Label>
-                            <Label fx:id="totalPrice" text="Name" textFill="#7a5465">
+                            <Label fx:id="totalPr" text="Name" textFill="#7a5465">
                                 <font>
                                     <Font size="25.0"/>
                                 </font>

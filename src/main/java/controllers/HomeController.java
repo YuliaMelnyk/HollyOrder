@@ -9,11 +9,16 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
+import services.CartItemService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.*;
+
+import static controllers.LoginController.cartItems;
+import static controllers.LoginController.products;
 
 /**
  * @author yuliiamelnyk on 2/9/21
@@ -38,7 +43,6 @@ public class HomeController extends BaseController implements Initializable {
     private TableColumn<CartItem, Double> totalPrice;
 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -48,6 +52,11 @@ public class HomeController extends BaseController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public ScrollPane initData() {
+        return scrollPane;
+    }
+
     //click en category of Finger Foods
     @FXML
     public void clickFinger(MouseEvent event) throws IOException {
@@ -113,5 +122,6 @@ public class HomeController extends BaseController implements Initializable {
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
     }
+
 
 }
