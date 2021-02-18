@@ -3,6 +3,9 @@ package services;
 import dao.DAO.ProductDAO;
 import model.Product;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 import static controllers.LoginController.cartItems;
 import static controllers.LoginController.products;
 
@@ -26,5 +29,10 @@ public class ProductService implements ServiceInterface{
         product = productDAO.getByName(name);
         products.add(product);
         cartItems.put(product, quantity);
+    }
+
+    @Override
+    public void insertCartItem(Timestamp timestamp, double totalPrice) {
+
     }
 }

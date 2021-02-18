@@ -1,7 +1,7 @@
 package dao.DAO;
 
-import dao.entity.CartDao;
-import model.Cart;
+import dao.entity.OrderDao;
+import model.Order;
 import model.Product;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -13,14 +13,13 @@ import javax.swing.*;
 import java.util.List;
 
 /**
- * @author sergeymelnik on 11/2/21
+ * @author yuliiamelnyk on 16/2/21
  * @project HollyOrder
  */
 
-// class CartDAO to make CRUD operations
-public class CartDAO extends AbstractDAO<Cart> implements CartDao {
+// class OrderDAO to make CRUD operations
+public class OrderDAO extends AbstractDAO<Order> implements OrderDao {
 
-    // delete Cart from database
     @Override
     public void delete(int id) {
         Session session = null;
@@ -28,7 +27,7 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
-            Query query = session.createQuery("delete from Cart where id =: id");
+            Query query = session.createQuery("delete from Order where id =: id");
             query.setParameter("id", id);
 
             session.getTransaction().commit();
@@ -41,7 +40,6 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
             }
         }
     }
-    // delete Product from Cart
     public void delete(Product product) {
 
         Session session = null;
@@ -59,17 +57,15 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
             }
         }
     }
-    // get List of Carts from database
+
     @Override
-    public List<Cart> getAll() {
-//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//        Session session = sessionFactory.openSession();
+    public List<Order> getAll() {
         Session session = null;
-        List<Cart> carts = null;
+        List<Order> orders = null;
 
         try{
             session = HibernateUtil.getSessionFactory().openSession();
-            carts = session.createCriteria(Cart.class).list();
+            orders = session.createCriteria(Order.class).list();
         } catch(Exception e) {
             session.getTransaction().rollback();
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error 'getAll'", JOptionPane.OK_OPTION);
@@ -78,22 +74,22 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
                 session.close();
             }
         }
-        return carts;
+        return orders;
     }
-    // get Cart from database
+
     @Override
-    public Cart getByName(String name) {
+    public Order getByName(String name) {
 
         Session session = null;
-        Cart cart = null;
+        Order order = null;
 
         try{
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
-            Criteria userCriteria = session.createCriteria(Cart.class);
+            Criteria userCriteria = session.createCriteria(Order.class);
             userCriteria.add(Restrictions.eq("id", name));
-            cart = (Cart) userCriteria.uniqueResult();
+            order = (Order) userCriteria.uniqueResult();
 
             session.getTransaction().commit();
 
@@ -105,19 +101,24 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
                 session.close();
             }
         }
-        return cart;
+        return order;
     }
-    // insert Cart into database
+
     @Override
-    public int insert(Cart cart) {
+    public int insert(Order order) {
+
         Session session = null;
         int resultId = 0;
+
 
         try{
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
-            session.save(cart);
+            session.save(order);
+
+           Query query = session.createQuery("from Order");
+            resultId = query.list().size();
 
             session.getTransaction().commit();
         } catch(Exception e) {
@@ -130,15 +131,15 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
         }
         return resultId;
     }
-    // update Cart in database
+
     @Override
-    public void update(Cart cart) {
+    public void update(Order order) {
 
         Session session = null;
         try{
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
-            session.update(cart);
+            session.update(order);
             session.getTransaction().commit();
         } catch(Exception e) {
             session.getTransaction().rollback();
@@ -149,4 +150,5 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
             }
         }
     }
+
 }

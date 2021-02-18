@@ -7,7 +7,7 @@ import java.util.List;
  * @project HollyOrder
  */
 
-// generic Interface for DAO
+// generic Interface for DAO with CRUD operations
 
 public interface GenericDao<T> {
     int insert(T t);

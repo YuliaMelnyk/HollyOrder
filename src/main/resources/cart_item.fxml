@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.CartController"
+      prefHeight="230.0" prefWidth="300.0" stylesheets="@styles/style.css">
+
+        <VBox.margin>
+            <Insets left="10.0" top="10.0" right="10.0" bottom="10.0"></Insets>
+        </VBox.margin>
+    <padding>
+        <Insets left="50.0" top="20.0" ></Insets>
+    </padding>
+                        <HBox>
+                            <children>
+                                <Label fx:id="name" text="false" textFill="#7a5465">
+                                    <HBox.margin>
+                                        <Insets left="15.0" right="15.0">
+                                        </Insets>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="quantity" text="Name" textFill="#7a5465">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+</VBox>

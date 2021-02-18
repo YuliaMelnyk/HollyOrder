@@ -1,11 +1,12 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * @author sergeymelnik on 9/2/21
+ * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
 @Entity
@@ -17,16 +18,9 @@ public class Cart {
     private long id;
     @Column(name = "date")
     private Date date;
-    @ManyToOne
-    private Product product;
     @Column(name = "totalPrice")
     private double totalPrice;
 
-    public Cart(long id, Product product) {
-        this.id = id;
-        this.date = new Date();
-        this.product = product;
-    }
 
     public Cart() {
     }
@@ -44,13 +38,6 @@ public class Cart {
         this.date = date;
     }
 
-    public Product getProducts() {
-        return product;
-    }
-
-    public void setProducts(Product product) {
-        this.product = product;
-    }
 
     public double getTotalPrice() {
         return totalPrice;
@@ -59,5 +46,7 @@ public class Cart {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
+
+
 }
 

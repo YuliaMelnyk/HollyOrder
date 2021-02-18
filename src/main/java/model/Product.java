@@ -25,13 +25,13 @@ public class Product {
     private double price;
 
 
-
     public Product(long product_id, String name, byte[] image, String description, double price) {
         this.product_id = product_id;
         this.name = name;
         this.image = image;
         this.description = description;
         this.price = price;
+
     }
 
     public Product() {
@@ -73,6 +73,5 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-
 
 }

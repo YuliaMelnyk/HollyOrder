@@ -5,13 +5,10 @@ import java.io.IOException;
 import java.net.URL;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.time.LocalDateTime;
+import java.util.*;
 
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,7 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import login.Main;
 import model.Product;
@@ -42,18 +38,11 @@ public class LoginController implements Initializable {
     // list of products that add to card
     public static HashMap<Product, Integer> cartItems = new HashMap<>();
 
-    @FXML
-    Circle min;
-    @FXML
-    Circle close;
-    ActionEvent event;
 
     @FXML
     private TextField tf_email, tf_password;
 
 
-    @FXML
-    Label login;
     private double xOffset = 0;
     private double yOffset = 0;
 
@@ -89,6 +78,7 @@ public class LoginController implements Initializable {
             error.show();
         }
     }
+
     @FXML
     public void back(MouseEvent event) throws IOException {
         Parent blah = FXMLLoader.load(getClass().getResource("pin.fxml"));
@@ -109,7 +99,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void registrate(MouseEvent event) throws  IOException{
+    void registrate(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/registration.fxml"));
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);

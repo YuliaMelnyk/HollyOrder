@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXButton?>
 <VBox alignment="CENTER"
@@ -18,7 +16,7 @@
         <Insets left="10.0" top="10.0" right="10.0" bottom="10.0"></Insets>
     </VBox.margin>
     <padding>
-        <Insets left="50.0" top="50.0" ></Insets>
+        <Insets left="50.0" top="50.0" bottom="20.0" ></Insets>
     </padding>
     <children>
         <VBox prefHeight="20.0" prefWidth="100.0">
@@ -40,9 +38,13 @@
                                     <Font size="25.0"/>
                                 </font>
                             </Label>
-                            <JFXButton fx:id="placeOrder" buttonType="RAISED" onMouseClicked="#putToOrder" prefHeight="30" prefWidth="40"
+                            <Label fx:id="euro" text="€" textFill="#7a5465">
+                                <font>
+                                    <Font size="25.0"/>
+                                </font>
+                            </Label>
+                            <JFXButton fx:id="placeOrder" buttonType="RAISED" onMouseClicked="#putToOrder" prefHeight="30" prefWidth="60"
                                        styleClass="buttonCard" text="Place Order">
-
                             </JFXButton>
                         </children>
                     </HBox>
