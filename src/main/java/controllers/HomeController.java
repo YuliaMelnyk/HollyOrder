@@ -33,6 +33,7 @@ public class HomeController extends BaseController implements Initializable {
     @FXML
     ScrollPane scrollPane;
 
+    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -51,10 +52,6 @@ public class HomeController extends BaseController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public ScrollPane initData() {
-        return scrollPane;
     }
 
     //click en category of Finger Foods

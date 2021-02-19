@@ -29,4 +29,7 @@ AnchorPane{
     -fx-border-radius: 15pt;
     -fx-background-radius: 15pt;
 }
+#signOut{
+    -fx-background-image: url("../images/b05.jpg");
+}
 

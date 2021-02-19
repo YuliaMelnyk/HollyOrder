@@ -7,155 +7,191 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="850.0" stylesheets="@styles/homeStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<AnchorPane prefHeight="700.0" prefWidth="850.0" stylesheets="@styles/homeStyle.css"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.HomeController">
     <children>
-        <HBox layoutX="-14.0" layoutY="328.0" prefHeight="600.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox layoutX="-14.0" layoutY="328.0" prefHeight="600.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <JFXTabPane fx:id="tabPane" prefHeight="690.0" prefWidth="1128.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                <JFXTabPane fx:id="tabPane" prefHeight="690.0" prefWidth="1128.0" side="LEFT"
+                            tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                         <Tab text="Menu">
                             <content>
                                 <ScrollPane prefHeight="NaN" prefWidth="800.0">
-                                <VBox  prefWidth="800.0">
-                                    <children>
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="fingerFood" buttonType="RAISED" onMouseClicked="#clickFinger" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="224.0" layoutY="3.0" prefHeight="55.0" prefWidth="290.0" text="Finger foods" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                    <VBox prefWidth="800.0">
+                                        <children>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="fingerFood" buttonType="RAISED"
+                                                               onMouseClicked="#clickFinger" prefHeight="300"
+                                                               prefWidth="800" styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="224.0" layoutY="3.0"
+                                                               prefHeight="55.0" prefWidth="290.0" text="Finger foods"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="westernSoup" onMouseClicked="#clickWestern" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Soups" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="westernSoup" onMouseClicked="#clickWestern"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Soups"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="salads" onMouseClicked="#clickSalads" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Salads" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="salads" onMouseClicked="#clickSalads"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Salads"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="sandwiches" onMouseClicked="#clickSandwiches" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Sandwiches" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="sandwiches" onMouseClicked="#clickSandwiches"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Sandwiches"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="chicken" onMouseClicked="#clickChicken" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Chicken" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="chicken" onMouseClicked="#clickChicken"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Chicken"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="burger" onMouseClicked="#clickBurger" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label fx:id="burgerLabel" alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Burgers" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="burger" onMouseClicked="#clickBurger"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label fx:id="burgerLabel" alignment="CENTER" layoutX="199.0"
+                                                               layoutY="3.0" prefHeight="54.0" prefWidth="351.0"
+                                                               text="Burgers" textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="drinks" onMouseClicked="#clickDrinks" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Drinks" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="drinks" onMouseClicked="#clickDrinks"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Drinks"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                        <VBox alignment="CENTER"  prefHeight="300" prefWidth="800.0">
-                                            <children>
-                                                <JFXButton fx:id="desserts" onMouseClicked="#clickDesserts" buttonType="RAISED" prefHeight="300" prefWidth="800" styleClass="buttonCard" text=" ">
-                                                </JFXButton>
-                                                <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
-                                                    <VBox.margin>
-                                                        <Insets top="-60.0" />
-                                                    </VBox.margin>
-                                                    <Label alignment="CENTER" layoutX="199.0" layoutY="3.0" prefHeight="54.0" prefWidth="351.0" text="Desserts" textAlignment="CENTER" textFill="WHITE">
-                                                        <font>
-                                                            <Font size="44.0" />
-                                                        </font>
-                                                    </Label>
-                                                </Pane>
-                                            </children>
-                                        </VBox>
+                                            <VBox alignment="CENTER" prefHeight="300" prefWidth="800.0">
+                                                <children>
+                                                    <JFXButton fx:id="desserts" onMouseClicked="#clickDesserts"
+                                                               buttonType="RAISED" prefHeight="300" prefWidth="800"
+                                                               styleClass="buttonCard" text=" ">
+                                                    </JFXButton>
+                                                    <Pane prefHeight="60.0" prefWidth="800.0" styleClass="paneCard">
+                                                        <VBox.margin>
+                                                            <Insets top="-60.0"/>
+                                                        </VBox.margin>
+                                                        <Label alignment="CENTER" layoutX="199.0" layoutY="3.0"
+                                                               prefHeight="54.0" prefWidth="351.0" text="Desserts"
+                                                               textAlignment="CENTER" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="44.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </children>
+                                            </VBox>
 
-                                    </children>
-                                </VBox>
+                                        </children>
+                                    </VBox>
 
                                 </ScrollPane>
                             </content>
@@ -170,42 +206,17 @@
                             <content>
                                 <TableView fx:id="cartTable" prefHeight="400.0" prefWidth="500.0">
                                     <columns>
-                                        <TableColumn fx:id="id" editable="false" prefWidth="150.0" resizable="false" sortable="false" style="-fx-alignment: center-left;" text="ORDER ID" />
-                                        <TableColumn fx:id="timestamp" editable="false" prefWidth="350.0"  text="DATE" />
-                                        <TableColumn fx:id="totalPrice" editable="false" prefWidth="150.0" resizable="false" sortable="false" text="TOTAL" />
+                                        <TableColumn fx:id="id" editable="false" prefWidth="150.0" resizable="false"
+                                                     sortable="false" style="-fx-alignment: center-left;"
+                                                     text="ORDER ID"/>
+                                        <TableColumn fx:id="timestamp" editable="false" prefWidth="350.0" text="DATE"/>
+                                        <TableColumn fx:id="totalPrice" editable="false" prefWidth="150.0"
+                                                     resizable="false" sortable="false" text="TOTAL"/>
                                     </columns>
                                     <columnResizePolicy>
-                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
                                     </columnResizePolicy>
                                 </TableView>
-                            </content>
-                        </Tab>
-                        <Tab text="Sign Out">
-                            <content>
-                                <VBox prefHeight="690.0" prefWidth="519.0">
-                                    <children>
-                                        <HBox prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-
-
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets />
-                                            </VBox.margin>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-
-
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER" layoutX="10.0" layoutY="214.0" prefHeight="230.0" prefWidth="200.0" spacing="40.0">
-                                            <children>
-
-                                            </children>
-                                        </HBox>
-                                    </children>
-                                </VBox>
                             </content>
                         </Tab>
                     </tabs>

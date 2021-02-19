@@ -12,7 +12,7 @@
               AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
               AnchorPane.topAnchor="5.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adding Person Dialog"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Congratulations!"/>
                 <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
                     <children>
                         <Label alignment="CENTER_RIGHT" minWidth="100.0" text="You order is preparing. Thank you!">

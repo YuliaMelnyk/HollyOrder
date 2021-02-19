@@ -5,17 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Tab;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.CartItem;
 import model.Product;
 import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 
@@ -39,6 +39,15 @@ public class BurgerController extends BaseController implements Initializable, G
     @FXML
     ScrollPane scrollPane;
 
+    @FXML
+    private TableView<CartItem> cartTable;
+    @FXML
+    private TableColumn<CartItem, Long> id;
+    @FXML
+    private TableColumn<CartItem, Timestamp> timestamp;
+    @FXML
+    private TableColumn<CartItem, Double> totalPrice;
+
     private ProductService service = new ProductService();
     private Product product = new Product();
 
@@ -47,6 +56,7 @@ public class BurgerController extends BaseController implements Initializable, G
     public void initialize(URL location, ResourceBundle resources) {
         try {
             addCartElements(scrollPane);
+            addToOrder(cartTable, id, timestamp, totalPrice);
         } catch (IOException e) {
             e.printStackTrace();
         }

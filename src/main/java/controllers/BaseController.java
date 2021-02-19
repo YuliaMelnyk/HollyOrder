@@ -90,6 +90,7 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         }
     }
 
+    //method using foreach to add all element CartItem from ObservableList to TableView Orders
     public void addToOrder(TableView<CartItem> cartTable, TableColumn<CartItem, Long> id,
                            TableColumn<CartItem, Timestamp> timestamp,
                            TableColumn<CartItem, Double> totalPrice) {

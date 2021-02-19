@@ -7,14 +7,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
+import model.CartItem;
 import model.Product;
 import services.ProductService;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 /**
@@ -36,13 +40,23 @@ public class SaladController extends BaseController implements Initializable, Ge
     @FXML
     ScrollPane scrollPane;
 
+    // TableView and columns
+    @FXML
+    private TableView<CartItem> cartTable;
+    @FXML
+    private TableColumn<CartItem, Long> id;
+    @FXML
+    private TableColumn<CartItem, Timestamp> timestamp;
+    @FXML
+    private TableColumn<CartItem, Double> totalPrice;
+
     private ProductService service = new ProductService();
-    private Product product = new Product();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             addCartElements(scrollPane);
+            addToOrder(cartTable, id, timestamp, totalPrice);
         } catch (IOException e) {
             e.printStackTrace();
         }
