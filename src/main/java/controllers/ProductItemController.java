@@ -23,6 +23,8 @@ import static controllers.LoginController.*;
  * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
+
+// Class controller for product_item fxml
 public class ProductItemController extends BaseController implements Initializable {
 
     @FXML
@@ -31,12 +33,14 @@ public class ProductItemController extends BaseController implements Initializab
     private CartItemService service = new CartItemService();
 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
+    // method when user clicked the button "Place Order"
+    // add cart to Order in database
+    // remove all items from Cart
     @FXML
     public void putToOrder(MouseEvent mouseEvent) throws IOException {
         double total = Double.valueOf(totalPr.getText());
@@ -46,7 +50,7 @@ public class ProductItemController extends BaseController implements Initializab
         cartItems.clear();
         products.clear();
 
-
+        // load the dialog window
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/WindowAccept.fxml"));
         Parent parent = fxmlLoader.load();
 

@@ -4,87 +4,86 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="loginAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane fx:id="loginAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="550.0" prefWidth="450.0" stylesheets="@styles/style.css"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.LoginController">
     <children>
-        <AnchorPane layoutY="419.0" prefHeight="48.0" prefWidth="310.0" style="-fx-background-color: #43bb73;">
-            <children>
-                <Label layoutX="133.0" layoutY="11.0" onMouseClicked="#back" prefHeight="17.0" prefWidth="45.0" text="Log23in">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
-
         <Label layoutX="89.0" layoutY="377.0" text="or Create new profile" textFill="#8c90b3">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
 
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: #2c344b;">
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: #2c344b;">
             <children>
                 <VBox layoutX="51.0" layoutY="231.0" prefHeight="135.0" prefWidth="45.0">
                     <children>
 
-                    <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@images/user.png" />
-                    </image>
-                        <VBox.margin>
-                            <Insets bottom="50.0" />
-                        </VBox.margin>
-                </ImageView>
-                    <ImageView fitHeight="41.0" fitWidth="37.0" layoutX="114.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@images/password2.png" />
-                        </image>
-                    </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="114.0" layoutY="119.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@images/user.png"/>
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="50.0"/>
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="41.0" fitWidth="37.0" layoutX="114.0" layoutY="200.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@images/password2.png"/>
+                            </image>
+                        </ImageView>
                     </children>
                 </VBox>
                 <VBox layoutX="96.0" layoutY="147.0" prefHeight="403.0" prefWidth="298.0">
                     <children>
-                        <TextField fx:id="tf_email" alignment="CENTER" maxHeight="49.0" maxWidth="417.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
+                        <TextField fx:id="tf_email" alignment="CENTER" maxHeight="49.0" maxWidth="417.0"
+                                   prefHeight="40.0" prefWidth="344.0" promptText="enter your email...">
                             <VBox.margin>
-                                <Insets top="80.0" />
+                                <Insets top="80.0"/>
                             </VBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
                         </TextField>
 
-                        <PasswordField fx:id="tf_password" alignment="CENTER" maxHeight="40.0" maxWidth="355.0" prefHeight="40.0" prefWidth="344.0" promptText="enter your password...">
+                        <PasswordField fx:id="tf_password" alignment="CENTER" maxHeight="40.0" maxWidth="355.0"
+                                       prefHeight="40.0" prefWidth="344.0" promptText="enter your password...">
                             <VBox.margin>
-                                <Insets top="50.0" />
+                                <Insets top="50.0"/>
                             </VBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
                         </PasswordField>
 
                     </children>
                 </VBox>
                 <VBox layoutX="175.0" layoutY="385.0" prefHeight="403.0" prefWidth="298.0">
                     <children>
-                <Label layoutX="153.0" layoutY="377.0" prefHeight="18.0" prefWidth="180.0" onMouseClicked="#registrate" text="or Create new profile" textFill="#8c90b3">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                        <Button fx:id="btn_login" alignment="CENTER" blendMode="HARD_LIGHT" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#login" prefHeight="37.0" prefWidth="137.0" text=" Login " VBox.vgrow="NEVER">
+                        <Label layoutX="153.0" layoutY="377.0" prefHeight="18.0" prefWidth="180.0"
+                               onMouseClicked="#registrate" text="or Create new profile" textFill="#8c90b3">
                             <font>
-                                <Font size="18.0" />
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="btn_login" alignment="CENTER" blendMode="HARD_LIGHT" contentDisplay="CENTER"
+                                mnemonicParsing="false" onMouseClicked="#login" prefHeight="37.0" prefWidth="137.0"
+                                text=" Login " VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="18.0"/>
                             </font>
                             <VBox.margin>
-                                <Insets  top="40.0" />
+                                <Insets top="40.0"/>
                             </VBox.margin>
                         </Button>
                     </children>
                 </VBox>
-
             </children>
         </AnchorPane>
     </children>

@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import login.Main;
 
@@ -26,6 +25,8 @@ public class WindowAcceptController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
+    // When the user clicked on OK button he will return to Home page
     @FXML
     public void btnAcceptClicked(ActionEvent event) throws IOException {
         System.out.println("btnAddPersonClicked");
@@ -39,6 +40,7 @@ public class WindowAcceptController implements Initializable {
 
     }
 
+    // In the finish we close the window
     private void closeStage(ActionEvent event) {
         Node  source = (Node)  event.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();

@@ -5,26 +5,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
-import services.CartItemService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.*;
-
-import static controllers.LoginController.cartItems;
-import static controllers.LoginController.products;
+import java.util.ResourceBundle;
 
 /**
  * @author yuliiamelnyk on 2/9/21
  * @project HollyOrder
  */
-
+// class controller for page home.fxml
 public class HomeController extends BaseController implements Initializable {
 
     @FXML
@@ -119,6 +117,4 @@ public class HomeController extends BaseController implements Initializable {
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
     }
-
-
 }

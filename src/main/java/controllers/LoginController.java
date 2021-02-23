@@ -1,35 +1,31 @@
 package controllers;
 
 
-import java.io.IOException;
-import java.net.URL;
-
-
-import java.time.LocalDateTime;
-import java.util.*;
-
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import login.Main;
 import model.Product;
 import model.User;
 import services.UserService;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  * @author yuliiamelnyk on 1/25/21
  * @project HollyOrder
  */
-
-
+// class controller for page login.fxml
 public class LoginController implements Initializable {
 
     // list of products that add to card
@@ -38,14 +34,10 @@ public class LoginController implements Initializable {
     // list of products that add to card
     public static HashMap<Product, Integer> cartItems = new HashMap<>();
 
-
     @FXML
     private TextField tf_email, tf_password;
 
-
-    private double xOffset = 0;
-    private double yOffset = 0;
-
+    // user static - the one in all session
     public static User u1;
 
     private UserService userService;
@@ -53,13 +45,13 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        // initialize userServise
         userService = new UserService();
-
         // initialize cartList
         products = new ArrayList<>();
     }
 
+    // method check if user login and password are correct
     @FXML
     void login(MouseEvent event) throws IOException {
 
@@ -69,7 +61,7 @@ public class LoginController implements Initializable {
         if (isLogin) {
             u1 = userService.takeDataBylogin(email, password);
             sign();
-
+            // if not correct open the alert window
         } else {
             Alert error = new Alert(Alert.AlertType.ERROR);
             error.setHeaderText("Error");
@@ -79,25 +71,7 @@ public class LoginController implements Initializable {
         }
     }
 
-    @FXML
-    public void back(MouseEvent event) throws IOException {
-        Parent blah = FXMLLoader.load(getClass().getResource("pin.fxml"));
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        blah.setOnMousePressed(event1 -> {
-            xOffset = event1.getSceneX();
-            yOffset = event1.getSceneY();
-        });
-        blah.setOnMouseDragged(event12 -> {
-            appStage.setX(event12.getScreenX() - xOffset);
-            appStage.setY(event12.getScreenY() - yOffset);
-        });
-
-        Scene scene = new Scene(blah);
-
-        appStage.setScene(scene);
-        appStage.show();
-    }
-
+    // method to open a registration scene when the user click in button
     @FXML
     void registrate(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/registration.fxml"));
@@ -105,6 +79,7 @@ public class LoginController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
+    // method to go to the home page if user login correctly
     @FXML
     void sign() throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));

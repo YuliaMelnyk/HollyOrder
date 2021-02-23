@@ -13,7 +13,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
-import model.Product;
 import services.ProductService;
 
 import java.io.IOException;
@@ -21,7 +20,7 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-
+// class controller for page fingerfoods.fxml
 public class FingerFoodController extends BaseController implements Initializable {
 
     @FXML

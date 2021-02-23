@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
@@ -21,7 +20,7 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-
+// class controller for page dessert.fxml
 public class DessertController extends BaseController implements Initializable, GeneralController {
 
     @FXML

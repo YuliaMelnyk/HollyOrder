@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
@@ -18,7 +17,7 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-
+// class controller for page burger,fxml
 public class BurgerController extends BaseController implements Initializable, GeneralController {
 
     //labels of quantities

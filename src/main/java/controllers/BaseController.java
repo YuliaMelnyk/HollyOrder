@@ -27,6 +27,8 @@ import static controllers.LoginController.cartItems;
  * @author yuliiamelnyk on 15/2/21
  * @project HollyOrder
  */
+
+//abstract class for all controller's classes
 public abstract class BaseController extends LocalDateTimeAttributeConverter {
 
     private CartItemDAO cartItemDAO = new CartItemDAO();
@@ -64,7 +66,7 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
             int price = quantity * (int) product.getPrice();
             totalPrice += price;
 
-            ((Label) loader.getNamespace().get("quantity")).setText(String.valueOf(price));
+            ((Label) loader.getNamespace().get("quantity")).setText(String.valueOf(quantity));
             //put image value en label from DB
             if (product.getImage() != null) {
                 // create a background image
@@ -74,6 +76,9 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
             }
             //put name value en label from DB
             ((Label) loader.getNamespace().get("name")).setText(product.getName());
+
+            //put price Total value en label from DB
+            ((Label) loader.getNamespace().get("priceTot")).setText(String.valueOf(price));
 
             //add each element in gridpane
             gridPane.add(vBox, index % 2, index / 2);
@@ -119,7 +124,6 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
                         setText(null);
                     } else {
                         setText(String.valueOf(item));
-
                     }
                 }
             };
@@ -129,11 +133,12 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         cartTable.setItems(tempItems);
     }
 
+    // method to plus quantity of food
     public void onPlus(Label label) {
         int q = Integer.parseInt(label.getText());
         label.setText(String.valueOf(++q));
     }
-
+    // method to minus quantity of food
     public void onMinus(Label label) {
         int q = Integer.parseInt(label.getText());
         if (q == 1) {
@@ -142,6 +147,4 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
             label.setText(String.valueOf(--q));
         }
     }
-
-
 }

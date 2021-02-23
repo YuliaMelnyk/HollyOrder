@@ -26,6 +26,7 @@ import java.util.ResourceBundle;
  * @project HollyOrder
  */
 
+// class controller for page salad.fxml
 public class SaladController extends BaseController implements Initializable, GeneralController {
 
     @FXML

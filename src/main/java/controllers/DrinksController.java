@@ -21,7 +21,7 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-
+// class controller for page drinks.fxml
 public class DrinksController extends BaseController implements Initializable, GeneralController {
 
     @FXML
