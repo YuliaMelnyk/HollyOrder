@@ -12,10 +12,10 @@ Search on Orders History
 
 
 Built With
-Java SE
-JavaFX, JPA
-Material Design
-Hibernate
-MySql
+Java SE,
+JavaFX, JPA,
+Material Design,
+Hibernate,
+MySql,
 Layered Architecture
 
