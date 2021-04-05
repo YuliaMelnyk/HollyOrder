@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import services.CartItemService;
@@ -46,7 +47,10 @@ public class ProductItemController extends BaseController implements Initializab
         double total = Double.valueOf(totalPr.getText());
         LocalDateTime now = LocalDateTime.now();
         Timestamp timestamp = Timestamp.valueOf(now);
-        service.insertCartItem(timestamp,total);
+
+        String productIds = cartItems.keySet().stream().collect(StringBuilder::new, (x, y) -> x.append(y.getProduct_id()).append(","), (a, b) -> a.append(",").append(b)).toString();
+
+        service.insertCartItem(timestamp, total, productIds);
         cartItems.clear();
         products.clear();
 

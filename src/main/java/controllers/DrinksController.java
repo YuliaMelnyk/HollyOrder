@@ -54,6 +54,7 @@ public class DrinksController extends BaseController implements Initializable, G
         try {
             addCartElements(scrollPane);
             addToOrder(cartTable, id, timestamp, totalPrice);
+            clickOnRowTableOrder(cartTable);
         } catch (IOException e) {
             e.printStackTrace();
         }

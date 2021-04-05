@@ -203,7 +203,7 @@
                         </Tab>
                         <Tab text="Orders">
                             <content>
-                                <TableView fx:id="cartTable" prefHeight="400.0" prefWidth="500.0">
+                                <TableView fx:id="cartTable" prefHeight="400.0" prefWidth="500.0" onMouseClicked="#clickOnTable">
                                     <columns>
                                         <TableColumn fx:id="id" editable="false" prefWidth="150.0" resizable="false"
                                                      sortable="false" style="-fx-alignment: center-left;"

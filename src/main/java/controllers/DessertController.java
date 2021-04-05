@@ -54,6 +54,7 @@ public class DessertController extends BaseController implements Initializable, 
         try {
             addCartElements(scrollPane);
             addToOrder(cartTable, id, timestamp, totalPrice);
+            clickOnRowTableOrder(cartTable);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,8 +96,6 @@ public class DessertController extends BaseController implements Initializable, 
         service.getProduct(tirName.getText(), Integer.parseInt(quantityLabelTir.getText()));
         addCartElements(scrollPane);
     }
-
-
 
     //plus quantity of Apricot Dessert
     @FXML

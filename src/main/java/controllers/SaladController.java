@@ -58,6 +58,7 @@ public class SaladController extends BaseController implements Initializable, Ge
         try {
             addCartElements(scrollPane);
             addToOrder(cartTable, id, timestamp, totalPrice);
+            clickOnRowTableOrder(cartTable);
         } catch (IOException e) {
             e.printStackTrace();
         }

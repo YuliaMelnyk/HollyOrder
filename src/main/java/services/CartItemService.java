@@ -27,9 +27,9 @@ public class CartItemService implements ServiceInterface {
 
     }
 
-    //method to insert CartItem into DataBase in moment to put on Order
-    public void insertCartItem(Timestamp timestamp, double totalprice) {
-        cartItem = new CartItem(timestamp, totalprice);
+    // method to insert CartItem into DataBase in moment to put on Order
+    public void insertCartItem(Timestamp timestamp, double totalprice, String productIds) {
+        cartItem = new CartItem(timestamp, totalprice, productIds);
         cartItemDAO.insert(cartItem);
     }
 }

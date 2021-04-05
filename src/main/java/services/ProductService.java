@@ -4,7 +4,6 @@ import dao.DAO.ProductDAO;
 import model.Product;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 import static controllers.LoginController.cartItems;
 import static controllers.LoginController.products;
@@ -23,7 +22,7 @@ public class ProductService implements ServiceInterface{
 
     }
 
-    //method to get Product by its Name from DataBase in moment to put in Cart and save it to List of Products
+    // method to get Product by its Name from DataBase in moment to put in Cart and save it to List of Products
     @Override
     public void getProduct(String name, int quantity) {
         product = productDAO.getByName(name);
@@ -32,7 +31,7 @@ public class ProductService implements ServiceInterface{
     }
 
     @Override
-    public void insertCartItem(Timestamp timestamp, double totalPrice) {
+    public void insertCartItem(Timestamp timestamp, double totalPrice, String productIds) {
 
     }
 }

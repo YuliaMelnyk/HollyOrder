@@ -55,7 +55,7 @@ public class SoupController extends BaseController implements Initializable, Gen
         try {
             addCartElements(scrollPane);
             addToOrder(cartTable, id, timestamp, totalPrice);
-
+            clickOnRowTableOrder(cartTable);
         } catch (IOException e) {
             e.printStackTrace();
         }

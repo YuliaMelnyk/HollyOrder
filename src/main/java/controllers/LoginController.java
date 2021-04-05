@@ -31,6 +31,9 @@ public class LoginController implements Initializable {
     // list of products that add to card
     public static List<Product> products;
 
+    // list of products that add to orders
+    public static List<Product> productsDetailOrder = new ArrayList<>();
+
     // list of products that add to card
     public static HashMap<Product, Integer> cartItems = new HashMap<>();
 

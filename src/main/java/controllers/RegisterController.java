@@ -30,7 +30,7 @@ public class RegisterController {
     Button btn_register;
 
     @FXML
-    void insertInto(MouseEvent event) {
+    void insertInto(MouseEvent event) throws IOException {
         Window owner = btn_register.getScene().getWindow();
         // check if field is empty
         if (fieldIsEmpty()) {
@@ -53,6 +53,7 @@ public class RegisterController {
             errorSendMail.setHeaderText("Confirmation");
             errorSendMail.setContentText("Please click in the Log in button and login ");
             errorSendMail.show();
+            sign();
         }
     }
 
@@ -98,5 +99,14 @@ public class RegisterController {
         alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
+    }
+
+    // method to go to the home page if user login correctly
+    @FXML
+    void sign() throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
+        Scene scene = new Scene(parent);
+        scene.getStylesheets().add(getClass().getResource("/styles/homeStyle.css").toExternalForm());
+        Main.getPrimaryStage().setScene(scene);
     }
 }

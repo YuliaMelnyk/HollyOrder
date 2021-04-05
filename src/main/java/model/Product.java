@@ -41,6 +41,9 @@ public class Product {
     public long getProduct_id() {
         return product_id;
     }
+    public String getProductIdString() {
+        return Long.toString(product_id);
+    }
 
     public String getName() {
         return name;

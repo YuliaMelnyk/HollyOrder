@@ -24,9 +24,13 @@ public class CartItem extends RecursiveTreeObject<CartItem> {
     @Column(name = "total")
     private double totalPrice;
 
-    public CartItem(Timestamp timestamp, double totalPrice) {
+    @Column(name = "productIds")
+    private String productIds;
+
+    public CartItem(Timestamp timestamp, double totalPrice, String productIds) {
         this.timestamp = timestamp;
         this.totalPrice = totalPrice;
+        this.productIds = productIds;
     }
 
     public CartItem() {
@@ -55,6 +59,23 @@ public class CartItem extends RecursiveTreeObject<CartItem> {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public String getProductIds() {
+        return productIds;
+    }
+
+    public void setProductIds(String productIds) {
+        this.productIds = productIds;
+    }
+
+    @Override
+    public String toString() {
+        return "CartItem{" +
+                "id=" + id +
+                ", timestamp=" + timestamp +
+                ", totalPrice=" + totalPrice +
+                '}';
     }
 }
 

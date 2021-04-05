@@ -15,6 +15,6 @@ public interface ServiceInterface {
 
     void getProduct(String name, int quantity);
 
-    void insertCartItem(Timestamp timestamp, double totalPrice);
+    void insertCartItem(Timestamp timestamp, double totalPrice, String productIds);
 
 }

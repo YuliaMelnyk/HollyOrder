@@ -22,6 +22,7 @@ public class Cart {
     private double totalPrice;
 
 
+
     public Cart() {
     }
 
@@ -46,7 +47,6 @@ public class Cart {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-
 
 }
 

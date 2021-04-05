@@ -53,7 +53,7 @@ public class SandwichController extends BaseController implements Initializable,
         try {
             addCartElements(scrollPane);
             addToOrder(cartTable, id, timestamp, totalPrice);
-
+            clickOnRowTableOrder(cartTable);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,15 +1,21 @@
 package controllers;
 
 import dao.DAO.CartItemDAO;
+import dao.DAO.ProductDAO;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import model.CartItem;
 import model.Product;
 import services.LocalDateTimeAttributeConverter;
@@ -18,10 +24,12 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-import static controllers.LoginController.cartItems;
+import static controllers.LoginController.*;
 
 /**
  * @author yuliiamelnyk on 15/2/21
@@ -31,13 +39,14 @@ import static controllers.LoginController.cartItems;
 //abstract class for all controller's classes
 public abstract class BaseController extends LocalDateTimeAttributeConverter {
 
+    private ProductDAO productDAO = new ProductDAO();
     private CartItemDAO cartItemDAO = new CartItemDAO();
 
     private CartItem orderItem = new CartItem();
     private List<CartItem> orderItems = new ArrayList<>();
 
 
-    //method using foreach to take element book and fill fxml element in positions in gridpane
+    // method using foreach to take element book and fill fxml element in positions in gridpane
     public void addCartElements(ScrollPane scrollPane) throws IOException {
 
         GridPane gridPane = new GridPane();
@@ -95,7 +104,7 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         }
     }
 
-    //method using foreach to add all element CartItem from ObservableList to TableView Orders
+    // method using foreach to add all element CartItem from ObservableList to TableView Orders
     public void addToOrder(TableView<CartItem> cartTable, TableColumn<CartItem, Long> id,
                            TableColumn<CartItem, Timestamp> timestamp,
                            TableColumn<CartItem, Double> totalPrice) {
@@ -104,9 +113,15 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         ObservableList<CartItem> tempItems = FXCollections.observableArrayList();
 
         orderItems = cartItemDAO.getAll();
+        List<Product> products = productDAO.getAll();
         for (CartItem cartItem :
                 orderItems) {
 
+            if (cartItem.getProductIds() != null) {
+                List<String> productIds = Arrays.asList(cartItem.getProductIds().split(",").clone());
+                List<Product> productItems = products.stream().filter(x -> productIds.contains(x.getProductIdString())).collect(Collectors.toList());
+                productItems.forEach(x -> System.out.println(x.getName()));
+            }
             tempItems.add(cartItem);
         }
         // Associate data with columns
@@ -133,11 +148,54 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         cartTable.setItems(tempItems);
     }
 
+    // click on row in the table Order to open the details of order
+    public void clickOnRowTableOrder(TableView<CartItem> cartTable) throws IOException {
+
+        List<Product> products = productDAO.getAll();
+        productsDetailOrder = new ArrayList<>();
+
+        cartTable.getSelectionModel().setCellSelectionEnabled(true);
+        ObservableList selectedCells = cartTable.getSelectionModel().getSelectedCells();
+
+        selectedCells.addListener((ListChangeListener) c -> {
+            CartItem rowData = cartTable.getSelectionModel().getSelectedItem();
+
+            if (rowData.getProductIds() != null) {
+                List<String> productIds = Arrays.asList(rowData.getProductIds().split(",").clone());
+                List<Product> productItems = products.stream().filter(x -> productIds.contains(x.getProductIdString())).collect(Collectors.toList());
+                productItems.forEach(x ->
+                {
+                    System.out.println(x.getName());
+                    productsDetailOrder.add(x);
+                });
+            }
+
+            // load the dialog window
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/order_detail.fxml"));
+            Parent parent = null;
+            try {
+                parent = fxmlLoader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Scene scene = new Scene(parent, 400, 300);
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.showAndWait();
+            System.out.println(rowData.toString());
+
+
+        });
+    }
+
     // method to plus quantity of food
     public void onPlus(Label label) {
         int q = Integer.parseInt(label.getText());
         label.setText(String.valueOf(++q));
     }
+
     // method to minus quantity of food
     public void onMinus(Label label) {
         int q = Integer.parseInt(label.getText());

@@ -117,4 +117,8 @@ public class HomeController extends BaseController implements Initializable {
         Scene scene = new Scene(parent);
         Main.getPrimaryStage().setScene(scene);
     }
+
+    public void clickOnTable(MouseEvent mouseEvent) throws IOException {
+        clickOnRowTableOrder(cartTable);
+    }
 }
