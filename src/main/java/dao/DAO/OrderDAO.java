@@ -13,11 +13,13 @@ import javax.swing.*;
 import java.util.List;
 
 /**
+ * The type Order dao.
+ * class OrderDAO to make CRUD operations
+ *
  * @author yuliiamelnyk on 16/2/21
  * @project HollyOrder
  */
 
-// class OrderDAO to make CRUD operations
 public class OrderDAO extends AbstractDAO<Order> implements OrderDao {
 
     @Override
@@ -40,6 +42,12 @@ public class OrderDAO extends AbstractDAO<Order> implements OrderDao {
             }
         }
     }
+
+    /**
+     * Delete.
+     *
+     * @param product the product
+     */
     public void delete(Product product) {
 
         Session session = null;

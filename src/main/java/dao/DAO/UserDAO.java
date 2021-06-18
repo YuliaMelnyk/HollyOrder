@@ -5,6 +5,8 @@ import model.User;
 
 
 /**
+ * The type User dao.
+ *
  * @author sergeymelnik on 9/2/21
  * @project HollyOrder
  */

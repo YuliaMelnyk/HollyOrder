@@ -20,22 +20,73 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-// class controller for page chicken.fxml
+/**
+ * The type Chicken controller.
+ * Class controller for page chicken.fxml
+ */
+
 public class ChickenController extends BaseController implements Initializable, GeneralController {
 
+    /**
+     * The Quantity label ch.
+     */
     @FXML
-    Label quantityLabelCh, quantityLabelTan, quantityLabelMoj, quantityLabelSal, quantityLabelKeb;
+    Label quantityLabelCh, /**
+     * The Quantity label tan.
+     */
+    quantityLabelTan, /**
+     * The Quantity label moj.
+     */
+    quantityLabelMoj, /**
+     * The Quantity label sal.
+     */
+    quantityLabelSal, /**
+     * The Quantity label keb.
+     */
+    quantityLabelKeb;
 
+    /**
+     * The Price ch.
+     */
     @FXML
-    Label priceCh, priceETan, priceSal, priceMoj, priceKeb;
+    Label priceCh, /**
+     * The Price e tan.
+     */
+    priceETan, /**
+     * The Price sal.
+     */
+    priceSal, /**
+     * The Price moj.
+     */
+    priceMoj, /**
+     * The Price keb.
+     */
+    priceKeb;
 
+    /**
+     * The Hoon name.
+     */
     @FXML
-    Label hoonName, tanName, SalName, mojoName, kebName;
+    Label hoonName, /**
+     * The Tan name.
+     */
+    tanName, /**
+     * The Sal name.
+     */
+    SalName, /**
+     * The Mojo name.
+     */
+    mojoName, /**
+     * The Keb name.
+     */
+    kebName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -61,7 +112,14 @@ public class ChickenController extends BaseController implements Initializable, 
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -71,99 +129,194 @@ public class ChickenController extends BaseController implements Initializable, 
     }
 
 
-    //add to Cart Chicken HOON
+    /**
+     * On cart ch.
+     * Add to Cart Chicken HOON
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartCh(MouseEvent event) throws IOException {
         service.getProduct(hoonName.getText(), Integer.parseInt(quantityLabelCh.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Mojo Chicken
+    /**
+     * On cart moj.
+     * add to Cart Mojo Chicken
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartMoj(MouseEvent event) throws IOException {
         service.getProduct(mojoName.getText(), Integer.parseInt(quantityLabelMoj.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Tandoori chicken
+    /**
+     * On cart tan.
+     * add to Cart Tandoori chicken
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartTan(MouseEvent event) throws IOException {
         service.getProduct(tanName.getText(), Integer.parseInt(quantityLabelTan.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Chicken Salad
+    /**
+     * On cart sal.
+     * add to Cart Chicken Salad
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartSal(MouseEvent event) throws IOException {
         service.getProduct(SalName.getText(), Integer.parseInt(quantityLabelSal.getText()));
         addCartElements(scrollPane);
     }
-    //add to Cart Chicken Kebab
+
+    /**
+     * On cart keb.
+     * add to Cart Chicken Kebab
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartKeb(MouseEvent event) throws IOException {
         service.getProduct(kebName.getText(), Integer.parseInt(quantityLabelKeb.getText()));
         addCartElements(scrollPane);
     }
 
-    //plus quantity of Chicken HOON
+    /**
+     * On plus click ch.
+     * plus quantity of Chicken HOON
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusClickCh(MouseEvent event) {
         onPlus(quantityLabelCh);
     }
 
-    //minus quantity of Chicken HOON
+    /**
+     * On minus click ch.
+     * minus quantity of Chicken HOON
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickCh(MouseEvent event) {
         onMinus(quantityLabelCh);
     }
 
-    //plus quantity of Tandoori chicken
+    /**
+     * On plus tan.
+     * plus quantity of Tandoori chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusTan(MouseEvent event) {
         onPlus(quantityLabelTan);
     }
 
-    //minus quantity of Tandoori chicken
+    /**
+     * On minus tan.
+     * minus quantity of Tandoori chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusTan(MouseEvent event) {
         onMinus(quantityLabelTan);
     }
 
-    //minus quantity of Mojo Chicken
+    /**
+     * On minus moj.
+     * minus quantity of Mojo Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusMoj(MouseEvent event) {
         onMinus(quantityLabelMoj);
     }
 
-    //plus quantity of Mojo Chicken
+    /**
+     * On plus moj.
+     * plus quantity of Mojo Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusMoj(MouseEvent event) {
         onPlus(quantityLabelMoj);
     }
 
-    //minus quantity of Chicken Salad
+    /**
+     * On minus sal.
+     * minus quantity of Chicken Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusSal(MouseEvent event) {
         onMinus(quantityLabelSal);
     }
 
-    //plus quantity of Chicken Salad
+    /**
+     * On plus sal.
+     * plus quantity of Chicken Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusSal(MouseEvent event) {
         onPlus(quantityLabelSal);
     }
 
-    //minus quantity of Chicken Kebab
+    /**
+     * On minus keb.
+     * minus quantity of Chicken Kebab
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusKeb(MouseEvent event) {
         onMinus(quantityLabelKeb);
     }
 
-    //plus quantity of Chicken Kebab
+    /**
+     * On plus keb.
+     * plus quantity of Chicken Kebab
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusKeb(MouseEvent event) {
         onPlus(quantityLabelKeb);
     }
-
 
 }

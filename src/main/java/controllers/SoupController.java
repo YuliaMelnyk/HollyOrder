@@ -20,25 +20,61 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-// class controller for page soup.fxml
+/**
+ * The type Soup controller.
+ * class controller for page soup.fxml
+ */
+
 public class SoupController extends BaseController implements Initializable, GeneralController {
 
+    /**
+     * The Quantity label car.
+     */
     @FXML
-    Label quantityLabelCar, quantityLabelTom, quantityLabelLem;
+    Label quantityLabelCar, /**
+     * The Quantity label tom.
+     */
+    quantityLabelTom, /**
+     * The Quantity label lem.
+     */
+    quantityLabelLem;
 
+    /**
+     * The Plus f ch.
+     */
     @FXML
     ImageView plusFCh;
 
+    /**
+     * The Price carrot.
+     */
     @FXML
-    Label priceCarrot, priceTom, priceLem;
+    Label priceCarrot, /**
+     * The Price tom.
+     */
+    priceTom, /**
+     * The Price lem.
+     */
+    priceLem;
 
+    /**
+     * The Car name.
+     */
     @FXML
-    Label carName, tomName, lemName;
+    Label carName, /**
+     * The Tom name.
+     */
+    tomName, /**
+     * The Lem name.
+     */
+    lemName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -61,7 +97,14 @@ public class SoupController extends BaseController implements Initializable, Gen
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -70,58 +113,115 @@ public class SoupController extends BaseController implements Initializable, Gen
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //add to Cart Carrot Soup
+    /**
+     * On cart car.
+     * add to Cart Carrot Soup
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartCar(MouseEvent event) throws IOException {
         service.getProduct(carName.getText(), Integer.parseInt(quantityLabelCar.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Tomato Soup
+    /**
+     * On cart tom.
+     * add to Cart Tomato Soup
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartTom(MouseEvent event) throws IOException {
         service.getProduct(tomName.getText(), Integer.parseInt(quantityLabelTom.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Lemon Soup
+    /**
+     * On cart lem.
+     * add to Cart Lemon Soup
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartLem(MouseEvent event) throws IOException {
         service.getProduct(lemName.getText(), Integer.parseInt(quantityLabelLem.getText()));
         addCartElements(scrollPane);
     }
 
-    //plus quantity of Carrot Soup
+    /**
+     * On plus click car.
+     * plus quantity of Carrot Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusClickCar(MouseEvent event) {
         onPlus(quantityLabelCar);
     }
 
-    //minus quantity of Carrot Soup
+    /**
+     * On minus click car.
+     * minus quantity of Carrot Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickCar(MouseEvent event) {
         onMinus(quantityLabelCar);
     }
 
-    //plus quantity of Tomato Soup
+    /**
+     * On plus tom.
+     * plus quantity of Tomato Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusTom(MouseEvent event) {
         onPlus(quantityLabelTom);
     }
 
-    //minus quantity of Tomato Soup
+    /**
+     * On minus tom.
+     * minus quantity of Tomato Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusTom(MouseEvent event) {
         onMinus(quantityLabelTom);
     }
 
-    //minus quantity of Lemon Soup
+    /**
+     * On minus lem.
+     * minus quantity of Lemon Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusLem(MouseEvent event) {
         onMinus(quantityLabelLem);
     }
 
-    //plus quantity of Lemon Soup
+    /**
+     * On plus lem.
+     * plus quantity of Lemon Soup
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusLem(MouseEvent event) {
         onPlus(quantityLabelLem);

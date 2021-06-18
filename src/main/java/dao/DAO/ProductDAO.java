@@ -9,11 +9,13 @@ import util.HibernateUtil;
 import java.util.List;
 
 /**
+ * The type Product dao.
+ * Class DAO to get data of Product from dataBase
+ *
  * @author yuliiamelnik on 11/2/21
  * @project HollyOrder
  */
 
-//class DAO to get data of Product from dataBase
 public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
 
 
@@ -67,6 +69,12 @@ public class ProductDAO extends AbstractDAO<Product> implements ProductDao {
         return product;
     }
 
+    /**
+     * Gets all.
+     *
+     * @param category the category
+     * @return the all
+     */
     public List<Product> getAll(int category) {
 
         Session session = null;

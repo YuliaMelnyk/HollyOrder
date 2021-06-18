@@ -21,22 +21,64 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-// class controller for page drinks.fxml
+/**
+ * The type Drinks controller.
+ * class controller for page drinks.fxml
+ */
+
 public class DrinksController extends BaseController implements Initializable, GeneralController {
 
+    /**
+     * The Quantity label hib.
+     */
     @FXML
-    Label quantityLabelHib, quantityLabelCoc, quantityLabelBee, quantityLabelMilk;
+    Label quantityLabelHib, /**
+     * The Quantity label coc.
+     */
+    quantityLabelCoc, /**
+     * The Quantity label bee.
+     */
+    quantityLabelBee, /**
+     * The Quantity label milk.
+     */
+    quantityLabelMilk;
 
+    /**
+     * The Price hib.
+     */
     @FXML
-    Label priceHib, priceCoc, priceBee, priceMilk;
+    Label priceHib, /**
+     * The Price coc.
+     */
+    priceCoc, /**
+     * The Price bee.
+     */
+    priceBee, /**
+     * The Price milk.
+     */
+    priceMilk;
 
+    /**
+     * The Hib name.
+     */
     @FXML
-    Label hibName, colaName, beerName, shakeName;
+    Label hibName, /**
+     * The Cola name.
+     */
+    colaName, /**
+     * The Beer name.
+     */
+    beerName, /**
+     * The Shake name.
+     */
+    shakeName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -60,7 +102,14 @@ public class DrinksController extends BaseController implements Initializable, G
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * Click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -69,28 +118,56 @@ public class DrinksController extends BaseController implements Initializable, G
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //add to Cart Hibiscus Lemonade
+    /**
+     * On cart hib.
+     * add to Cart Hibiscus Lemonade
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartHib(MouseEvent event) throws IOException {
         service.getProduct(hibName.getText(), Integer.parseInt(quantityLabelHib.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Coca Cola
+    /**
+     * On cart coc.
+     * add to Cart Coca Cola
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartCoc(MouseEvent event) throws IOException {
         service.getProduct(colaName.getText(), Integer.parseInt(quantityLabelCoc.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Craft Beer
+    /**
+     * On cart bee.
+     * add to Cart Craft Beer
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartBee(MouseEvent event) throws IOException {
         service.getProduct(beerName.getText(), Integer.parseInt(quantityLabelBee.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Milk Shake
+    /**
+     * On cart milk.
+     * add to Cart Milk Shake
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartMilk(MouseEvent event) throws IOException {
         service.getProduct(shakeName.getText(), Integer.parseInt(quantityLabelMilk.getText()));
@@ -98,50 +175,97 @@ public class DrinksController extends BaseController implements Initializable, G
     }
 
 
+    /**
+     * On plus click hib.
+     * plus quantity of Hibiscus Lemonade
+     *
+     * @param event the event
+     */
 
-    //plus quantity of Hibiscus Lemonade
     @FXML
     public void onPlusClickHib(MouseEvent event) {
         onPlus(quantityLabelHib);
     }
 
-    //minus quantity of Hibiscus Lemonade
+    /**
+     * On minus click hib.
+     * minus quantity of Hibiscus Lemonade
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickHib(MouseEvent event) {
         onMinus(quantityLabelHib);
     }
 
-    //plus quantity of Coca Cola
+    /**
+     * On plus coc.
+     * plus quantity of Coca Cola
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusCoc(MouseEvent event) {
         onPlus(quantityLabelCoc);
     }
 
-    //minus quantity of Coca Cola
+    /**
+     * On minus coc.
+     * minus quantity of Coca Cola
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusCoc(MouseEvent event) {
         onMinus(quantityLabelCoc);
     }
 
-    //minus quantity of Craft Beer
+    /**
+     * On minus bee.
+     * minus quantity of Craft Beer
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusBee(MouseEvent event) {
         onMinus(quantityLabelBee);
     }
 
-    //plus quantity of Craft Beer
+    /**
+     * On plus bee.
+     * plus quantity of Craft Beer
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusBee(MouseEvent event) {
         onPlus(quantityLabelBee);
     }
 
-    //minus quantity of Milk Shake
+    /**
+     * On minus milk.
+     * minus quantity of Milk Shake
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusMilk(MouseEvent event) {
         onMinus(quantityLabelMilk);
     }
 
-    //plus quantity of Milk Shake
+    /**
+     * On plus milk.
+     * plus quantity of Milk Shake
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusMilk(MouseEvent event) {
         onPlus(quantityLabelMilk);

@@ -19,19 +19,27 @@ import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 /**
+ * The type Home controller.
+ * Class controller for page home.fxml
+ *
  * @author yuliiamelnyk on 2/9/21
  * @project HollyOrder
  */
-// class controller for page home.fxml
+
 public class HomeController extends BaseController implements Initializable {
 
+    /**
+     * The Cart tab.
+     */
     @FXML
     Tab cartTab;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -52,7 +60,14 @@ public class HomeController extends BaseController implements Initializable {
         }
     }
 
-    //click en category of Finger Foods
+    /**
+     * Click finger.
+     * click en category of Finger Foods
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickFinger(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/fingerfoods.fxml"));
@@ -61,7 +76,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Western Soups
+    /**
+     * Click western.
+     * click en category of Western Soups
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickWestern(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/soup.fxml"));
@@ -70,7 +92,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Sandwiches
+    /**
+     * Click sandwiches.
+     * click en category of Sandwiches
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickSandwiches(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/sandwiches.fxml"));
@@ -78,7 +107,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Salads
+    /**
+     * Click salads.
+     * click en category of Salads
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickSalads(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/salads.fxml"));
@@ -86,7 +122,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Chicken
+    /**
+     * Click chicken.
+     * click en category of Chicken
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickChicken(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/chicken.fxml"));
@@ -94,7 +137,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Burgers
+    /**
+     * Click burger.
+     * click en category of Burgers
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickBurger(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/burger.fxml"));
@@ -102,7 +152,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Drinks
+    /**
+     * Click drinks.
+     * click en category of Drinks
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickDrinks(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/drinks.fxml"));
@@ -110,7 +167,14 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //click en category of Desserts
+    /**
+     * Click desserts.
+     * click en category of Desserts
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void clickDesserts(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/dessert.fxml"));
@@ -118,6 +182,12 @@ public class HomeController extends BaseController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
+    /**
+     * Click on table.
+     *
+     * @param mouseEvent the mouse event
+     * @throws IOException the io exception
+     */
     public void clickOnTable(MouseEvent mouseEvent) throws IOException {
         clickOnRowTableOrder(cartTable);
     }

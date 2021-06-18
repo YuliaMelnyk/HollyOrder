@@ -5,11 +5,14 @@ import dao.entity.GenericDao;
 import java.util.List;
 
 /**
+ * The type Abstract dao.
+ * abstract class with using generics
+ *
+ * @param <T> the type parameter
  * @author sergeymelnik on 9/2/21
  * @project HollyOrder
  */
 
-//abstract class with using generics
 public class AbstractDAO<T> implements GenericDao<T> {
     @Override
     public int insert(T t) {

@@ -8,6 +8,8 @@ import org.hibernate.Transaction;
 import util.HibernateUtil;
 
 /**
+ * The type User service.
+ *
  * @author yuliiamelnyk on 1/25/21
  * @project HollyOrder
  */
@@ -16,6 +18,13 @@ import util.HibernateUtil;
 public class UserService {
 
 
+    /**
+     * Login boolean.
+     *
+     * @param email    the email
+     * @param password the password
+     * @return the boolean
+     */
     public boolean login(String email, String password) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -38,6 +47,13 @@ public class UserService {
         return true;
     }
 
+    /**
+     * Take data bylogin user.
+     *
+     * @param email    the email
+     * @param password the password
+     * @return the user
+     */
     public User takeDataBylogin(String email, String password) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();

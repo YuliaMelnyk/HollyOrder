@@ -16,19 +16,30 @@ import services.RegisterService;
 import java.io.IOException;
 
 /**
+ * The type Register controller.
+ * class controller for page registration.fxml
+ *
  * @author yuliiamelnyk on 1/25/21
  * @project HollyOrder
  */
 
-// class controller for page registration.fxml
 public class RegisterController {
 
     @FXML
     private TextField tf_email, tf_password, tf_name, tf_surname, tf_phone;
 
+    /**
+     * The Btn register.
+     */
     @FXML
     Button btn_register;
 
+    /**
+     * Insert into.
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
     @FXML
     void insertInto(MouseEvent event) throws IOException {
         Window owner = btn_register.getScene().getWindow();
@@ -68,7 +79,14 @@ public class RegisterController {
         return new User(email, password, name, surname, phone);
     }
 
-    // method to return in login page when user click back button
+    /**
+     * On back to login.
+     * method to return in login page when user click back button
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     void onBackToLogin(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/login.fxml"));
@@ -91,7 +109,16 @@ public class RegisterController {
         alert.show();
     }
 
-    //method to show alert window if email isn't correct
+    /**
+     * Show alert.
+     * method to show alert window if email isn't correct
+     *
+     * @param alertType the alert type
+     * @param owner     the owner
+     * @param title     the title
+     * @param message   the message
+     */
+
     public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -101,7 +128,13 @@ public class RegisterController {
         alert.show();
     }
 
-    // method to go to the home page if user login correctly
+    /**
+     * Sign.
+     * method to go to the home page if user login correctly
+     *
+     * @throws IOException the io exception
+     */
+
     @FXML
     void sign() throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));

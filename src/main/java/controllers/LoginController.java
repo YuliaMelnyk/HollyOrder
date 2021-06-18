@@ -22,25 +22,44 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 /**
+ * The type Login controller.
+ * class controller for page login.fxml
+ *
  * @author yuliiamelnyk on 1/25/21
  * @project HollyOrder
  */
-// class controller for page login.fxml
+
 public class LoginController implements Initializable {
 
-    // list of products that add to card
+    /**
+     * The Products.
+     * list of products that add to card
+     */
+
     public static List<Product> products;
 
-    // list of products that add to orders
+    /**
+     * The constant productsDetailOrder.
+     * list of products that add to orders
+     */
+
     public static List<Product> productsDetailOrder = new ArrayList<>();
 
-    // list of products that add to card
+    /**
+     * The constant cartItems.
+     * list of products that add to card
+     */
+
     public static HashMap<Product, Integer> cartItems = new HashMap<>();
 
     @FXML
     private TextField tf_email, tf_password;
 
-    // user static - the one in all session
+    /**
+     * The constant u1.
+     * user static - the one in all session
+     */
+
     public static User u1;
 
     private UserService userService;
@@ -54,7 +73,14 @@ public class LoginController implements Initializable {
         products = new ArrayList<>();
     }
 
-    // method check if user login and password are correct
+    /**
+     * Login.
+     * method check if user login and password are correct
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     void login(MouseEvent event) throws IOException {
 
@@ -74,7 +100,14 @@ public class LoginController implements Initializable {
         }
     }
 
-    // method to open a registration scene when the user click in button
+    /**
+     * Registrate.
+     * method to open a registration scene when the user click in button
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     void registrate(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/registration.fxml"));
@@ -82,7 +115,13 @@ public class LoginController implements Initializable {
         Main.getPrimaryStage().setScene(scene);
     }
 
-    // method to go to the home page if user login correctly
+    /**
+     * Sign.
+     * method to go to the home page if user login correctly
+     *
+     * @throws IOException the io exception
+     */
+
     @FXML
     void sign() throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));

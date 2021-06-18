@@ -3,7 +3,6 @@ package controllers;
 import dao.DAO.ProductDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -12,7 +11,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.CartItem;
 import model.Product;
@@ -25,22 +23,32 @@ import java.util.ResourceBundle;
 import static controllers.LoginController.productsDetailOrder;
 
 /**
+ * The type Order detail container.
+ * Window show when user clicked to row in the table of Orders
+ *
  * @author yuliiamelnyk on 29/3/21
  * @project HollyOrder
  */
-
-// Window show when user clicked to row in the table of Orders
 
 public class OrderDetailContainer extends BaseController implements Initializable {
 
     private ProductDAO productDAO = new ProductDAO();
 
+    /**
+     * The Product name detail order.
+     */
     @FXML
     Label productNameDetailOrder;
 
+    /**
+     * The Product image detail.
+     */
     @FXML
     ImageView productImageDetail;
 
+    /**
+     * The Detail scroll.
+     */
     @FXML
     ScrollPane detailScroll;
 
@@ -58,16 +66,14 @@ public class OrderDetailContainer extends BaseController implements Initializabl
 
         detailScroll.setContent(gridPane);
         int index = -1;
-        for (Product product: productsDetailOrder
-             ) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/product_item_order_detail.fxml"));
-            VBox vBox = null;
-            try {
-                vBox = (VBox) loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            vBox.setMaxHeight(250);
+        for (Product product :
+                productsDetailOrder) {
+            ImageView imageView = null;
+            Label label = new Label();
+            index++;
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/product_item_order_detail.fxml"));
+
+
             //productNameDetailOrder.setText(x.getName());
             String name = product.getName();
             //put image value en label from DB
@@ -75,21 +81,31 @@ public class OrderDetailContainer extends BaseController implements Initializabl
                 // create a background image
                 Image image = new Image(new ByteArrayInputStream(product.getImage()));
                 // set background image
-                ((ImageView) loader.getNamespace().get("productImage")).setImage(image);
+                imageView = new ImageView(image);
+                //((ImageView) loader.getNamespace().get("productImage")).setImage(image);
             }
 
             //put name value en label from DB
-            ((Label) loader.getNamespace().get("name")).setText(product.getName());
+            //((Label) loader.getNamespace().get("name")).setText(x.getName());
+            label.setText(product.getName());
             //add each element in gridpane
-            gridPane.add(vBox, index % 2, index / 2);
+            gridPane.add(label, index % 2, index / 2);
         }
+
         productsDetailOrder.forEach(x ->
         {
 
         });
     }
 
-    // When the user clicked on OK button to close the window
+    /**
+     * Btn accept clicked.
+     * When the user clicked on OK button to close the window
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void btnAcceptClicked(ActionEvent event) throws IOException {
         closeStage(event);

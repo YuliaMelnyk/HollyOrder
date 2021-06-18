@@ -5,9 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import services.CartItemService;
@@ -18,16 +17,22 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
-import static controllers.LoginController.*;
+import static controllers.LoginController.cartItems;
+import static controllers.LoginController.products;
 
 /**
+ * The type Product item controller.
+ * Class controller for product_item fxml
+ *
  * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
 
-// Class controller for product_item fxml
 public class ProductItemController extends BaseController implements Initializable {
 
+    /**
+     * The Total pr.
+     */
     @FXML
     Label totalPr;
 
@@ -39,9 +44,16 @@ public class ProductItemController extends BaseController implements Initializab
 
     }
 
-    // method when user clicked the button "Place Order"
-    // add cart to Order in database
-    // remove all items from Cart
+    /**
+     * Put to order.
+     * method when user clicked the button "Place Order"
+     * add cart to Order in database
+     * remove all items from Cart
+     *
+     * @param mouseEvent the mouse event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void putToOrder(MouseEvent mouseEvent) throws IOException {
         double total = Double.valueOf(totalPr.getText());

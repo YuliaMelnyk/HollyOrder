@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 
 /**
+ * The type Category.
+ *
  * @author yuliiamelnyk on 2/2/21
  * @project HollyOrder copy
  */

@@ -20,25 +20,70 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-// class controller for page fingerfoods.fxml
+/**
+ * The type Finger food controller.
+ * class controller for page fingerfoods.fxml
+ */
+
 public class FingerFoodController extends BaseController implements Initializable {
 
+    /**
+     * The Quantity label f ch.
+     */
     @FXML
-    Label quantityLabelFCh, quantityLabelKCh, quantityLabelShrimp, quantityLabelCroquetas;
+    Label quantityLabelFCh, /**
+     * The Quantity label k ch.
+     */
+    quantityLabelKCh, /**
+     * The Quantity label shrimp.
+     */
+    quantityLabelShrimp, /**
+     * The Quantity label croquetas.
+     */
+    quantityLabelCroquetas;
 
+    /**
+     * The Plus f ch.
+     */
     @FXML
     ImageView plusFCh;
 
+    /**
+     * The Price fried chicken.
+     */
     @FXML
-    Label priceFriedChicken, priceKoreanFried, priceShrimps, priceCroquetas;
+    Label priceFriedChicken, /**
+     * The Price korean fried.
+     */
+    priceKoreanFried, /**
+     * The Price shrimps.
+     */
+    priceShrimps, /**
+     * The Price croquetas.
+     */
+    priceCroquetas;
 
+    /**
+     * The Fried name.
+     */
     @FXML
-    Label friedName, korName, chimName, croName;
+    Label friedName, /**
+     * The Kor name.
+     */
+    korName, /**
+     * The Chim name.
+     */
+    chimName, /**
+     * The Cro name.
+     */
+    croName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -62,7 +107,14 @@ public class FingerFoodController extends BaseController implements Initializabl
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -71,77 +123,153 @@ public class FingerFoodController extends BaseController implements Initializabl
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //add to Cart Fried Chicken
+    /**
+     * On cart f ch.
+     * add to Cart Fried Chicken
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartFCh(MouseEvent event) throws IOException {
         service.getProduct(friedName.getText(), Integer.parseInt(quantityLabelFCh.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Korean Chicken
+    /**
+     * On cart k ch.
+     * add to Cart Korean Chicken
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartKCh(MouseEvent event) throws IOException {
         service.getProduct(korName.getText(), Integer.parseInt(quantityLabelKCh.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Shrimp
+    /**
+     * On cart shr.
+     * add to Cart Shrimp
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartShr(MouseEvent event) throws IOException {
         service.getProduct(chimName.getText(), Integer.parseInt(quantityLabelShrimp.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Croquetas
+    /**
+     * On cart cr.
+     * add to Cart Croquetas
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartCr(MouseEvent event) throws IOException {
         service.getProduct(croName.getText(), Integer.parseInt(quantityLabelCroquetas.getText()));
         addCartElements(scrollPane);
     }
 
-    //plus quantity of Fried Chicken
+    /**
+     * On plus click f ch.
+     * plus quantity of Fried Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusClickFCh(MouseEvent event) {
         onPlus(quantityLabelFCh);
     }
 
-    //minus quantity of Korean Chicken
+    /**
+     * On minus click f ch.
+     * minus quantity of Korean Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickFCh(MouseEvent event) {
         onMinus(quantityLabelFCh);
     }
 
-    //plus quantity of Korean Chicken
+    /**
+     * On plus k ch.
+     * plus quantity of Korean Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusKCh(MouseEvent event) {
         onPlus(quantityLabelKCh);
     }
 
-    //minus quantity of Fried Chicken
+    /**
+     * On minus k ch.
+     * minus quantity of Fried Chicken
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusKCh(MouseEvent event) {
         onMinus(quantityLabelKCh);
     }
 
-    //minus quantity of Shrimp
+    /**
+     * On minus shr.
+     * minus quantity of Shrimp
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusShr(MouseEvent event) {
         onMinus(quantityLabelShrimp);
     }
 
-    //plus quantity of Shrimp
+    /**
+     * On plus shr.
+     * plus quantity of Shrimp
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusShr(MouseEvent event) {
         onPlus(quantityLabelShrimp);
     }
 
-    //minus quantity of Croquetas
+    /**
+     * On minus cr.
+     * minus quantity of Croquetas
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusCr(MouseEvent event) {
         onMinus(quantityLabelCroquetas);
     }
 
-    //plus quantity of Croquetas
+    /**
+     * On plus cr.
+     * plus quantity of Croquetas
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusCr(MouseEvent event) {
         onPlus(quantityLabelCroquetas);

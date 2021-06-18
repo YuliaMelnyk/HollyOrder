@@ -15,18 +15,27 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
+ * The type Window accept controller.
+ * Window alert that open when you click Place to the Order
+ *
  * @author yuliiamelnyk on 18/2/21
  * @project HollyOrder
  */
 
-// Window alert that open when you click Place to the Order
 public class WindowAcceptController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
-    // When the user clicked on OK button he will return to Home page
+    /**
+     * Btn accept clicked.
+     * When the user clicked on OK button he will return to Home page
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void btnAcceptClicked(ActionEvent event) throws IOException {
         System.out.println("btnAddPersonClicked");

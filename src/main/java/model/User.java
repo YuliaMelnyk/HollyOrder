@@ -3,10 +3,11 @@ package model;
 import javax.persistence.*;
 
 /**
+ * The type User.
+ *
  * @author yuliiamelnyk on 1/22/21
  * @project HollyOrder
  */
-
 @Entity
 @Table(name = "User")
 public class User {
@@ -26,10 +27,22 @@ public class User {
     @Column(name = "phone")
     private String phone;
 
+    /**
+     * Instantiates a new User.
+     */
     public User() {
         super();
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param email    the email
+     * @param password the password
+     * @param name     the name
+     * @param surname  the surname
+     * @param phone    the phone
+     */
     public User(String email,String password, String name, String surname,  String phone) {
         super();
         this.email = email;
@@ -39,6 +52,16 @@ public class User {
         this.phone = phone;
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param user_id  the user id
+     * @param email    the email
+     * @param password the password
+     * @param name     the name
+     * @param surname  the surname
+     * @param phone    the phone
+     */
     public User(long user_id, String email, String password, String name, String surname, String phone) {
         super();
         this.user_id = user_id;
@@ -49,50 +72,110 @@ public class User {
         this.phone = phone;
     }
 
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
     public long getUser_id() {
         return user_id;
     }
 
+    /**
+     * Sets user id.
+     *
+     * @param id_user the id user
+     */
     public void setUser_id(long id_user) {
         this.user_id = id_user;
     }
 
+    /**
+     * Gets password.
+     *
+     * @return the password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Sets password.
+     *
+     * @param password the password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets surname.
+     *
+     * @return the surname
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     * Sets surname.
+     *
+     * @param surname the surname
+     */
     public void setSurname(String surname) {
         this.surname = surname;
     }
 
+    /**
+     * Gets email.
+     *
+     * @return the email
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * Gets phone.
+     *
+     * @return the phone
+     */
     public String getPhone() {
         return phone;
     }
 
+    /**
+     * Sets phone.
+     *
+     * @param phone the phone
+     */
     public void setPhone(String phone) {
         this.phone = phone;
     }

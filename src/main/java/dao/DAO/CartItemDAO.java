@@ -10,6 +10,8 @@ import javax.swing.*;
 import java.util.List;
 
 /**
+ * The type Cart item dao.
+ *
  * @author yuliiamelnyk on 16/2/21
  * @project HollyOrder
  */

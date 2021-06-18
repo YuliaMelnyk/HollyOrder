@@ -9,11 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import login.Main;
 import model.CartItem;
-import model.Product;
 import services.ProductService;
 
 import java.io.IOException;
@@ -22,26 +20,66 @@ import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 /**
+ * The type Salad controller.
+ * class controller for page salad.fxml
+ *
  * @author yuliiamelnik on 11/2/21
  * @project HollyOrder
  */
 
-// class controller for page salad.fxml
 public class SaladController extends BaseController implements Initializable, GeneralController {
 
+    /**
+     * The Quantity label tun.
+     */
     @FXML
-    Label quantityLabelTun, quantityLabelOc, quantityLabelCes, quantityLabelPr;
+    Label quantityLabelTun, /**
+     * The Quantity label oc.
+     */
+    quantityLabelOc, /**
+     * The Quantity label ces.
+     */
+    quantityLabelCes, /**
+     * The Quantity label pr.
+     */
+    quantityLabelPr;
 
+    /**
+     * The Price tuna.
+     */
     @FXML
-    Label priceTuna, priceTCes, priceOc, pricePr;
+    Label priceTuna, /**
+     * The Price t ces.
+     */
+    priceTCes, /**
+     * The Price oc.
+     */
+    priceOc, /**
+     * The Price pr.
+     */
+    pricePr;
 
+    /**
+     * The Tuna name.
+     */
     @FXML
-    Label tunaName, cesName, octName, primName;
+    Label tunaName, /**
+     * The Ces name.
+     */
+    cesName, /**
+     * The Oct name.
+     */
+    octName, /**
+     * The Prim name.
+     */
+    primName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -64,7 +102,14 @@ public class SaladController extends BaseController implements Initializable, Ge
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -73,77 +118,153 @@ public class SaladController extends BaseController implements Initializable, Ge
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //add to Cart Tuna Salad
+    /**
+     * On cart tun.
+     * add to Cart Tuna Salad
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartTun(MouseEvent event) throws IOException {
         service.getProduct(tunaName.getText(), Integer.parseInt(quantityLabelTun.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Octopus Salad
+    /**
+     * On cart oc.
+     * add to Cart Octopus Salad
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartOc(MouseEvent event) throws IOException {
         service.getProduct(octName.getText(), Integer.parseInt(quantityLabelOc.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Cesar Salad
+    /**
+     * On cart ces.
+     * add to Cart Cesar Salad
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartCes(MouseEvent event) throws IOException {
         service.getProduct(cesName.getText(), Integer.parseInt(quantityLabelCes.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Primavera Salad
+    /**
+     * On cart pr.
+     * add to Cart Primavera Salad
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartPr(MouseEvent event) throws IOException {
         service.getProduct(primName.getText(), Integer.parseInt(quantityLabelPr.getText()));
         addCartElements(scrollPane);
     }
 
-    //plus quantity of Tuna Salad
+    /**
+     * On plus click tun.
+     * plus quantity of Tuna Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusClickTun(MouseEvent event) {
         onPlus(quantityLabelTun);
     }
 
-    //minus quantity of Tuna Salad
+    /**
+     * On minus click tun.
+     * minus quantity of Tuna Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickTun(MouseEvent event) {
         onMinus(quantityLabelTun);
     }
 
-    //plus quantity of Octopus Salad
+    /**
+     * On plus oc.
+     * plus quantity of Octopus Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusOc(MouseEvent event) {
         onPlus(quantityLabelOc);
     }
 
-    //minus quantity of Octopus Salad
+    /**
+     * On minus oc.
+     * minus quantity of Octopus Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusOc(MouseEvent event) {
         onMinus(quantityLabelOc);
     }
 
-    //minus quantity of Cesar Salad
+    /**
+     * On minus ces.
+     * minus quantity of Cesar Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusCes(MouseEvent event) {
         onMinus(quantityLabelCes);
     }
 
-    //plus quantity of Cesar Salad
+    /**
+     * On plus ces.
+     * plus quantity of Cesar Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusCes(MouseEvent event) {
         onPlus(quantityLabelCes);
     }
 
-    //minus quantity of Primavera Salad
+    /**
+     * On minus pr.
+     * minus quantity of Primavera Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusPr(MouseEvent event) {
         onMinus(quantityLabelPr);
     }
 
-    //plus quantity of Primavera Salad
+    /**
+     * On plus pr.
+     * plus quantity of Primavera Salad
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusPr(MouseEvent event) {
         onPlus(quantityLabelPr);

@@ -9,6 +9,8 @@ import static controllers.LoginController.cartItems;
 import static controllers.LoginController.products;
 
 /**
+ * The type Product service.
+ *
  * @author yuliiamelnyk on 11/2/21
  * @project HollyOrder
  */

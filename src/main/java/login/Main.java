@@ -7,9 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+/**
+ * The type Main.
+ */
 public class Main extends Application {
     private static Stage primaryStage;
 
+    /**
+     * Gets primary stage.
+     *
+     * @return the primary stage
+     */
     public static Stage getPrimaryStage() {
         return primaryStage;
     }
@@ -41,6 +49,11 @@ public class Main extends Application {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

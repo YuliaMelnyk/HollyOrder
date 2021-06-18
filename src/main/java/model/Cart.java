@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * The type Cart.
+ *
  * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
@@ -22,28 +24,55 @@ public class Cart {
     private double totalPrice;
 
 
-
+    /**
+     * Instantiates a new Cart.
+     */
     public Cart() {
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public long getId() {
         return id;
     }
 
 
+    /**
+     * Gets date.
+     *
+     * @return the date
+     */
     public Date getDate() {
         return date;
     }
 
+    /**
+     * Sets date.
+     *
+     * @param date the date
+     */
     public void setDate(Date date) {
         this.date = date;
     }
 
 
+    /**
+     * Gets total price.
+     *
+     * @return the total price
+     */
     public double getTotalPrice() {
         return totalPrice;
     }
 
+    /**
+     * Sets total price.
+     *
+     * @param totalPrice the total price
+     */
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }

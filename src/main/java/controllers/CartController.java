@@ -9,12 +9,18 @@ import java.util.ResourceBundle;
 
 
 /**
+ * The type Cart controller.
+ * class controller for page cart.fxml
+ *
  * @author yuliiamelnyk on 9/2/21
  * @project HollyOrder
  */
-// class controller for page cart.fxml
+
 public class CartController extends BaseController implements Initializable {
 
+    /**
+     * The Grid pane.
+     */
     @FXML
     GridPane gridPane;
 

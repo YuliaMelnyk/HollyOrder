@@ -7,7 +7,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+
 /**
+ * The type Hibernate util.
+ *
  * @author yuliiamelnyk on 1/25/21
  * @project HollyOrder
  */
@@ -33,6 +36,11 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
+    /**
+     * Gets session factory.
+     *
+     * @return the session factory
+     */
     public static SessionFactory getSessionFactory() {
         if (Objects.isNull(sessionFactory)) {
             sessionFactory = buildSessionFactory();

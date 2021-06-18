@@ -32,11 +32,12 @@ import java.util.stream.Collectors;
 import static controllers.LoginController.*;
 
 /**
+ * The type Base controller.
+ * Abstract class for all controller's classes
+ *
  * @author yuliiamelnyk on 15/2/21
  * @project HollyOrder
  */
-
-//abstract class for all controller's classes
 public abstract class BaseController extends LocalDateTimeAttributeConverter {
 
     private ProductDAO productDAO = new ProductDAO();
@@ -46,7 +47,12 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
     private List<CartItem> orderItems = new ArrayList<>();
 
 
-    // method using foreach to take element book and fill fxml element in positions in gridpane
+    /**
+     * method using foreach to take element book and fill fxml element in positions in gridpane
+     *
+     * @param scrollPane the scroll pane
+     * @throws IOException the io exception
+     */
     public void addCartElements(ScrollPane scrollPane) throws IOException {
 
         GridPane gridPane = new GridPane();
@@ -104,7 +110,15 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         }
     }
 
-    // method using foreach to add all element CartItem from ObservableList to TableView Orders
+    /**
+     * Add to order.
+     * Method using foreach to add all element CartItem from ObservableList to TableView Orders
+     *
+     * @param cartTable  the cart table
+     * @param id         the id
+     * @param timestamp  the timestamp
+     * @param totalPrice the total price
+     */
     public void addToOrder(TableView<CartItem> cartTable, TableColumn<CartItem, Long> id,
                            TableColumn<CartItem, Timestamp> timestamp,
                            TableColumn<CartItem, Double> totalPrice) {
@@ -148,7 +162,13 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         cartTable.setItems(tempItems);
     }
 
-    // click on row in the table Order to open the details of order
+    /**
+     * Click on row table order.
+     * click on row in the table Order to open the details of order
+     *
+     * @param cartTable the cart table
+     * @throws IOException the io exception
+     */
     public void clickOnRowTableOrder(TableView<CartItem> cartTable) throws IOException {
 
         List<Product> products = productDAO.getAll();
@@ -190,13 +210,23 @@ public abstract class BaseController extends LocalDateTimeAttributeConverter {
         });
     }
 
-    // method to plus quantity of food
+    /**
+     * On plus.
+     * method to plus quantity of food
+     *
+     * @param label the label
+     */
     public void onPlus(Label label) {
         int q = Integer.parseInt(label.getText());
         label.setText(String.valueOf(++q));
     }
 
-    // method to minus quantity of food
+    /**
+     * On minus.
+     * method to minus quantity of food
+     *
+     * @param label the label
+     */
     public void onMinus(Label label) {
         int q = Integer.parseInt(label.getText());
         if (q == 1) {

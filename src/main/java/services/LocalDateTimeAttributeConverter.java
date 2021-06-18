@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 import java.sql.Timestamp;
 
 /**
+ * The type Local date time attribute converter.
+ *
  * @author sergeymelnik on 16/2/21
  * @project HollyOrder
  */

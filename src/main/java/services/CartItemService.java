@@ -6,12 +6,13 @@ import model.Product;
 
 import java.sql.Timestamp;
 
+
 /**
+ * The type Cart item service.
+ *
  * @author yuliiamelnyk on 16/2/21
  * @project HollyOrder
  */
-
-
 public class CartItemService implements ServiceInterface {
     private CartItemDAO cartItemDAO = new CartItemDAO();
     private CartItem cartItem;

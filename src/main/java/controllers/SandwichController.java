@@ -21,22 +21,64 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
-// class controller for page sandwich.fxml
+/**
+ * The type Sandwich controller.
+ * class controller for page sandwich.fxml
+ */
+
 public class SandwichController extends BaseController implements Initializable, GeneralController {
 
+    /**
+     * The Quantity label por.
+     */
     @FXML
-    Label quantityLabelPor, quantityLabelEgg, quantityLabelTo, quantityLabelPr;
+    Label quantityLabelPor, /**
+     * The Quantity label egg.
+     */
+    quantityLabelEgg, /**
+     * The Quantity label to.
+     */
+    quantityLabelTo, /**
+     * The Quantity label pr.
+     */
+    quantityLabelPr;
 
+    /**
+     * The Price pork.
+     */
     @FXML
-    Label pricePork, priceEgg, pricePr, priceTo;
+    Label pricePork, /**
+     * The Price egg.
+     */
+    priceEgg, /**
+     * The Price pr.
+     */
+    pricePr, /**
+     * The Price to.
+     */
+    priceTo;
 
+    /**
+     * The Pork name.
+     */
     @FXML
-    Label porkName, eggName, prosName, tofuName;
+    Label porkName, /**
+     * The Egg name.
+     */
+    eggName, /**
+     * The Pros name.
+     */
+    prosName, /**
+     * The Tofu name.
+     */
+    tofuName;
 
+    /**
+     * The Scroll pane.
+     */
     @FXML
     ScrollPane scrollPane;
 
-    // TableView and columns
     @FXML
     private TableView<CartItem> cartTable;
     @FXML
@@ -59,7 +101,14 @@ public class SandwichController extends BaseController implements Initializable,
         }
     }
 
-    //click on Image Back
+    /**
+     * On back to menu.
+     * click on Image Back
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onBackToMenu(MouseEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -68,77 +117,153 @@ public class SandwichController extends BaseController implements Initializable,
         Main.getPrimaryStage().setScene(scene);
     }
 
-    //add to Cart Pork Sandwich
+    /**
+     * On cart por.
+     * add to Cart Pork Sandwich
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartPor(MouseEvent event) throws IOException {
         service.getProduct(porkName.getText(), Integer.parseInt(quantityLabelPor.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Tofu Sandwich
+    /**
+     * On cart to.
+     * add to Cart Tofu Sandwich
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartTo(MouseEvent event) throws IOException {
         service.getProduct(tofuName.getText(), Integer.parseInt(quantityLabelTo.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Egg Sandwich
+    /**
+     * On cart egg.
+     * add to Cart Egg Sandwich
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartEgg(MouseEvent event) throws IOException {
         service.getProduct(eggName.getText(), Integer.parseInt(quantityLabelEgg.getText()));
         addCartElements(scrollPane);
     }
 
-    //add to Cart Prosciutto Sandwich
+    /**
+     * On cart pr.
+     * add to Cart Prosciutto Sandwich
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
+
     @FXML
     public void onCartPr(MouseEvent event) throws IOException {
         service.getProduct(prosName.getText(), Integer.parseInt(quantityLabelPr.getText()));
         addCartElements(scrollPane);
     }
 
-    //plus quantity of Pork Sandwich
+    /**
+     * On plus click por.
+     * plus quantity of Pork Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusClickPor(MouseEvent event) {
         onPlus(quantityLabelPor);
     }
 
-    //minus quantity of Pork Sandwich
+    /**
+     * On minus click por.
+     * minus quantity of Pork Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusClickPor(MouseEvent event) {
         onMinus(quantityLabelPor);
     }
 
-    //plus quantity of Egg Sandwich
+    /**
+     * On plus egg.
+     * plus quantity of Egg Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusEgg(MouseEvent event) {
         onPlus(quantityLabelEgg);
     }
 
-    //minus quantity of Egg Sandwich
+    /**
+     * On minus egg.
+     * minus quantity of Egg Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusEgg(MouseEvent event) {
         onMinus(quantityLabelEgg);
     }
 
-    //minus quantity of Tofu Sandwich
+    /**
+     * On minus to.
+     * minus quantity of Tofu Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusTo(MouseEvent event) {
         onMinus(quantityLabelTo);
     }
 
-    //plus quantity of Tofu Sandwich
+    /**
+     * On plus to.
+     * plus quantity of Tofu Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusTo(MouseEvent event) {
         onPlus(quantityLabelTo);
     }
 
-    //minus quantity of Prosciutto Sandwich
+    /**
+     * On minus pr.
+     * minus quantity of Prosciutto Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onMinusPr(MouseEvent event) {
         onMinus(quantityLabelPr);
     }
 
-    //plus quantity of Prosciutto Sandwich
+    /**
+     * On plus pr.
+     * plus quantity of Prosciutto Sandwich
+     *
+     * @param event the event
+     */
+
     @FXML
     public void onPlusPr(MouseEvent event) {
         onPlus(quantityLabelPr);

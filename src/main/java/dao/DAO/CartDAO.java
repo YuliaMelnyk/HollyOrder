@@ -13,11 +13,13 @@ import javax.swing.*;
 import java.util.List;
 
 /**
+ * The type Cart dao.
+ * class CartDAO to make CRUD operations
+ *
  * @author sergeymelnik on 11/2/21
  * @project HollyOrder
  */
 
-// class CartDAO to make CRUD operations
 public class CartDAO extends AbstractDAO<Cart> implements CartDao {
 
     // delete Cart from database
@@ -41,7 +43,14 @@ public class CartDAO extends AbstractDAO<Cart> implements CartDao {
             }
         }
     }
-    // delete Product from Cart
+
+    /**
+     * Delete.
+     * delete Product from Cart
+     *
+     * @param product the product
+     */
+
     public void delete(Product product) {
 
         Session session = null;
